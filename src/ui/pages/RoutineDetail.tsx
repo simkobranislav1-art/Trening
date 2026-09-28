@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { db } from '../../db/db';
-import { equipmentLabel, muscleLabel } from '../../domain/exercises';
+import { muscleLabel } from '../../domain/exercises';
 import { fmtSets } from '../../domain/format';
 import type { Routine } from '../../domain/types';
 import { sessionFromRoutine } from '../../domain/workout';
-import { Button, Card, EmptyState, Spinner, Tag } from '../components/basic';
-import { ExerciseThumb } from '../components/ExerciseImages';
+import { Button, EmptyState, Spinner, Tag } from '../components/basic';
 import { PageHeader } from '../components/PageHeader';
 import { useLibrary } from '../hooks/data';
 import { useWorkout } from '../WorkoutContext';
@@ -60,25 +59,34 @@ export function RoutineDetail() {
         {routine.exercises.length === 0 ? (
           <EmptyState title="Rutina je prázdna" hint="Pridaj cviky v úprave rutiny." />
         ) : (
-          <ul className="flex flex-col gap-3">
-            {routine.exercises.map((re) => {
+          <ul className="grid grid-cols-2 gap-3">
+            {routine.exercises.map((re, i) => {
               const ex = lib.byId(re.exerciseId);
               return (
                 <li key={re.id}>
-                  <Link to={`/cviky/${encodeURIComponent(re.exerciseId)}`}>
-                    <Card className={`flex items-center gap-3 !p-3 ${re.supersetId ? 'border-l-4 border-accent' : ''}`}>
-                      <ExerciseThumb id={re.exerciseId} count={ex?.images ?? 0} large />
-                      <div className="min-w-0 flex-1">
-                        <p className="font-semibold leading-tight">{lib.nameOf(re.exerciseId, re.exerciseName)}</p>
-                        <p className="text-sm text-muted">
-                          {fmtSets(re.sets)}
-                          {ex ? ` · ${muscleLabel(ex.primaryMuscle)} · ${equipmentLabel(ex.equipment)}` : ''}
-                        </p>
-                        {re.supersetId && <p className="text-xs font-semibold text-accent">Superset</p>}
-                        {re.note && <p className="mt-1 text-sm text-muted">{re.note}</p>}
-                      </div>
-                      <span className="text-muted" aria-hidden>›</span>
-                    </Card>
+                  <Link
+                    to={`/cviky/${encodeURIComponent(re.exerciseId)}`}
+                    className={`block h-full overflow-hidden rounded-2xl bg-card ${re.supersetId ? 'ring-2 ring-accent' : ''}`}
+                  >
+                    {!!ex?.images && (
+                      <img
+                        src={`${import.meta.env.BASE_URL}exercises/${re.exerciseId}-0.webp`}
+                        alt=""
+                        loading="lazy"
+                        className="aspect-[4/3] w-full object-cover"
+                        onError={(e) => (e.currentTarget.style.display = 'none')}
+                      />
+                    )}
+                    <div className="p-3">
+                      <p className="text-xs font-semibold text-muted">{i + 1}.</p>
+                      <p className="font-semibold leading-tight">{lib.nameOf(re.exerciseId, re.exerciseName)}</p>
+                      <p className="mt-1 text-sm text-muted">
+                        {fmtSets(re.sets)}
+                        {ex ? ` · ${muscleLabel(ex.primaryMuscle)}` : ''}
+                      </p>
+                      {re.supersetId && <p className="mt-1 text-xs font-semibold text-accent">Superset</p>}
+                      {re.note && <p className="mt-1 text-sm text-muted">{re.note}</p>}
+                    </div>
                   </Link>
                 </li>
               );

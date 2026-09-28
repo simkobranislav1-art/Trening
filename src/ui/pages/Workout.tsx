@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { doneSetCount, workoutVolume } from '../../domain/calc';
 import { plannedRoutineId } from '../../domain/calendar';
-import { fmtClock, fmtNumber, fmtVolume } from '../../domain/format';
+import { fmtClock, fmtNumber, fmtSets, fmtVolume } from '../../domain/format';
 import { buildHistoryIndex, type HistoryEntry } from '../../domain/stats';
 import { suggestNext } from '../../domain/suggest';
 import type { AppSettings, Exercise, Routine, SetType, WorkoutExercise, WorkoutSession, WorkoutSet } from '../../domain/types';
@@ -20,7 +20,6 @@ import {
   unfinishedSetCount,
 } from '../../domain/workout';
 import { Button, Card, Chip, EmptyState, ErrorNote, SectionTitle, Spinner, Tag } from '../components/basic';
-import { ExerciseThumb } from '../components/ExerciseImages';
 import { ExercisePicker } from '../components/ExercisePicker';
 import { NumberField } from '../components/NumberField';
 import { PlateCalculator } from '../components/PlateCalculator';
@@ -94,7 +93,6 @@ function StartWorkout() {
 }
 
 function RoutineCard({ routine, onStart, plannedToday }: { routine: Routine; onStart: () => void; plannedToday?: boolean }) {
-  const lib = useLibrary();
   return (
     <Card>
       <div className="flex items-start justify-between gap-3">
@@ -104,22 +102,10 @@ function RoutineCard({ routine, onStart, plannedToday }: { routine: Routine; onS
             {routine.isSample && <Tag>Ukážka</Tag>}
             {plannedToday && <Tag tone="accent">Dnes</Tag>}
           </div>
-          {routine.exercises.length > 0 && (
-            <div className="mt-2 flex gap-1.5 overflow-hidden">
-              {routine.exercises.slice(0, 4).map((e) => (
-                <ExerciseThumb key={e.id} id={e.exerciseId} count={lib?.byId(e.exerciseId)?.images ?? 0} />
-              ))}
-              {routine.exercises.length > 4 && (
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-card2 text-sm font-semibold text-muted">
-                  +{routine.exercises.length - 4}
-                </span>
-              )}
-            </div>
-          )}
-          <p className="mt-2 line-clamp-2 text-sm text-muted">
-            {routine.exercises.map((e) => lib?.nameOf(e.exerciseId, e.exerciseName) ?? e.exerciseName).join(', ') || 'Bez cvikov'}
+          <p className="mt-1 text-muted">
+            {routine.exercises.length} cvikov · {fmtSets(routine.exercises.reduce((a, e) => a + e.sets, 0))}
           </p>
-          <p className="mt-1 text-sm font-medium text-accent">Zobraziť cviky ›</p>
+          <p className="mt-2 text-sm font-medium text-accent">Zobraziť cviky a fotky ›</p>
         </Link>
         <Link
           to={`/rutiny/${routine.id}`}
