@@ -8,6 +8,7 @@ import {
 } from '../../domain/exercises';
 import type { Exercise } from '../../domain/types';
 import { Chip, EmptyState, Tag } from './basic';
+import { ExerciseThumb } from './ExerciseImages';
 
 /** Vyhľadávanie a filtre + zoznam cvikov. Ťuknutie volá `onPick`. */
 export function ExerciseBrowser({
@@ -83,6 +84,7 @@ export function ExerciseBrowser({
                     isSel ? 'bg-accent/15' : ''
                   }`}
                 >
+                  <ExerciseThumb id={e.id} count={e.images ?? 0} />
                   <span className="min-w-0 flex-1">
                     <span className="block truncate font-semibold">{e.name}</span>
                     <span className="block truncate text-sm text-muted">

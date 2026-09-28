@@ -17,7 +17,8 @@
    "Po skončení vráť tyč do stojana."
   ],
   "unilateral": false,
-  "nameEn": "Barbell Bench Press - Medium Grip"
+  "nameEn": "Barbell Bench Press - Medium Grip",
+  "images": 2
  },
  {
   "id": "fed-barbell-incline-bench-press-medium-grip",
@@ -37,7 +38,8 @@
    "Po skončení vráť tyč do stojana."
   ],
   "unilateral": false,
-  "nameEn": "Barbell Incline Bench Press - Medium Grip"
+  "nameEn": "Barbell Incline Bench Press - Medium Grip",
+  "images": 2
  },
  {
   "id": "fed-decline-barbell-bench-press",
@@ -58,7 +60,8 @@
    "Po skončení vráť tyč do stojana."
   ],
   "unilateral": false,
-  "nameEn": "Decline Barbell Bench Press"
+  "nameEn": "Decline Barbell Bench Press",
+  "images": 2
  },
  {
   "id": "fed-dumbbell-bench-press",
@@ -78,7 +81,8 @@
    "Opakuj pohyb predpísaný počet opakovaní podľa tréningového plánu."
   ],
   "unilateral": false,
-  "nameEn": "Dumbbell Bench Press"
+  "nameEn": "Dumbbell Bench Press",
+  "images": 2
  },
  {
   "id": "fed-incline-dumbbell-press",
@@ -100,7 +104,8 @@
    "Po skončení polož jednoručky späť na stehná a potom na zem. Je to najbezpečnejší spôsob, ako jednoručky odložiť."
   ],
   "unilateral": false,
-  "nameEn": "Incline Dumbbell Press"
+  "nameEn": "Incline Dumbbell Press",
+  "images": 2
  },
  {
   "id": "fed-dumbbell-flyes",
@@ -117,7 +122,8 @@
    "V kontrahovanej polohe na sekundu vydrž a opakuj pohyb predpísaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Dumbbell Flyes"
+  "nameEn": "Dumbbell Flyes",
+  "images": 2
  },
  {
   "id": "fed-butterfly",
@@ -134,7 +140,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Butterfly"
+  "nameEn": "Butterfly",
+  "images": 2
  },
  {
   "id": "fed-cable-crossover",
@@ -153,7 +160,8 @@
    "Vo východiskovej polohe na sekundu vydrž a opakuj pohyb predpísaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Cable Crossover"
+  "nameEn": "Cable Crossover",
+  "images": 2
  },
  {
   "id": "fed-pushups",
@@ -172,7 +180,8 @@
    "Po krátkej pauze v hornej kontrahovanej polohe sa môžeš znova spúšťať nadol, podľa potrebného počtu opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Pushups"
+  "nameEn": "Pushups",
+  "images": 2
  },
  {
   "id": "fed-dips-chest-version",
@@ -191,7 +200,8 @@
    "Opakuj pohyb predpísaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Dips - Chest Version"
+  "nameEn": "Dips - Chest Version",
+  "images": 2
  },
  {
   "id": "fed-barbell-shoulder-press",
@@ -211,7 +221,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Barbell Shoulder Press"
+  "nameEn": "Barbell Shoulder Press",
+  "images": 2
  },
  {
   "id": "fed-dumbbell-shoulder-press",
@@ -231,7 +242,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Dumbbell Shoulder Press"
+  "nameEn": "Dumbbell Shoulder Press",
+  "images": 2
  },
  {
   "id": "fed-arnold-dumbbell-press",
@@ -250,7 +262,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Arnold Dumbbell Press"
+  "nameEn": "Arnold Dumbbell Press",
+  "images": 2
  },
  {
   "id": "fed-side-lateral-raise",
@@ -266,7 +279,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Side Lateral Raise"
+  "nameEn": "Side Lateral Raise",
+  "images": 2
  },
  {
   "id": "fed-front-dumbbell-raise",
@@ -282,7 +296,8 @@
    "Takto pokračuj v striedaní, kým neodcvičíš odporúčaný počet opakovaní pre každú ruku."
   ],
   "unilateral": false,
-  "nameEn": "Front Dumbbell Raise"
+  "nameEn": "Front Dumbbell Raise",
+  "images": 2
  },
  {
   "id": "fed-reverse-flyes",
@@ -300,7 +315,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Reverse Flyes"
+  "nameEn": "Reverse Flyes",
+  "images": 2
  },
  {
   "id": "fed-face-pull",
@@ -315,7 +331,8 @@
    "Postav sa čelom k vysokej kladke s lanom alebo dvoma rukoväťami a ťahaj záťaž priamo k tvári, pričom ruky od seba oddiaľuj. Nadlaktia drž rovnobežne so zemou."
   ],
   "unilateral": false,
-  "nameEn": "Face Pull"
+  "nameEn": "Face Pull",
+  "images": 2
  },
  {
   "id": "fed-upright-barbell-row",
@@ -333,7 +350,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Upright Barbell Row"
+  "nameEn": "Upright Barbell Row",
+  "images": 2
  },
  {
   "id": "fed-barbell-shrug",
@@ -349,7 +367,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Barbell Shrug"
+  "nameEn": "Barbell Shrug",
+  "images": 2
  },
  {
   "id": "fed-dumbbell-shrug",
@@ -365,7 +384,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Dumbbell Shrug"
+  "nameEn": "Dumbbell Shrug",
+  "images": 2
  },
  {
   "id": "fed-pullups",
@@ -385,7 +405,8 @@
    "Opakuj pohyb predpísaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Pullups"
+  "nameEn": "Pullups",
+  "images": 2
  },
  {
   "id": "fed-chin-up",
@@ -406,7 +427,8 @@
    "Opakuj pohyb predpísaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Chin-Up"
+  "nameEn": "Chin-Up",
+  "images": 2
  },
  {
   "id": "fed-wide-grip-lat-pulldown",
@@ -428,7 +450,8 @@
    "Opakuj pohyb predpísaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Wide-Grip Lat Pulldown"
+  "nameEn": "Wide-Grip Lat Pulldown",
+  "images": 2
  },
  {
   "id": "fed-close-grip-front-lat-pulldown",
@@ -450,7 +473,8 @@
    "Opakuj pohyb predpísaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Close-Grip Front Lat Pulldown"
+  "nameEn": "Close-Grip Front Lat Pulldown",
+  "images": 2
  },
  {
   "id": "fed-v-bar-pulldown",
@@ -472,7 +496,8 @@
    "Opakuj predpísaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "V-Bar Pulldown"
+  "nameEn": "V-Bar Pulldown",
+  "images": 2
  },
  {
   "id": "fed-bent-over-barbell-row",
@@ -492,7 +517,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Bent Over Barbell Row"
+  "nameEn": "Bent Over Barbell Row",
+  "images": 2
  },
  {
   "id": "fed-one-arm-dumbbell-row",
@@ -515,7 +541,8 @@
    "Vymeň strany a zopakuj s druhou rukou."
   ],
   "unilateral": true,
-  "nameEn": "One-Arm Dumbbell Row"
+  "nameEn": "One-Arm Dumbbell Row",
+  "images": 2
  },
  {
   "id": "fed-seated-cable-rows",
@@ -536,7 +563,8 @@
    "Zopakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Seated Cable Rows"
+  "nameEn": "Seated Cable Rows",
+  "images": 2
  },
  {
   "id": "fed-t-bar-row-with-handle",
@@ -556,7 +584,8 @@
    "Po krátkej pauze sa vráť do východiskovej polohy."
   ],
   "unilateral": false,
-  "nameEn": "T-Bar Row with Handle"
+  "nameEn": "T-Bar Row with Handle",
+  "images": 2
  },
  {
   "id": "fed-straight-arm-pulldown",
@@ -573,7 +602,8 @@
    "Zopakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Straight-Arm Pulldown"
+  "nameEn": "Straight-Arm Pulldown",
+  "images": 2
  },
  {
   "id": "fed-barbell-deadlift",
@@ -599,7 +629,8 @@
    "Vykonaj počet opakovaní predpísaný v programe."
   ],
   "unilateral": false,
-  "nameEn": "Barbell Deadlift"
+  "nameEn": "Barbell Deadlift",
+  "images": 2
  },
  {
   "id": "fed-romanian-deadlift",
@@ -620,7 +651,8 @@
    "Zopakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Romanian Deadlift"
+  "nameEn": "Romanian Deadlift",
+  "images": 2
  },
  {
   "id": "fed-stiff-legged-barbell-deadlift",
@@ -640,7 +672,8 @@
    "Zopakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Stiff-Legged Barbell Deadlift"
+  "nameEn": "Stiff-Legged Barbell Deadlift",
+  "images": 2
  },
  {
   "id": "fed-sumo-deadlift",
@@ -664,7 +697,8 @@
    "Vráť záťaž na zem ohnutím v bokoch a kontrolovaným spúšťaním."
   ],
   "unilateral": false,
-  "nameEn": "Sumo Deadlift"
+  "nameEn": "Sumo Deadlift",
+  "images": 2
  },
  {
   "id": "fed-hyperextensions-back-extensions",
@@ -685,7 +719,8 @@
    "Zopakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Hyperextensions (Back Extensions)"
+  "nameEn": "Hyperextensions (Back Extensions)",
+  "images": 2
  },
  {
   "id": "fed-good-morning",
@@ -704,7 +739,8 @@
    "Pohyb otoč vystretím bokov pomocou sedacích a zadných stehenných svalov. Pokračuj, kým sa nevrátiš do východiskovej polohy."
   ],
   "unilateral": false,
-  "nameEn": "Good Morning"
+  "nameEn": "Good Morning",
+  "images": 2
  },
  {
   "id": "fed-barbell-curl",
@@ -723,7 +759,8 @@
    "Zopakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Barbell Curl"
+  "nameEn": "Barbell Curl",
+  "images": 2
  },
  {
   "id": "fed-dumbbell-bicep-curl",
@@ -741,7 +778,8 @@
    "Zopakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Dumbbell Bicep Curl"
+  "nameEn": "Dumbbell Bicep Curl",
+  "images": 2
  },
  {
   "id": "fed-alternate-hammer-curl",
@@ -761,7 +799,8 @@
    "Takto pokračuj striedavo odporúčaný počet opakovaní."
   ],
   "unilateral": true,
-  "nameEn": "Alternate Hammer Curl"
+  "nameEn": "Alternate Hammer Curl",
+  "images": 2
  },
  {
   "id": "fed-hammer-curls",
@@ -778,7 +817,8 @@
    "Zopakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Hammer Curls"
+  "nameEn": "Hammer Curls",
+  "images": 2
  },
  {
   "id": "fed-preacher-curl",
@@ -795,7 +835,8 @@
    "Zopakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Preacher Curl"
+  "nameEn": "Preacher Curl",
+  "images": 2
  },
  {
   "id": "fed-concentration-curls",
@@ -814,7 +855,8 @@
    "Zopakuj odporúčaný počet opakovaní. Potom zopakuj pohyb s ľavou rukou."
   ],
   "unilateral": true,
-  "nameEn": "Concentration Curls"
+  "nameEn": "Concentration Curls",
+  "images": 2
  },
  {
   "id": "fed-incline-dumbbell-curl",
@@ -830,7 +872,8 @@
    "Zopakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Incline Dumbbell Curl"
+  "nameEn": "Incline Dumbbell Curl",
+  "images": 2
  },
  {
   "id": "fed-cable-hammer-curls-rope-attachment",
@@ -848,7 +891,8 @@
    "Zopakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Cable Hammer Curls - Rope Attachment"
+  "nameEn": "Cable Hammer Curls - Rope Attachment",
+  "images": 2
  },
  {
   "id": "fed-ez-bar-curl",
@@ -865,7 +909,8 @@
    "Zopakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "EZ-Bar Curl"
+  "nameEn": "EZ-Bar Curl",
+  "images": 2
  },
  {
   "id": "fed-triceps-pushdown",
@@ -882,7 +927,8 @@
    "Zopakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Triceps Pushdown"
+  "nameEn": "Triceps Pushdown",
+  "images": 2
  },
  {
   "id": "fed-triceps-pushdown-rope-attachment",
@@ -899,7 +945,8 @@
    "Zopakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Triceps Pushdown - Rope Attachment"
+  "nameEn": "Triceps Pushdown - Rope Attachment",
+  "images": 2
  },
  {
   "id": "fed-lying-triceps-press",
@@ -916,7 +963,8 @@
    "Zopakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Lying Triceps Press"
+  "nameEn": "Lying Triceps Press",
+  "images": 2
  },
  {
   "id": "fed-standing-dumbbell-triceps-extension",
@@ -933,7 +981,8 @@
    "Zopakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Standing Dumbbell Triceps Extension"
+  "nameEn": "Standing Dumbbell Triceps Extension",
+  "images": 2
  },
  {
   "id": "fed-close-grip-barbell-bench-press",
@@ -953,7 +1002,8 @@
    "Po skončení polož tyč späť na stojan."
   ],
   "unilateral": false,
-  "nameEn": "Close-Grip Barbell Bench Press"
+  "nameEn": "Close-Grip Barbell Bench Press",
+  "images": 2
  },
  {
   "id": "fed-bench-dips",
@@ -972,7 +1022,8 @@
    "Zopakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Bench Dips"
+  "nameEn": "Bench Dips",
+  "images": 2
  },
  {
   "id": "fed-cable-one-arm-tricep-extension",
@@ -990,7 +1041,8 @@
    "Zopakuj odporúčaný počet opakovaní a potom vykonaj rovnaký pohyb s druhou rukou."
   ],
   "unilateral": true,
-  "nameEn": "Cable One Arm Tricep Extension"
+  "nameEn": "Cable One Arm Tricep Extension",
+  "images": 2
  },
  {
   "id": "fed-barbell-full-squat",
@@ -1013,7 +1065,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Barbell Full Squat"
+  "nameEn": "Barbell Full Squat",
+  "images": 2
  },
  {
   "id": "fed-barbell-squat",
@@ -1036,7 +1089,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Barbell Squat"
+  "nameEn": "Barbell Squat",
+  "images": 2
  },
  {
   "id": "fed-front-barbell-squat",
@@ -1058,7 +1112,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Front Barbell Squat"
+  "nameEn": "Front Barbell Squat",
+  "images": 2
  },
  {
   "id": "fed-goblet-squat",
@@ -1078,7 +1133,8 @@
    "V dolnej polohe sa zastav a lakťami tlač kolená von. Vráť sa do východiskovej polohy a opakuj 10 – 20 opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Goblet Squat"
+  "nameEn": "Goblet Squat",
+  "images": 2
  },
  {
   "id": "fed-leg-press",
@@ -1099,7 +1155,8 @@
    "Opakuj odporúčaný počet opakovaní a po skončení nezabudni riadne zaistiť bezpečnostné poistky. Nechceš, aby ti plne naložená platforma spadla na telo."
   ],
   "unilateral": false,
-  "nameEn": "Leg Press"
+  "nameEn": "Leg Press",
+  "images": 2
  },
  {
   "id": "fed-hack-squat",
@@ -1122,7 +1179,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Hack Squat"
+  "nameEn": "Hack Squat",
+  "images": 2
  },
  {
   "id": "fed-barbell-lunge",
@@ -1143,7 +1201,8 @@
    "Opakuj pohyb odporúčaný počet opakovaní a potom cvič s ľavou nohou."
   ],
   "unilateral": true,
-  "nameEn": "Barbell Lunge"
+  "nameEn": "Barbell Lunge",
+  "images": 2
  },
  {
   "id": "fed-dumbbell-lunges",
@@ -1163,7 +1222,8 @@
    "Opakuj pohyb odporúčaný počet opakovaní a potom cvič s ľavou nohou."
   ],
   "unilateral": true,
-  "nameEn": "Dumbbell Lunges"
+  "nameEn": "Dumbbell Lunges",
+  "images": 2
  },
  {
   "id": "fed-split-squat-with-dumbbells",
@@ -1182,7 +1242,8 @@
    "V dolnej polohe sa odraz cez pätu, vystri koleno aj bedro a vráť sa do východiskovej polohy."
   ],
   "unilateral": true,
-  "nameEn": "Split Squat with Dumbbells"
+  "nameEn": "Split Squat with Dumbbells",
+  "images": 2
  },
  {
   "id": "fed-bodyweight-squat",
@@ -1200,7 +1261,8 @@
    "Ak vládzeš, pokračuj do plnej hĺbky a rýchlo pohyb otoč späť do východiskovej polohy. Pri drepe drž hlavu a hruď hore a tlač kolená von."
   ],
   "unilateral": false,
-  "nameEn": "Bodyweight Squat"
+  "nameEn": "Bodyweight Squat",
+  "images": 2
  },
  {
   "id": "fed-leg-extensions",
@@ -1216,7 +1278,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Leg Extensions"
+  "nameEn": "Leg Extensions",
+  "images": 2
  },
  {
   "id": "fed-lying-leg-curls",
@@ -1232,7 +1295,8 @@
    "S nádychom vráť nohy do východiskovej polohy. Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Lying Leg Curls"
+  "nameEn": "Lying Leg Curls",
+  "images": 2
  },
  {
   "id": "fed-seated-leg-curl",
@@ -1249,7 +1313,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Seated Leg Curl"
+  "nameEn": "Seated Leg Curl",
+  "images": 2
  },
  {
   "id": "fed-standing-calf-raises",
@@ -1266,7 +1331,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Standing Calf Raises"
+  "nameEn": "Standing Calf Raises",
+  "images": 2
  },
  {
   "id": "fed-seated-calf-raise",
@@ -1284,7 +1350,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Seated Calf Raise"
+  "nameEn": "Seated Calf Raise",
+  "images": 2
  },
  {
   "id": "fed-barbell-hip-thrust",
@@ -1302,7 +1369,8 @@
    "Začni pohyb tlakom cez chodidlá a vystieraj boky zvislo nahor cez tyč. Tvoju váhu nesú lopatky a chodidlá. Vystri sa čo najviac, potom pohyb otoč späť do východiskovej polohy."
   ],
   "unilateral": false,
-  "nameEn": "Barbell Hip Thrust"
+  "nameEn": "Barbell Hip Thrust",
+  "images": 2
  },
  {
   "id": "fed-barbell-glute-bridge",
@@ -1320,7 +1388,8 @@
    "Vystri sa čo najviac, potom pohyb otoč späť do východiskovej polohy."
   ],
   "unilateral": false,
-  "nameEn": "Barbell Glute Bridge"
+  "nameEn": "Barbell Glute Bridge",
+  "images": 2
  },
  {
   "id": "fed-dumbbell-step-ups",
@@ -1340,7 +1409,8 @@
    "Opakuj s pravou nohou odporúčaný počet opakovaní a potom cvič s ľavou nohou."
   ],
   "unilateral": true,
-  "nameEn": "Dumbbell Step Ups"
+  "nameEn": "Dumbbell Step Ups",
+  "images": 2
  },
  {
   "id": "fed-crunches",
@@ -1358,7 +1428,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Crunches"
+  "nameEn": "Crunches",
+  "images": 2
  },
  {
   "id": "fed-sit-up",
@@ -1375,7 +1446,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Sit-Up"
+  "nameEn": "Sit-Up",
+  "images": 2
  },
  {
   "id": "fed-plank",
@@ -1389,7 +1461,8 @@
    "Telo drž stále rovné a v tejto polohe vydrž čo najdlhšie. Na zvýšenie náročnosti môžeš zdvihnúť ruku alebo nohu."
   ],
   "unilateral": false,
-  "nameEn": "Plank"
+  "nameEn": "Plank",
+  "images": 2
  },
  {
   "id": "fed-hanging-leg-raise",
@@ -1405,7 +1478,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Hanging Leg Raise"
+  "nameEn": "Hanging Leg Raise",
+  "images": 2
  },
  {
   "id": "fed-cable-crunch",
@@ -1423,7 +1497,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Cable Crunch"
+  "nameEn": "Cable Crunch",
+  "images": 2
  },
  {
   "id": "fed-russian-twist",
@@ -1442,7 +1517,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Russian Twist"
+  "nameEn": "Russian Twist",
+  "images": 2
  },
  {
   "id": "fed-ab-roller",
@@ -1460,7 +1536,8 @@
    "Po pauze v natiahnutej polohe sa začni sťahovať späť do východiskovej polohy a vydychuj. Tip: Choď pomaly a brucho drž stále napnuté."
   ],
   "unilateral": false,
-  "nameEn": "Ab Roller"
+  "nameEn": "Ab Roller",
+  "images": 2
  },
  {
   "id": "fed-mountain-climbers",
@@ -1478,7 +1555,8 @@
    "Explozívne vymeň polohy nôh: pokrčenú nohu vystri, kým nie je rovná a opretá o špičku, a druhú nohu prines dopredu s pokrčeným bedrom a kolenom. Opakuj striedavo 20 – 30 sekúnd."
   ],
   "unilateral": false,
-  "nameEn": "Mountain Climbers"
+  "nameEn": "Mountain Climbers",
+  "images": 2
  },
  {
   "id": "fed-one-arm-kettlebell-swings",
@@ -1494,7 +1572,8 @@
   "category": "strength",
   "instructions": [],
   "unilateral": true,
-  "nameEn": "One-Arm Kettlebell Swings"
+  "nameEn": "One-Arm Kettlebell Swings",
+  "images": 2
  },
  {
   "id": "fed-push-press",
@@ -1508,7 +1587,8 @@
   "category": "olympic weightlifting",
   "instructions": [],
   "unilateral": false,
-  "nameEn": "Push Press"
+  "nameEn": "Push Press",
+  "images": 2
  },
  {
   "id": "fed-machine-shoulder-military-press",
@@ -1527,7 +1607,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Machine Shoulder (Military) Press"
+  "nameEn": "Machine Shoulder (Military) Press",
+  "images": 2
  },
  {
   "id": "fed-leverage-chest-press",
@@ -1546,7 +1627,8 @@
    "Po krátkej pauze v hornej polohe vráť záťaž tesne nad východiskovú polohu. Záťaž nespúšťaj až na doraz, kým nedokončíš sériu, aby svaly zostali pod napätím."
   ],
   "unilateral": false,
-  "nameEn": "Leverage Chest Press"
+  "nameEn": "Leverage Chest Press",
+  "images": 2
  },
  {
   "id": "fed-smith-machine-squat",
@@ -1569,7 +1651,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Smith Machine Squat"
+  "nameEn": "Smith Machine Squat",
+  "images": 2
  },
  {
   "id": "fed-smith-machine-bench-press",
@@ -1589,7 +1672,8 @@
    "Keď skončíš, zaveš tyč späť do držiakov."
   ],
   "unilateral": false,
-  "nameEn": "Smith Machine Bench Press"
+  "nameEn": "Smith Machine Bench Press",
+  "images": 2
  },
  {
   "id": "fed-reverse-barbell-curl",
@@ -1607,7 +1691,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Reverse Barbell Curl"
+  "nameEn": "Reverse Barbell Curl",
+  "images": 2
  },
  {
   "id": "fed-farmer-s-walk",
@@ -1629,7 +1714,8 @@
    "Choď krátkymi rýchlymi krokmi a nezabúdaj dýchať. Prejdi určenú vzdialenosť, zvyčajne 15 – 30 metrov, čo najrýchlejšie."
   ],
   "unilateral": false,
-  "nameEn": "Farmer's Walk"
+  "nameEn": "Farmer's Walk",
+  "images": 2
  },
  {
   "id": "fed-incline-dumbbell-flyes",
@@ -1649,7 +1735,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Incline Dumbbell Flyes"
+  "nameEn": "Incline Dumbbell Flyes",
+  "images": 2
  },
  {
   "id": "fed-low-cable-crossover",
@@ -1667,7 +1754,8 @@
    "Po krátkej pauze vráť ruky do východiskovej polohy."
   ],
   "unilateral": false,
-  "nameEn": "Low Cable Crossover"
+  "nameEn": "Low Cable Crossover",
+  "images": 2
  },
  {
   "id": "fed-inverted-row",
@@ -1686,7 +1774,8 @@
    "Opakuj požadovaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Inverted Row"
+  "nameEn": "Inverted Row",
+  "images": 2
  },
  {
   "id": "fed-dumbbell-rear-lunge",
@@ -1706,7 +1795,8 @@
    "Teraz zopakuj s druhou nohou."
   ],
   "unilateral": true,
-  "nameEn": "Dumbbell Rear Lunge"
+  "nameEn": "Dumbbell Rear Lunge",
+  "images": 2
  },
  {
   "id": "fed-reverse-crunch",
@@ -1723,7 +1813,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Reverse Crunch"
+  "nameEn": "Reverse Crunch",
+  "images": 2
  },
  {
   "id": "fed-seated-dumbbell-press",
@@ -1743,7 +1834,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Seated Dumbbell Press"
+  "nameEn": "Seated Dumbbell Press",
+  "images": 2
  },
  {
   "id": "fed-seated-barbell-military-press",
@@ -1762,7 +1854,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Seated Barbell Military Press"
+  "nameEn": "Seated Barbell Military Press",
+  "images": 2
  },
  {
   "id": "fed-bent-over-two-dumbbell-row",
@@ -1782,7 +1875,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Bent Over Two-Dumbbell Row"
+  "nameEn": "Bent Over Two-Dumbbell Row",
+  "images": 2
  },
  {
   "id": "fed-reverse-machine-flyes",
@@ -1798,7 +1892,8 @@
    "V zadnej polohe sa zastav a pomaly vráť záťaž do východiskovej polohy."
   ],
   "unilateral": false,
-  "nameEn": "Reverse Machine Flyes"
+  "nameEn": "Reverse Machine Flyes",
+  "images": 2
  },
  {
   "id": "fed-leverage-iso-row",
@@ -1816,7 +1911,8 @@
    "V koncovej polohe sa zastav a potom pomaly vráť rúčky do východiskovej polohy. Pri viacerých opakovaniach záťaž nespúšťaj úplne na doraz, aby zaťažované svaly zostali pod napätím."
   ],
   "unilateral": false,
-  "nameEn": "Leverage Iso Row"
+  "nameEn": "Leverage Iso Row",
+  "images": 2
  },
  {
   "id": "fed-machine-bicep-curl",
@@ -1832,7 +1928,8 @@
    "Záťaž nespúšťaj úplne na doraz, kým nedokončíš sériu, aby zaťažované svaly zostali pod napätím."
   ],
   "unilateral": false,
-  "nameEn": "Machine Bicep Curl"
+  "nameEn": "Machine Bicep Curl",
+  "images": 2
  },
  {
   "id": "fed-cable-shoulder-press",
@@ -1850,7 +1947,8 @@
    "Po pauze v hornej polohe sa vráť do východiskovej polohy a opakuj."
   ],
   "unilateral": false,
-  "nameEn": "Cable Shoulder Press"
+  "nameEn": "Cable Shoulder Press",
+  "images": 2
  },
  {
   "id": "fed-rack-pulls",
@@ -1870,7 +1968,8 @@
    "Vráť záťaž na kolíky a opakuj."
   ],
   "unilateral": false,
-  "nameEn": "Rack Pulls"
+  "nameEn": "Rack Pulls",
+  "images": 2
  },
  {
   "id": "fed-palms-up-barbell-wrist-curl-over-a-bench",
@@ -1889,7 +1988,8 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Palms-Up Barbell Wrist Curl Over A Bench"
+  "nameEn": "Palms-Up Barbell Wrist Curl Over A Bench",
+  "images": 2
  },
  {
   "id": "fed-cable-wrist-curl",
@@ -1907,6 +2007,7 @@
    "Opakuj odporúčaný počet opakovaní."
   ],
   "unilateral": false,
-  "nameEn": "Cable Wrist Curl"
+  "nameEn": "Cable Wrist Curl",
+  "images": 2
  }
 ]

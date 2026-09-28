@@ -99,3 +99,14 @@ describe('ukážkové rutiny', () => {
     expect(ids.length).toBeGreaterThanOrEqual(95);
   });
 });
+
+describe('fotky cvikov', () => {
+  it('každá deklarovaná fotka existuje v public/exercises', async () => {
+    const { existsSync } = await import('node:fs');
+    for (const e of BUILTIN_EXERCISES) {
+      for (let i = 0; i < (e.images ?? 0); i++) {
+        expect(existsSync(`public/exercises/${e.id}-${i}.webp`), `${e.id}-${i}`).toBe(true);
+      }
+    }
+  });
+});

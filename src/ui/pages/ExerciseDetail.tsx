@@ -7,6 +7,7 @@ import { fmtDate, fmtKg, fmtNumber } from '../../domain/format';
 import { buildHistoryIndex, currentRecords, exerciseStats, progressSeries } from '../../domain/stats';
 import type { RecordKind, WorkoutSet } from '../../domain/types';
 import { Button, Card, EmptyState, SectionTitle, Spinner, Tag } from '../components/basic';
+import { ExerciseImages } from '../components/ExerciseImages';
 import { LineChart } from '../components/LineChart';
 import { PageHeader } from '../components/PageHeader';
 import { useFinishedSessions, useLibrary, useRecords, useSettings } from '../hooks/data';
@@ -66,6 +67,7 @@ export function ExerciseDetail() {
         }
       />
       <div className="px-4 pb-8">
+        {ex && !!ex.images && <ExerciseImages id={ex.id} count={ex.images} name={ex.name} />}
         {ex && (
           <div className="mb-4 flex flex-wrap gap-2">
             <Tag tone="accent">{muscleLabel(ex.primaryMuscle)}</Tag>

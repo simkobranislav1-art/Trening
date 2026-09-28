@@ -3,7 +3,7 @@ import { Card, SectionTitle } from '../components/basic';
 import { PageHeader } from '../components/PageHeader';
 
 const LICENSES = [
-  ['Free Exercise DB', 'Unlicense (public domain) – zoznam cvikov a návody, github.com/yuhonas/free-exercise-db. Názvy a návody sú preložené do slovenčiny.'],
+  ['Free Exercise DB', 'Unlicense (public domain) – zoznam cvikov a návody, github.com/yuhonas/free-exercise-db. Názvy a návody sú preložené do slovenčiny, fotky zmenšené.'],
   ['React, React Router', 'MIT'],
   ['Dexie.js', 'Apache 2.0'],
   ['Tailwind CSS, Vite, Workbox', 'MIT'],
@@ -62,8 +62,7 @@ export function About() {
           ))}
         </Card>
         <p className="mt-3 px-1 text-sm text-muted">
-          Knižnica obsahuje {BUILTIN_EXERCISES.length} cvikov vybraných z Free Exercise DB. Aplikácia
-          nepoužíva žiadne obrázky ani médiá tretích strán.
+          Knižnica obsahuje {BUILTIN_EXERCISES.length} cvikov vybraných z Free Exercise DB. Fotky cvikov sú z toho istého datasetu (public domain). Aplikácia nepoužíva žiadne iné médiá tretích strán.
         </p>
       </div>
     </>

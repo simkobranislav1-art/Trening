@@ -19,6 +19,8 @@ export interface Exercise {
   instructions: string[];
   unilateral: boolean;
   custom: boolean;
+  /** Počet fotiek vo /exercises/<id>-<n>.webp (vstavané cviky). */
+  images?: number;
 }
 
 /** Vlastný cvik uložený v databáze. */
