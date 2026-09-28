@@ -1,0 +1,1912 @@
+[
+ {
+  "id": "fed-barbell-bench-press-medium-grip",
+  "name": "Tlak na lavičke s činkou - stredný úchop",
+  "primaryMuscle": "chest",
+  "secondaryMuscles": [
+   "shoulders",
+   "triceps"
+  ],
+  "equipment": "barbell",
+  "category": "strength",
+  "instructions": [
+   "Ľahni si na rovnú lavičku. Stredným úchopom (takým, pri ktorom majú predlaktia a nadlaktia v strede pohybu uhol 90 stupňov) zdvihni tyč zo stojana a drž ju priamo nad sebou so zamknutými rukami. Toto je východisková poloha.",
+   "Z východiskovej polohy sa nadýchni a pomaly spúšťaj tyč, kým sa nedotkne stredu hrudníka.",
+   "Po krátkej pauze zatlač tyč späť do východiskovej polohy a vydýchni. Sústreď sa na tlak hrudnými svalmi. Zamkni ruky a v hornej kontrahovanej polohe stiahni hrudník, na sekundu vydrž a potom začni pomaly klesať. Tip: Spúšťanie záťaže by malo trvať približne dvakrát dlhšie ako zdvíhanie.",
+   "Opakuj pohyb predpísaný počet opakovaní.",
+   "Po skončení vráť tyč do stojana."
+  ],
+  "unilateral": false,
+  "nameEn": "Barbell Bench Press - Medium Grip"
+ },
+ {
+  "id": "fed-barbell-incline-bench-press-medium-grip",
+  "name": "Tlak s činkou na šikmej lavičke nahor - stredný úchop",
+  "primaryMuscle": "chest",
+  "secondaryMuscles": [
+   "shoulders",
+   "triceps"
+  ],
+  "equipment": "barbell",
+  "category": "strength",
+  "instructions": [
+   "Ľahni si na šikmú lavičku nahor. Stredným úchopom (takým, pri ktorom majú predlaktia a nadlaktia v strede pohybu uhol 90 stupňov) zdvihni tyč zo stojana a drž ju priamo nad sebou so zamknutými rukami. Toto je východisková poloha.",
+   "Pri nádychu pomaly klesaj, kým tyč nepocítiš na hornej časti hrudníka.",
+   "Po sekundovej pauze vráť tyč do východiskovej polohy a vydýchni, pričom tlačíš hrudnými svalmi. V kontrahovanej polohe zamkni ruky, stiahni hrudník, na sekundu vydrž a potom začni pomaly klesať. Tip: Klesanie by malo trvať aspoň dvakrát dlhšie ako zdvíhanie.",
+   "Opakuj pohyb predpísaný počet opakovaní.",
+   "Po skončení vráť tyč do stojana."
+  ],
+  "unilateral": false,
+  "nameEn": "Barbell Incline Bench Press - Medium Grip"
+ },
+ {
+  "id": "fed-decline-barbell-bench-press",
+  "name": "Tlak s činkou na šikmej lavičke nadol",
+  "primaryMuscle": "chest",
+  "secondaryMuscles": [
+   "shoulders",
+   "triceps"
+  ],
+  "equipment": "barbell",
+  "category": "strength",
+  "instructions": [
+   "Zaisti si nohy na konci lavičky so sklonom nadol a pomaly si ľahni.",
+   "Stredným úchopom (takým, pri ktorom majú predlaktia a nadlaktia v strede pohybu uhol 90 stupňov) zdvihni tyč zo stojana a drž ju priamo nad sebou so zamknutými rukami. Ruky majú byť kolmo na podlahu. Toto je východisková poloha. Tip: Na ochranu rotátorovej manžety je najlepšie, ak ti pri zdvíhaní tyče zo stojana pomáha spotter.",
+   "Pri nádychu pomaly klesaj, kým tyč nepocítiš na dolnej časti hrudníka.",
+   "Po sekundovej pauze vráť tyč do východiskovej polohy a vydýchni, pričom tlačíš hrudnými svalmi. Zamkni ruky, v kontrahovanej polohe stiahni hrudník, na sekundu vydrž a potom začni pomaly klesať. Tip: Klesanie by malo trvať aspoň dvakrát dlhšie ako zdvíhanie.",
+   "Opakuj pohyb predpísaný počet opakovaní.",
+   "Po skončení vráť tyč do stojana."
+  ],
+  "unilateral": false,
+  "nameEn": "Decline Barbell Bench Press"
+ },
+ {
+  "id": "fed-dumbbell-bench-press",
+  "name": "Tlak na lavičke s jednoručkami",
+  "primaryMuscle": "chest",
+  "secondaryMuscles": [
+   "shoulders",
+   "triceps"
+  ],
+  "equipment": "dumbbell",
+  "category": "strength",
+  "instructions": [
+   "Ľahni si na rovnú lavičku s jednoručkou v každej ruke opretou o stehná. Dlane smerujú k sebe.",
+   "Pomocou stehien vyhoď jednoručky hore a zdvihni ich po jednej tak, aby si ich držal pred sebou v šírke ramien.",
+   "V šírke ramien otoč zápästia dopredu, aby dlane smerovali od teba. Jednoručky majú byť tesne po stranách hrudníka a nadlaktie s predlaktím zvierajú uhol 90 stupňov. Vždy udržuj jednoručky pod plnou kontrolou. Toto je východisková poloha.",
+   "Pri výdychu tlač jednoručky hore hrudníkom. Na vrchole zamkni ruky, stiahni hrudník, na sekundu vydrž a potom začni pomaly klesať. Tip: Spúšťanie záťaže by malo trvať približne dvakrát dlhšie ako zdvíhanie.",
+   "Opakuj pohyb predpísaný počet opakovaní podľa tréningového plánu."
+  ],
+  "unilateral": false,
+  "nameEn": "Dumbbell Bench Press"
+ },
+ {
+  "id": "fed-incline-dumbbell-press",
+  "name": "Tlak s jednoručkami na šikmej lavičke nahor",
+  "primaryMuscle": "chest",
+  "secondaryMuscles": [
+   "shoulders",
+   "triceps"
+  ],
+  "equipment": "dumbbell",
+  "category": "strength",
+  "instructions": [
+   "Ľahni si na šikmú lavičku nahor s jednoručkou v každej ruke opretou o stehná. Dlane smerujú k sebe.",
+   "Pomocou stehien vytlač jednoručky hore a zdvihni ich po jednej tak, aby si ich držal v šírke ramien.",
+   "Keď máš jednoručky zdvihnuté v šírke ramien, otoč zápästia dopredu, aby dlane smerovali od teba. Toto je východisková poloha.",
+   "Vždy udržuj jednoručky pod plnou kontrolou. Potom vydýchni a tlač jednoručky hore hrudníkom.",
+   "Na vrchole zamkni ruky, na sekundu vydrž a potom začni záťaž pomaly spúšťať. Tip: Spúšťanie záťaže by malo trvať približne dvakrát dlhšie ako zdvíhanie.",
+   "Opakuj pohyb predpísaný počet opakovaní.",
+   "Po skončení polož jednoručky späť na stehná a potom na zem. Je to najbezpečnejší spôsob, ako jednoručky odložiť."
+  ],
+  "unilateral": false,
+  "nameEn": "Incline Dumbbell Press"
+ },
+ {
+  "id": "fed-dumbbell-flyes",
+  "name": "Rozpažovanie s jednoručkami na lavičke",
+  "primaryMuscle": "chest",
+  "secondaryMuscles": [],
+  "equipment": "dumbbell",
+  "category": "strength",
+  "instructions": [
+   "Ľahni si na rovnú lavičku s jednoručkou v každej ruke opretou o stehná. Dlane smerujú k sebe.",
+   "Pomocou stehien vyhoď jednoručky hore a zdvihni ich po jednej tak, aby si ich držal pred sebou v šírke ramien s dlaňami k sebe. Zdvihni ich ako pri tlaku, ale zastav tesne pred zamknutím lakťov. Toto je východisková poloha.",
+   "S miernym ohnutím v lakťoch, aby si predišiel namáhaniu šľachy bicepsu, spúšťaj ruky do strán v širokom oblúku, kým nepocítiš natiahnutie v hrudníku. Pri tejto fáze pohybu sa nadýchni. Tip: Počas celého pohybu ostávajú ruky v rovnakom uhle; pohyb prebieha len v ramennom kĺbe.",
+   "Vráť ruky do východiskovej polohy, stiahni hrudné svaly a vydýchni. Tip: Použi rovnaký oblúk pohybu ako pri spúšťaní záťaže.",
+   "V kontrahovanej polohe na sekundu vydrž a opakuj pohyb predpísaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Dumbbell Flyes"
+ },
+ {
+  "id": "fed-butterfly",
+  "name": "Rozpažovanie na stroji (butterfly)",
+  "primaryMuscle": "chest",
+  "secondaryMuscles": [],
+  "equipment": "machine",
+  "category": "strength",
+  "instructions": [
+   "Sadni si na stroj s chrbtom pritlačeným na opierku.",
+   "Chyť rukoväte. Tip: Nadlaktia majú byť rovnobežne s podlahou; stroj podľa toho nastav. Toto je východisková poloha.",
+   "Pomaly tlač rukoväte k sebe a stiahni hrudník v strede. Počas tejto fázy vydychuj a kontrakciu na sekundu udrž.",
+   "Pomaly sa vráť do východiskovej polohy a nadýchni sa, kým nie sú hrudné svaly plne natiahnuté.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Butterfly"
+ },
+ {
+  "id": "fed-cable-crossover",
+  "name": "Rozpažovanie na kladkách (crossover)",
+  "primaryMuscle": "chest",
+  "secondaryMuscles": [
+   "shoulders"
+  ],
+  "equipment": "cable",
+  "category": "strength",
+  "instructions": [
+   "Do východiskovej polohy sa dostaneš tak, že nastavíš kladky do vysokej polohy (nad hlavu), zvolíš záťaž a chytíš rukoväte do každej ruky.",
+   "Vykroč dopredu pred pomyselnú priamku medzi oboma kladkami a pritiahni ruky pred seba. Trup mierne predkloň v páse. Toto je východisková poloha.",
+   "S miernym ohnutím v lakťoch, aby si predišiel namáhaniu šľachy bicepsu, roztiahni ruky do strán v širokom oblúku, kým nepocítiš natiahnutie v hrudníku. Pri tejto fáze pohybu sa nadýchni. Tip: Počas celého pohybu ostávajú ruky aj trup nehybné; pohyb prebieha len v ramennom kĺbe.",
+   "Vráť ruky do východiskovej polohy a vydýchni. Použi rovnaký oblúk pohybu ako pri spúšťaní záťaže.",
+   "Vo východiskovej polohe na sekundu vydrž a opakuj pohyb predpísaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Cable Crossover"
+ },
+ {
+  "id": "fed-pushups",
+  "name": "Kľuky",
+  "primaryMuscle": "chest",
+  "secondaryMuscles": [
+   "shoulders",
+   "triceps"
+  ],
+  "equipment": "bodyweight",
+  "category": "strength",
+  "instructions": [
+   "Ľahni si tvárou na podlahu, ruky polož približne 90 cm od seba a trup drž vzpriamený na natiahnutých rukách.",
+   "Potom sa spusti nadol, kým sa hrudník takmer nedotkne podlahy, a nadýchni sa.",
+   "Teraz vydýchni a vytlač hornú časť tela späť do východiskovej polohy so stiahnutým hrudníkom.",
+   "Po krátkej pauze v hornej kontrahovanej polohe sa môžeš znova spúšťať nadol, podľa potrebného počtu opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Pushups"
+ },
+ {
+  "id": "fed-dips-chest-version",
+  "name": "Dipy na bradlách - záber na hrudník",
+  "primaryMuscle": "chest",
+  "secondaryMuscles": [
+   "shoulders",
+   "triceps"
+  ],
+  "equipment": "other",
+  "category": "strength",
+  "instructions": [
+   "Na toto cvičenie potrebuješ bradlá. Do východiskovej polohy sa dostaneš tak, že sa držíš nad bradlami na natiahnutých (zamknutých) rukách.",
+   "Pri nádychu sa pomaly spúšťaj s trupom predkloneným zhruba o 30 stupňov a s lakťami mierne vysunutými do strán, kým nepocítiš jemné natiahnutie v hrudníku.",
+   "Keď pocítiš natiahnutie, vytlač telo hrudníkom späť do východiskovej polohy a vydýchni. Tip: Na vrchole pohybu na sekundu stiahni hrudník.",
+   "Opakuj pohyb predpísaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Dips - Chest Version"
+ },
+ {
+  "id": "fed-barbell-shoulder-press",
+  "name": "Tlak s činkou na ramená",
+  "primaryMuscle": "shoulders",
+  "secondaryMuscles": [
+   "chest",
+   "triceps"
+  ],
+  "equipment": "barbell",
+  "category": "strength",
+  "instructions": [
+   "Sadni si na lavičku s opierkou chrbta v stojane na drepy. Nastav tyč do výšky tesne nad hlavou. Chyť tyč nadhmatom (dlane smerujú dopredu).",
+   "Keď tyč zdvihneš so správnou šírkou úchopu, zdvihni ju nad hlavu zamknutím rúk. Drž ju približne vo výške ramien a mierne pred hlavou. Toto je východisková poloha.",
+   "Pomaly spusti tyč k ramenám a nadýchni sa.",
+   "Zdvihni tyč späť do východiskovej polohy a vydýchni.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Barbell Shoulder Press"
+ },
+ {
+  "id": "fed-dumbbell-shoulder-press",
+  "name": "Tlak s jednoručkami na ramená",
+  "primaryMuscle": "shoulders",
+  "secondaryMuscles": [
+   "triceps"
+  ],
+  "equipment": "dumbbell",
+  "category": "strength",
+  "instructions": [
+   "S jednoručkou v každej ruke si sadni na lavičku s opierkou chrbta (na vojenský tlak alebo univerzálnu lavičku). Postav jednoručky zvislo na stehná.",
+   "Teraz zdvihni jednoručky po jednej do výšky ramien, pričom si pomáhaj stehnami.",
+   "Otoč zápästia tak, aby dlane smerovali dopredu. Toto je východisková poloha.",
+   "Teraz vydýchni a tlač jednoručky hore, kým sa navrchu nedotknú.",
+   "Po krátkej pauze v hornej kontrahovanej polohe pomaly spusti záťaž späť do východiskovej polohy a nadýchni sa.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Dumbbell Shoulder Press"
+ },
+ {
+  "id": "fed-arnold-dumbbell-press",
+  "name": "Arnoldov tlak s jednoručkami",
+  "primaryMuscle": "shoulders",
+  "secondaryMuscles": [
+   "triceps"
+  ],
+  "equipment": "dumbbell",
+  "category": "strength",
+  "instructions": [
+   "Sadni si na lavičku s opierkou chrbta a drž dve jednoručky pred sebou približne vo výške hornej časti hrudníka s dlaňami k telu a pokrčenými lakťami. Tip: Ruky majú byť pri trupe. Východisková poloha vyzerá ako kontrahovaná fáza bicepsového curlu s jednoručkami.",
+   "Pohyb vykonáš tak, že zdvíhaš jednoručky a súčasne otáčaš dlane, kým nesmerujú dopredu.",
+   "Pokračuj v zdvíhaní, kým nie sú ruky nad tebou natiahnuté. Počas tejto fázy pohybu vydychuj.",
+   "Po sekundovej pauze navrchu začni spúšťať jednoručky do pôvodnej polohy otáčaním dlaní k sebe. Tip: Ľavá ruka sa otáča proti smeru hodinových ručičiek, pravá v smere hodinových ručičiek. Počas tejto fázy pohybu sa nadýchni.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Arnold Dumbbell Press"
+ },
+ {
+  "id": "fed-side-lateral-raise",
+  "name": "Upažovanie s jednoručkami",
+  "primaryMuscle": "shoulders",
+  "secondaryMuscles": [],
+  "equipment": "dumbbell",
+  "category": "strength",
+  "instructions": [
+   "Vezmi dve jednoručky a postav sa s vzpriameným trupom, jednoručky drž po bokoch na natiahnutých rukách s dlaňami k sebe. Toto je východisková poloha.",
+   "Trup drž nehybne (bez hojdania) a zdvíhaj jednoručky do strán s miernym ohnutím v lakti a rukami mierne naklonenými dopredu, akoby si naberal vodu do pohára. Pokračuj hore, kým nie sú ruky rovnobežne s podlahou. Pri tomto pohybe vydychuj a navrchu na sekundu vydrž.",
+   "Pomaly spusti jednoručky späť do východiskovej polohy a nadýchni sa.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Side Lateral Raise"
+ },
+ {
+  "id": "fed-front-dumbbell-raise",
+  "name": "Predpažovanie s jednoručkami",
+  "primaryMuscle": "shoulders",
+  "secondaryMuscles": [],
+  "equipment": "dumbbell",
+  "category": "strength",
+  "instructions": [
+   "Vezmi dve jednoručky a postav sa s vzpriameným trupom, jednoručky drž pred stehnami na natiahnutých rukách s dlaňami smerujúcimi k stehnám. Toto je východisková poloha.",
+   "Trup drž nehybne (bez hojdania) a zdvihni ľavú jednoručku dopredu s miernym ohnutím v lakti a dlaňami stále smerom nadol. Pokračuj hore, kým nie je ruka mierne nad rovnobežnou polohou s podlahou. Pri tejto fáze pohybu vydychuj a navrchu na sekundu vydrž. Po pauze sa nadýchni.",
+   "Teraz pomaly spusti jednoručku späť do východiskovej polohy a súčasne zdvihni pravú jednoručku.",
+   "Takto pokračuj v striedaní, kým neodcvičíš odporúčaný počet opakovaní pre každú ruku."
+  ],
+  "unilateral": false,
+  "nameEn": "Front Dumbbell Raise"
+ },
+ {
+  "id": "fed-reverse-flyes",
+  "name": "Zadné rozpažovanie s jednoručkami",
+  "primaryMuscle": "shoulders",
+  "secondaryMuscles": [],
+  "equipment": "dumbbell",
+  "category": "strength",
+  "instructions": [
+   "Ľahni si na šikmú lavičku nahor tak, aby hrudník a brucho ležali na lavičke. V každej ruke drž jednoručku, dlane smerujú k sebe (neutrálny úchop).",
+   "Natiahni ruky pred seba tak, aby boli kolmo na sklon lavičky. Nohy drž nehybne a tlač do podlahy priehlavkami. Toto je východisková poloha.",
+   "So zachovaním miernego ohnutia v lakťoch posúvaj jednoručky od seba do strán v oblúku a vydychuj. Tip: Snaž sa stiahnuť lopatky k sebe, aby mal tento cvik čo najlepší efekt.",
+   "Ruky zdvíhaj, kým nie sú rovnobežne s podlahou.",
+   "Precíť kontrakciu a pomaly spusti záťaž späť do východiskovej polohy a nadýchni sa.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Reverse Flyes"
+ },
+ {
+  "id": "fed-face-pull",
+  "name": "Face pull (sťahovanie kladky k tvári)",
+  "primaryMuscle": "shoulders",
+  "secondaryMuscles": [
+   "middle back"
+  ],
+  "equipment": "cable",
+  "category": "strength",
+  "instructions": [
+   "Postav sa čelom k vysokej kladke s lanom alebo dvoma rukoväťami a ťahaj záťaž priamo k tvári, pričom ruky od seba oddiaľuj. Nadlaktia drž rovnobežne so zemou."
+  ],
+  "unilateral": false,
+  "nameEn": "Face Pull"
+ },
+ {
+  "id": "fed-upright-barbell-row",
+  "name": "Veslovanie s činkou v stoji (upright row)",
+  "primaryMuscle": "shoulders",
+  "secondaryMuscles": [
+   "traps"
+  ],
+  "equipment": "barbell",
+  "category": "strength",
+  "instructions": [
+   "Chyť činku nadhmatom v šírke o niečo užšej ako ramená. Tyč je opretá o vrch stehien, ruky sú natiahnuté s miernym ohnutím v lakťoch. Chrbát drž rovný. Toto je východisková poloha.",
+   "Teraz vydýchni a bočnými časťami ramien zdvíhaj tyč, pričom lakte smerujú hore a do strán. Tyč drž blízko tela. Pokračuj, kým sa takmer nedotkne brady. Tip: Pohyb majú viesť lakte a mali by byť stále vyššie ako predlaktia. Trup drž nehybne a navrchu na sekundu vydrž.",
+   "Pomaly spusti tyč späť do východiskovej polohy a nadýchni sa.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Upright Barbell Row"
+ },
+ {
+  "id": "fed-barbell-shrug",
+  "name": "Shrug s činkou",
+  "primaryMuscle": "traps",
+  "secondaryMuscles": [],
+  "equipment": "barbell",
+  "category": "strength",
+  "instructions": [
+   "Postav sa vzpriamene s nohami v šírke ramien a drž činku oboma rukami pred sebou nadhmatom (dlane smerujú k stehnám). Tip: Ruky by mali byť o niečo širšie ako šírka ramien. Na lepší úchop môžeš použiť trhacie pásky. Toto je východisková poloha.",
+   "Zdvihni ramená čo najvyššie a vydýchni, kontrakciu na sekundu udrž. Tip: Nesnaž sa zdvíhať činku bicepsami.",
+   "Pomaly sa vráť do východiskovej polohy a nadýchni sa.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Barbell Shrug"
+ },
+ {
+  "id": "fed-dumbbell-shrug",
+  "name": "Shrug s jednoručkami",
+  "primaryMuscle": "traps",
+  "secondaryMuscles": [],
+  "equipment": "dumbbell",
+  "category": "strength",
+  "instructions": [
+   "Postav sa vzpriamene s jednoručkou v každej ruke (dlane smerujú k trupu) a rukami natiahnutými po bokoch.",
+   "Zdvíhaj jednoručky pomocou ramien čo najvyššie a vydychuj. Kontrakciu navrchu na sekundu udrž. Tip: Ruky ostávajú stále natiahnuté. Nepomáhaj si bicepsami. Hore a dole sa hýbu len ramená.",
+   "Spusti jednoručky späť do pôvodnej polohy.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Dumbbell Shrug"
+ },
+ {
+  "id": "fed-pullups",
+  "name": "Zhyby",
+  "primaryMuscle": "lats",
+  "secondaryMuscles": [
+   "biceps",
+   "middle back"
+  ],
+  "equipment": "bodyweight",
+  "category": "strength",
+  "instructions": [
+   "Chyť hrazdu s dlaňami smerujúcimi dopredu predpísaným úchopom. Poznámka k úchopom: pri širokom úchope sú ruky od seba vo vzdialenosti väčšej ako šírka ramien, pri strednom v šírke ramien a pri úzkom vo vzdialenosti menšej ako šírka ramien.",
+   "S rukami natiahnutými pred sebou a chytenými na zvolenej šírke úchopu nakloň trup dozadu zhruba o 30 stupňov, prehni driek a vystrč hrudník. Toto je východisková poloha.",
+   "Vytiahni trup nahor, kým sa tyč nedotkne hornej časti hrudníka, sťahovaním ramien a nadlakti nadol a dozadu. Pri tejto fáze pohybu vydychuj. Tip: Sústreď sa na stiahnutie chrbtových svalov v plne kontrahovanej polohe. Horná časť trupu ostáva pri pohybe nehybná a hýbu sa len ruky. Predlaktia nerobia nič iné, len držia tyč.",
+   "Po sekunde v kontrahovanej polohe sa nadýchni a pomaly spusti trup späť do východiskovej polohy, kým nie sú ruky úplne natiahnuté a lat svaly plne natiahnuté.",
+   "Opakuj pohyb predpísaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Pullups"
+ },
+ {
+  "id": "fed-chin-up",
+  "name": "Zhyby podchvatom",
+  "primaryMuscle": "lats",
+  "secondaryMuscles": [
+   "biceps",
+   "forearms",
+   "middle back"
+  ],
+  "equipment": "bodyweight",
+  "category": "strength",
+  "instructions": [
+   "Chyť hrazdu s dlaňami smerujúcimi k trupu a úchopom užším, ako je šírka ramien.",
+   "S rukami natiahnutými pred sebou a chytenými na zvolenej šírke úchopu drž trup čo najviac vzpriamený, prehni driek a vystrč hrudník. Toto je východisková poloha. Tip: Čo najvzpriamenejší trup maximalizuje zapojenie bicepsov a minimalizuje zapojenie chrbta.",
+   "Pri výdychu vytiahni trup nahor, kým nie je hlava približne vo výške hrazdy. Sústreď sa na prácu bicepsov. Lakte drž blízko tela. Tip: Horná časť trupu ostáva pri pohybe nehybná a hýbu sa len ruky. Predlaktia nerobia nič iné, len držia tyč.",
+   "Po sekunde stiahnutia bicepsov v kontrahovanej polohe pomaly spusti trup späť do východiskovej polohy, kým nie sú ruky úplne natiahnuté. Pri tejto fáze pohybu sa nadýchni.",
+   "Opakuj pohyb predpísaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Chin-Up"
+ },
+ {
+  "id": "fed-wide-grip-lat-pulldown",
+  "name": "Sťahovanie kladky k hrudi - široký úchop",
+  "primaryMuscle": "lats",
+  "secondaryMuscles": [
+   "biceps",
+   "middle back",
+   "shoulders"
+  ],
+  "equipment": "cable",
+  "category": "strength",
+  "instructions": [
+   "Sadni si k stroju na sťahovanie kladky so širokou tyčou pripevnenou na hornej kladke. Nastav zarážku na kolená podľa svojej výšky. Zarážky zabránia tomu, aby ťa záťaž na tyči nadvihla zo sedadla.",
+   "Chyť tyč s dlaňami smerujúcimi dopredu predpísaným úchopom. Poznámka k úchopom: pri širokom úchope sú ruky od seba vo vzdialenosti väčšej ako šírka ramien, pri strednom v šírke ramien a pri úzkom vo vzdialenosti menšej ako šírka ramien.",
+   "S rukami natiahnutými pred sebou a chytenými na zvolenej šírke úchopu nakloň trup dozadu zhruba o 30 stupňov, prehni driek a vystrč hrudník. Toto je východisková poloha.",
+   "Pri výdychu stiahni tyč dolu, kým sa nedotkne hornej časti hrudníka, sťahovaním ramien a nadlakti nadol a dozadu. Tip: Sústreď sa na stiahnutie chrbtových svalov v plne kontrahovanej polohe. Horná časť trupu ostáva nehybná a hýbu sa len ruky. Predlaktia nerobia nič iné, len držia tyč; nesnaž sa preto sťahovať tyč predlaktiami.",
+   "Po sekunde v kontrahovanej polohe so stiahnutými lopatkami pomaly zdvihni tyč späť do východiskovej polohy, kým nie sú ruky úplne natiahnuté a lat svaly plne natiahnuté. Pri tejto fáze pohybu sa nadýchni.",
+   "Opakuj pohyb predpísaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Wide-Grip Lat Pulldown"
+ },
+ {
+  "id": "fed-close-grip-front-lat-pulldown",
+  "name": "Sťahovanie kladky k hrudi - úzky úchop",
+  "primaryMuscle": "lats",
+  "secondaryMuscles": [
+   "biceps",
+   "middle back",
+   "shoulders"
+  ],
+  "equipment": "cable",
+  "category": "strength",
+  "instructions": [
+   "Sadni si k stroju na sťahovanie kladky so širokou tyčou pripevnenou na hornej kladke. Nastav zarážku na kolená podľa svojej výšky. Zarážky zabránia tomu, aby ťa záťaž na tyči nadvihla zo sedadla.",
+   "Chyť tyč s dlaňami smerujúcimi dopredu predpísaným úchopom. Poznámka k úchopom: pri širokom úchope sú ruky od seba vo vzdialenosti väčšej ako šírka ramien, pri strednom v šírke ramien a pri úzkom vo vzdialenosti menšej ako šírka ramien.",
+   "S rukami natiahnutými pred sebou - pri držaní tyče na zvolenej šírke úchopu - nakloň trup dozadu zhruba o 30 stupňov, prehni driek a vystrč hrudník. Toto je východisková poloha.",
+   "Pri výdychu stiahni tyč dolu, kým sa nedotkne hornej časti hrudníka, sťahovaním ramien a nadlakti nadol a dozadu. Tip: Sústreď sa na stiahnutie chrbtových svalov v plne kontrahovanej polohe. Horná časť trupu ostáva nehybná (hýbu sa len ruky). Predlaktia nerobia nič iné, len držia tyč; nesnaž sa preto sťahovať tyč nadol predlaktiami.",
+   "Po sekunde v kontrahovanej polohe, so stiahnutými lopatkami, pomaly zdvihni tyč späť do východiskovej polohy, kým nie sú ruky úplne natiahnuté a lat svaly plne natiahnuté. Pri tejto fáze pohybu sa nadýchni.",
+   "Opakuj pohyb predpísaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Close-Grip Front Lat Pulldown"
+ },
+ {
+  "id": "fed-v-bar-pulldown",
+  "name": "Sťahovanie kladky s V-tyčou",
+  "primaryMuscle": "lats",
+  "secondaryMuscles": [
+   "biceps",
+   "middle back",
+   "shoulders"
+  ],
+  "equipment": "cable",
+  "category": "strength",
+  "instructions": [
+   "Sadni si k stroju na sťahovanie kladky s V-tyčou pripevnenou na hornej kladke.",
+   "Nastav zarážku na kolená podľa svojej výšky. Zarážky zabránia tomu, aby ťa záťaž na tyči nadvihla zo sedadla.",
+   "Chyť V-tyč s dlaňami smerujúcimi k sebe (neutrálny úchop). Vystrč hrudník a mierne sa nakloň dozadu (približne o 30 stupňov), aby sa lepšie zapojili lat svaly. Toto je východisková poloha.",
+   "Pomocou lat svalov stiahni tyč nadol a stiahni lopatky k sebe. Pokračuj, kým sa hrudník takmer nedotkne V-tyče. Pri tomto pohybe vydychuj. Tip: Trup drž počas celého pohybu nehybne.",
+   "Po sekunde v kontrahovanej polohe pomaly vráť tyč do východiskovej polohy a nadýchni sa.",
+   "Opakuj predpísaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "V-Bar Pulldown"
+ },
+ {
+  "id": "fed-bent-over-barbell-row",
+  "name": "Veslovanie s činkou v predklone",
+  "primaryMuscle": "middle back",
+  "secondaryMuscles": [
+   "biceps",
+   "lats",
+   "shoulders"
+  ],
+  "equipment": "barbell",
+  "category": "strength",
+  "instructions": [
+   "S činkou v nadhmate (dlane smerujú nadol) mierne pokrč kolená a predkloň trup v páse s rovným chrbtom, takmer rovnobežne s podlahou. Tip: Drž hlavu hore. Činka visí priamo pred tebou, ruky visia kolmo na podlahu a trup. Toto je východisková poloha.",
+   "Teraz pri nehybnom trupe vydýchni a pritiahni činku k sebe. Lakte drž blízko tela a predlaktia použi len na držanie záťaže. V hornej kontrahovanej polohe stiahni chrbtové svaly a krátko vydrž.",
+   "Potom sa nadýchni a pomaly spusti činku späť do východiskovej polohy.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Bent Over Barbell Row"
+ },
+ {
+  "id": "fed-one-arm-dumbbell-row",
+  "name": "Veslovanie s jednoručkou jednou rukou",
+  "primaryMuscle": "middle back",
+  "secondaryMuscles": [
+   "biceps",
+   "lats",
+   "shoulders"
+  ],
+  "equipment": "dumbbell",
+  "category": "strength",
+  "instructions": [
+   "Vyber si rovnú lavičku a polož jednoručku na zem vedľa nej.",
+   "Polož pravé koleno na koniec lavičky, predkloň trup v páse tak, aby horná časť tela bola rovnobežne s podlahou, a pravou rukou sa opri o druhý koniec lavičky.",
+   "Ľavou rukou zdvihni jednoručku zo zeme a drž ju a udržuj rovný spodok chrbta. Dlaň smeruje k trupu. Toto je východisková poloha.",
+   "Potiahni záťaž priamo nahor k boku hrudníka, hornú časť paže drž blízko tela a trup nehybne. Pri pohybe vydychuj. Tip: Sústreď sa na stiahnutie chrbtových svalov v hornej polohe. Sila musí ísť z chrbta, nie z rúk. Horná časť trupu ostáva nehybná, hýbu sa len ruky. Predlaktia slúžia len na držanie jednoručky, nesnaž sa ju ťahať predlaktiami.",
+   "Spusti záťaž priamo nadol do východiskovej polohy. Pri spúšťaní nadychuj.",
+   "Zopakuj pohyb predpísaný počet opakovaní.",
+   "Vymeň strany a zopakuj s druhou rukou."
+  ],
+  "unilateral": true,
+  "nameEn": "One-Arm Dumbbell Row"
+ },
+ {
+  "id": "fed-seated-cable-rows",
+  "name": "Veslovanie na kladke v sede",
+  "primaryMuscle": "middle back",
+  "secondaryMuscles": [
+   "biceps",
+   "lats",
+   "shoulders"
+  ],
+  "equipment": "cable",
+  "category": "strength",
+  "instructions": [
+   "Na toto cvičenie potrebuješ stroj s nízkou kladkou a V-rukoväťou. Poznámka: V-rukoväť umožňuje neutrálny úchop, pri ktorom sú dlane oproti sebe. Sadni si na stroj, opri nohy o prednú plošinu alebo priečku a kolená maj mierne pokrčené, nie zamknuté.",
+   "Predkloň sa s prirodzeným prehnutím chrbta a chyť rukoväte V-tyče.",
+   "S vystretými rukami sa potiahni dozadu, kým trup nebude v 90-stupňovom uhle voči nohám. Chrbát je mierne prehnutý a hrudník vypnutý. Mal by si cítiť príjemný strečing lat svalov. Toto je východisková poloha.",
+   "Trup drž nehybne a ťahaj rukoväte k trupu, ruky drž blízko tela, kým sa nedotkneš brucha. Pri pohybe vydychuj. V tej chvíli silno stiahni chrbtové svaly. Drž kontrakciu sekundu a pomaly sa vráť do pôvodnej polohy s nádychom.",
+   "Zopakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Seated Cable Rows"
+ },
+ {
+  "id": "fed-t-bar-row-with-handle",
+  "name": "Veslovanie s T-tyčou s rukoväťou",
+  "primaryMuscle": "middle back",
+  "secondaryMuscles": [
+   "biceps",
+   "lats"
+  ],
+  "equipment": "barbell",
+  "category": "strength",
+  "instructions": [
+   "Zasuň tyč do landmine držiaka alebo do rohu, aby sa nehýbala. Na voľný koniec nalož vhodnú záťaž.",
+   "Postav sa nad tyč a okolo nej pri objímke umiestni rukoväť Double D. Pomocou bokov a nôh sa vzpriam do stoja.",
+   "Zaujmi široký postoj s bokmi vzadu a hrudníkom vypnutým. Ruky sú vystreté. Toto je východisková poloha.",
+   "Potiahni záťaž k hornej časti brucha stiahnutím lopatiek a pokrčením lakťov. Záťaž nerozhýbavaj a nepodvádzaj.",
+   "Po krátkej pauze sa vráť do východiskovej polohy."
+  ],
+  "unilateral": false,
+  "nameEn": "T-Bar Row with Handle"
+ },
+ {
+  "id": "fed-straight-arm-pulldown",
+  "name": "Sťahovanie kladky s vystretými rukami",
+  "primaryMuscle": "lats",
+  "secondaryMuscles": [],
+  "equipment": "cable",
+  "category": "strength",
+  "instructions": [
+   "Chyť širokú tyč z hornej kladky nadhmatom (dlane dole) v šírke väčšej než ramená. Ustúp dozadu asi o dva kroky.",
+   "Predkloň trup v páse približne o 30 stupňov, ruky maj pred sebou úplne vystreté s miernym pokrčením v lakťoch. Ak nie sú ruky úplne vystreté, ustúp o kúsok ďalej. Keď sú ruky vystreté a trup mierne predklonený, napni lat svaly a môžeš začať.",
+   "S vystretými rukami stiahni tyč kontrakciou lat svalov, kým nie sú ruky pri stehnách. Pri pohybe vydychuj.",
+   "S vystretými rukami sa vráť do východiskovej polohy s nádychom.",
+   "Zopakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Straight-Arm Pulldown"
+ },
+ {
+  "id": "fed-barbell-deadlift",
+  "name": "Mŕtvy ťah s činkou",
+  "primaryMuscle": "lower back",
+  "secondaryMuscles": [
+   "calves",
+   "forearms",
+   "glutes",
+   "hamstrings",
+   "lats",
+   "middle back",
+   "quadriceps",
+   "traps"
+  ],
+  "equipment": "barbell",
+  "category": "strength",
+  "instructions": [
+   "Postav sa pred naloženú činku.",
+   "S čo najrovnejším chrbtom pokrč kolená, predkloň sa a chyť tyč nadhmatom v šírke ramien. Toto je východisková poloha. Tip: Ak je ťažké tyč udržať, použi striedavý úchop alebo trhacie pásky.",
+   "Drž tyč a začni zdvih tlakom nôh a súčasným vzpriamením trupu, pričom vydychuj. V stoji vypni hrudník a stiahni chrbát pritiahnutím lopatiek dozadu. Predstav si vojaka v pozore.",
+   "Vráť sa do východiskovej polohy pokrčením kolien a súčasným predklonom trupu v páse s rovným chrbtom. Keď kotúče dosadnú na zem, si späť v začiatku a môžeš robiť ďalšie opakovanie.",
+   "Vykonaj počet opakovaní predpísaný v programe."
+  ],
+  "unilateral": false,
+  "nameEn": "Barbell Deadlift"
+ },
+ {
+  "id": "fed-romanian-deadlift",
+  "name": "Rumunský mŕtvy ťah",
+  "primaryMuscle": "hamstrings",
+  "secondaryMuscles": [
+   "calves",
+   "glutes",
+   "lower back"
+  ],
+  "equipment": "barbell",
+  "category": "strength",
+  "instructions": [
+   "Polož činku pred seba na zem a chyť ju nadhmatom (dlane dole) o niečo širšie, než sú ramená. Tip: Podľa záťaže môžeš potrebovať zápästné bandáže a zvýšenú plošinu pre lepší rozsah pohybu.",
+   "Mierne pokrč kolená, holene drž zvislo, boky vzadu a chrbát rovný. Toto je východisková poloha.",
+   "S chrbtom a rukami stále úplne rovnými zdvihni tyč pomocou bokov a vydychuj. Tip: Pohyb nemá byť rýchly, ale plynulý a kontrolovaný.",
+   "Keď stojíš úplne vzpriamene, spusti tyč tlakom bokov dozadu a len miernym pokrčením kolien, na rozdiel od drepu. Tip: Na začiatku pohybu sa zhlboka nadýchni a drž hrudník vypnutý. Dych zadrž pri spúšťaní a vydýchni pri dokončení pohybu.",
+   "Zopakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Romanian Deadlift"
+ },
+ {
+  "id": "fed-stiff-legged-barbell-deadlift",
+  "name": "Mŕtvy ťah s činkou na spätých nohách",
+  "primaryMuscle": "hamstrings",
+  "secondaryMuscles": [
+   "glutes",
+   "lower back"
+  ],
+  "equipment": "barbell",
+  "category": "strength",
+  "instructions": [
+   "Chyť tyč nadhmatom (dlane dole). Pri väčšej záťaži môžeš potrebovať zápästné bandáže.",
+   "Postav sa s rovným trupom a nohami v šírke ramien alebo užšie. Kolená sú mierne pokrčené. Toto je východisková poloha.",
+   "Kolená drž nehybne a spusti činku nad priehlavky ohnutím v bokoch s rovným chrbtom. Pokračuj dopredu, akoby si dvíhal niečo zo zeme, kým nepocítiš strečing v zadných stehnách. Pri pohybe nadychuj.",
+   "Vzpriamuj trup vystretím bokov späť do východiskovej polohy. Pri pohybe vydychuj.",
+   "Zopakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Stiff-Legged Barbell Deadlift"
+ },
+ {
+  "id": "fed-sumo-deadlift",
+  "name": "Sumo mŕtvy ťah",
+  "primaryMuscle": "hamstrings",
+  "secondaryMuscles": [
+   "adductors",
+   "forearms",
+   "glutes",
+   "lower back",
+   "middle back",
+   "quadriceps",
+   "traps"
+  ],
+  "equipment": "barbell",
+  "category": "powerlifting",
+  "instructions": [
+   "Začni s naloženou tyčou na zemi. Prisuň sa k tyči tak, aby prechádzala stredom chodidiel. Nohy maj veľmi široko, blízko objímok. Ohni sa v bokoch a chyť tyč. Ruky sú priamo pod ramenami, vo vnútri nôh, a môžeš použiť nadhmat, striedavý alebo hákový úchop. Uvoľni ramená, čím sa ruky predĺžia.",
+   "Nadýchni sa, spusti boky, hlavu drž vpred a hrudník vypnutý. Tlač do podlahy a roztláčaj nohy od seba, s váhou na zadnej polovici chodidiel. Vystri boky a kolená.",
+   "Keď tyč prejde okolo kolien, zakloň sa a zatlač boky do tyče, pričom stiahni lopatky k sebe.",
+   "Vráť záťaž na zem ohnutím v bokoch a kontrolovaným spúšťaním."
+  ],
+  "unilateral": false,
+  "nameEn": "Sumo Deadlift"
+ },
+ {
+  "id": "fed-hyperextensions-back-extensions",
+  "name": "Extenzie chrbta (hyperextenzie)",
+  "primaryMuscle": "lower back",
+  "secondaryMuscles": [
+   "glutes",
+   "hamstrings"
+  ],
+  "equipment": "other",
+  "category": "strength",
+  "instructions": [
+   "Ľahni si tvárou dolu na lavičku na hyperextenzie a pevne zasuň členky pod podložky.",
+   "Ak sa dá, nastav hornú podložku tak, aby horné stehná ležali naplocho na širokej podložke a mal si dosť miesta na ohyb v páse bez obmedzenia.",
+   "S rovným telom prekríž ruky pred sebou alebo ich daj za hlavu. Toto je východisková poloha. Tip: Pre väčší odpor môžeš držať kotúč pred sebou pod prekríženými rukami.",
+   "Pomaly sa predkláňaj v páse tak ďaleko, ako môžeš, s rovným chrbtom. Pri pohybe nadychuj. Pokračuj, kým nepocítiš strečing v zadných stehnách a nemôžeš ísť ďalej bez zaguľatenia chrbta. Tip: Chrbát nikdy nezaguľacuj. Niekto sa dostane ďalej než iný. Dôležité je ísť tak ďaleko, ako ti telo dovolí bez zaguľatenia chrbta.",
+   "Pomaly zdvihni trup späť do pôvodnej polohy s nádychom. Tip: Nepreháňaj chrbát za rovnú líniu. Trupom nikdy nehádž, aby si chránil chrbát pred zranením.",
+   "Zopakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Hyperextensions (Back Extensions)"
+ },
+ {
+  "id": "fed-good-morning",
+  "name": "Good morning (predklon s činkou)",
+  "primaryMuscle": "hamstrings",
+  "secondaryMuscles": [
+   "abdominals",
+   "glutes",
+   "lower back"
+  ],
+  "equipment": "barbell",
+  "category": "powerlifting",
+  "instructions": [
+   "Začni s tyčou na stojane vo výške ramien. Polož tyč na zadnú časť ramien ako pri silovom drepe, nie na vrch ramien. Chrbát maj napnutý, lopatky stiahnuté k sebe a kolená mierne pokrčené. Ustúp od stojana.",
+   "Začni ohnutím v bokoch, posúvaj ich dozadu a predkloň sa takmer do vodorovnej polohy. Chrbát drž prehnutý a krčnú chrbticu v správnom postavení.",
+   "Pohyb otoč vystretím bokov pomocou sedacích a zadných stehenných svalov. Pokračuj, kým sa nevrátiš do východiskovej polohy."
+  ],
+  "unilateral": false,
+  "nameEn": "Good Morning"
+ },
+ {
+  "id": "fed-barbell-curl",
+  "name": "Bicepsový curl s činkou",
+  "primaryMuscle": "biceps",
+  "secondaryMuscles": [
+   "forearms"
+  ],
+  "equipment": "barbell",
+  "category": "strength",
+  "instructions": [
+   "Postav sa vzpriamene a drž činku v úchope v šírke ramien. Dlane smerujú dopredu a lakte sú blízko trupu. Toto je východisková poloha.",
+   "Hornú časť paží drž nehybne a zdvíhaj činku dopredu napínaním bicepsov, pričom vydychuj. Tip: Hýbu sa len predlaktia.",
+   "Pokračuj, kým nie sú bicepsy úplne stiahnuté a tyč je vo výške ramien. Drž stiahnutú polohu sekundu a silno stiahni bicepsy.",
+   "Pomaly vráť tyč do východiskovej polohy s nádychom.",
+   "Zopakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Barbell Curl"
+ },
+ {
+  "id": "fed-dumbbell-bicep-curl",
+  "name": "Bicepsový curl s jednoručkami",
+  "primaryMuscle": "biceps",
+  "secondaryMuscles": [
+   "forearms"
+  ],
+  "equipment": "dumbbell",
+  "category": "strength",
+  "instructions": [
+   "Postav sa vzpriamene s jednoručkou v každej ruke a rukami voľne vystretými. Lakte maj blízko trupu a otoč dlane dopredu. Toto je východisková poloha.",
+   "Hornú časť paží drž nehybne, vydýchni a zdvíhaj jednoručky napínaním bicepsov. Pokračuj, kým nie sú bicepsy úplne stiahnuté a jednoručky sú vo výške ramien. Krátko drž stiahnutú polohu a stiahni bicepsy.",
+   "Potom sa nadýchni a pomaly spúšťaj jednoručky do východiskovej polohy.",
+   "Zopakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Dumbbell Bicep Curl"
+ },
+ {
+  "id": "fed-alternate-hammer-curl",
+  "name": "Kladivový curl striedavo",
+  "primaryMuscle": "biceps",
+  "secondaryMuscles": [
+   "forearms"
+  ],
+  "equipment": "dumbbell",
+  "category": "strength",
+  "instructions": [
+   "Postav sa vzpriamene s jednoručkou v každej ruke a rukami voľne vystretými. Lakte maj blízko trupu.",
+   "Dlane smerujú k trupu. Toto je východisková poloha.",
+   "Hornú časť paže drž nehybne a zdvíhaj pravú jednoručku dopredu napínaním bicepsu, pričom vydychuj. Pokračuj, kým nie je biceps úplne stiahnutý a jednoručka je vo výške ramena. Drž stiahnutú polohu sekundu a stiahni biceps. Tip: Hýbe sa len predlaktie.",
+   "Pomaly vráť jednoručku do východiskovej polohy s nádychom.",
+   "Zopakuj pohyb s ľavou rukou. To je jedno opakovanie.",
+   "Takto pokračuj striedavo odporúčaný počet opakovaní."
+  ],
+  "unilateral": true,
+  "nameEn": "Alternate Hammer Curl"
+ },
+ {
+  "id": "fed-hammer-curls",
+  "name": "Kladivový curl",
+  "primaryMuscle": "biceps",
+  "secondaryMuscles": [],
+  "equipment": "dumbbell",
+  "category": "strength",
+  "instructions": [
+   "Postav sa vzpriamene s jednoručkou v každej ruke a rukami voľne vystretými. Lakte maj blízko trupu.",
+   "Dlane smerujú k trupu. Toto je východisková poloha.",
+   "Hornú časť paží drž nehybne, vydýchni a zdvíhaj záťaž dopredu napínaním bicepsov. Pokračuj, kým nie sú bicepsy úplne stiahnuté a jednoručka je vo výške ramena. Krátko drž stiahnutú polohu a stiahni bicepsy. Tip: Sústreď sa na nehybný lakeť a pohyb len predlaktia.",
+   "Po krátkej pauze sa nadýchni a pomaly spúšťaj jednoručky do východiskovej polohy.",
+   "Zopakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Hammer Curls"
+ },
+ {
+  "id": "fed-preacher-curl",
+  "name": "Curl na Scottovej lavičke",
+  "primaryMuscle": "biceps",
+  "secondaryMuscles": [],
+  "equipment": "barbell",
+  "category": "strength",
+  "instructions": [
+   "Na tento pohyb potrebuješ Scottovu lavičku a EZ tyč. Chyť EZ tyč za blízku vnútornú rukoväť (ideálne ti ju niekto podá, alebo ju vezmi z prednej opierky, ktorú má väčšina Scottových lavičiek). Dlane smerujú dopredu a vďaka tvaru tyče sú mierne naklonené dovnútra.",
+   "Horné časti paží polož na podložku lavičky, hrudník opri o ňu a drž EZ tyč vo výške ramien. Toto je východisková poloha.",
+   "S nádychom pomaly spúšťaj tyč, kým nie je horná časť paže vystretá a biceps úplne natiahnutý.",
+   "S výdychom zdvihni záťaž bicepsom, kým nie je biceps úplne stiahnutý a tyč je vo výške ramien. Silno stiahni biceps a drž túto polohu sekundu.",
+   "Zopakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Preacher Curl"
+ },
+ {
+  "id": "fed-concentration-curls",
+  "name": "Koncentračný curl",
+  "primaryMuscle": "biceps",
+  "secondaryMuscles": [
+   "forearms"
+  ],
+  "equipment": "dumbbell",
+  "category": "strength",
+  "instructions": [
+   "Sadni si na rovnú lavičku s jednoručkou na zemi pred sebou medzi nohami. Nohy maj roztiahnuté, kolená pokrčené a chodidlá na zemi.",
+   "Pravou rukou zdvihni jednoručku. Zadnú časť pravej hornej paže opri o vnútornú stranu pravého stehna. Otoč dlaň dopredu, preč od stehna. Tip: Ruka je vystretá a jednoručka je nad zemou. Toto je východisková poloha.",
+   "Hornú časť paže drž nehybne a zdvíhaj jednoručku dopredu napínaním bicepsu, pričom vydychuj. Hýbe sa len predlaktie. Pokračuj, kým nie je biceps úplne stiahnutý a jednoručka je vo výške ramena. Tip: V hornej polohe dbaj, aby malíček bol vyššie než palec. Zaručí to dobrú kontrakciu. Drž stiahnutú polohu sekundu a stiahni biceps.",
+   "Pomaly vráť jednoručku do východiskovej polohy s nádychom. Pozor: Nikdy nehádž pohybom tela.",
+   "Zopakuj odporúčaný počet opakovaní. Potom zopakuj pohyb s ľavou rukou."
+  ],
+  "unilateral": true,
+  "nameEn": "Concentration Curls"
+ },
+ {
+  "id": "fed-incline-dumbbell-curl",
+  "name": "Curl s jednoručkami na šikmej lavičke nahor",
+  "primaryMuscle": "biceps",
+  "secondaryMuscles": [],
+  "equipment": "dumbbell",
+  "category": "strength",
+  "instructions": [
+   "Opri sa o šikmú lavičku nahor s jednoručkou v každej ruke a rukami voľne vystretými. Lakte maj blízko trupu a otoč dlane dopredu. Toto je východisková poloha.",
+   "Hornú časť paží drž nehybne a zdvíhaj jednoručky dopredu napínaním bicepsov, pričom vydychuj. Hýbu sa len predlaktia. Pokračuj, kým nie sú bicepsy úplne stiahnuté a jednoručky sú vo výške ramien. Drž stiahnutú polohu sekundu.",
+   "Pomaly vráť jednoručky do východiskovej polohy s nádychom.",
+   "Zopakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Incline Dumbbell Curl"
+ },
+ {
+  "id": "fed-cable-hammer-curls-rope-attachment",
+  "name": "Kladivový curl na kladke s lanom",
+  "primaryMuscle": "biceps",
+  "secondaryMuscles": [],
+  "equipment": "cable",
+  "category": "strength",
+  "instructions": [
+   "Pripevni lano na spodnú kladku a postav sa tvárou k stroju asi 30 cm od neho.",
+   "Chyť lano neutrálnym úchopom (dlane k sebe) a vzpriam sa s prirodzeným prehnutím chrbta a nehybným trupom.",
+   "Lakte maj pri bokoch a drž ich nehybne počas celého pohybu. Tip: Hýbu sa len predlaktia, nie horné časti paží. Toto je východisková poloha.",
+   "Bicepsami ťahaj ruky nahor a vydychuj, kým sa bicepsy nedotknú predlaktí. Tip: Lakte maj pri tele a horné časti paží nehybné.",
+   "Po 1-sekundovej kontrakcii so stiahnutím bicepsov pomaly vráť záťaž do pôvodnej polohy.",
+   "Zopakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Cable Hammer Curls - Rope Attachment"
+ },
+ {
+  "id": "fed-ez-bar-curl",
+  "name": "Curl s EZ tyčou",
+  "primaryMuscle": "biceps",
+  "secondaryMuscles": [],
+  "equipment": "ez-bar",
+  "category": "strength",
+  "instructions": [
+   "Postav sa vzpriamene a drž EZ tyč za široký vonkajší úchop. Dlane smerujú dopredu a vďaka tvaru tyče sú mierne naklonené dovnútra. Lakte maj blízko trupu. Toto je východisková poloha.",
+   "Hornú časť paží drž nehybne, vydýchni a zdvíhaj záťaž dopredu napínaním bicepsov. Sústreď sa na pohyb len predlaktí.",
+   "Pokračuj, kým nie sú bicepsy úplne stiahnuté a tyč je vo výške ramien. Chvíľu drž hornú stiahnutú polohu a stiahni bicepsy.",
+   "Potom sa nadýchni a pomaly spusti tyč do východiskovej polohy.",
+   "Zopakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "EZ-Bar Curl"
+ },
+ {
+  "id": "fed-triceps-pushdown",
+  "name": "Tricepsové sťahovanie kladky",
+  "primaryMuscle": "triceps",
+  "secondaryMuscles": [],
+  "equipment": "cable",
+  "category": "strength",
+  "instructions": [
+   "Pripevni rovnú alebo zalomenú tyč na hornú kladku a chyť ju nadhmatom (dlane dole) v šírke ramien.",
+   "Postav sa vzpriamene s rovným trupom a veľmi malým predklonom, horné časti paží maj pri tele a kolmo na podlahu. Predlaktia smerujú nahor ku kladke, kde držia tyč. Toto je východisková poloha.",
+   "Pomocou tricepsov stiahni tyč nadol, kým sa nedotkne prednej strany stehien a ruky nie sú úplne vystreté kolmo na podlahu. Horné časti paží ostávajú stále nehybné pri trupe a hýbu sa len predlaktia. Pri pohybe vydychuj.",
+   "Po sekundovom držaní v stiahnutej polohe pomaly vráť tyč do východiskovej polohy. Pri tomto kroku nadychuj.",
+   "Zopakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Triceps Pushdown"
+ },
+ {
+  "id": "fed-triceps-pushdown-rope-attachment",
+  "name": "Tricepsové sťahovanie kladky s lanom",
+  "primaryMuscle": "triceps",
+  "secondaryMuscles": [],
+  "equipment": "cable",
+  "category": "strength",
+  "instructions": [
+   "Pripevni lano na hornú kladku a chyť ho neutrálnym úchopom (dlane k sebe).",
+   "Postav sa vzpriamene s rovným trupom a veľmi malým predklonom, horné časti paží maj pri tele a kolmo na podlahu. Predlaktia smerujú nahor ku kladke, kde držia lano s dlaňami k sebe. Toto je východisková poloha.",
+   "Pomocou tricepsov stiahni lano nadol a každú jeho stranu priveď k boku stehien. Na konci pohybu sú ruky úplne vystreté kolmo na podlahu. Horné časti paží ostávajú stále nehybné pri trupe a hýbu sa len predlaktia. Pri pohybe vydychuj.",
+   "Po sekundovom držaní v stiahnutej polohe pomaly vráť lano do východiskovej polohy. Pri tomto kroku nadychuj.",
+   "Zopakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Triceps Pushdown - Rope Attachment"
+ },
+ {
+  "id": "fed-lying-triceps-press",
+  "name": "Francúzsky tlak v ľahu",
+  "primaryMuscle": "triceps",
+  "secondaryMuscles": [],
+  "equipment": "ez-bar",
+  "category": "strength",
+  "instructions": [
+   "Ľahni si na rovnú lavičku s EZ tyčou (odporúčam) alebo rovnou tyčou položenou na zemi za hlavou a s nohami na zemi.",
+   "Chyť tyč za sebou stredným nadhmatom a zdvihni ju pred seba do vystretých rúk. Tip: Ruky sú kolmo na trup a podlahu. Lakte sú zatiahnuté. Toto je východisková poloha.",
+   "S nádychom pomaly spúšťaj záťaž, kým sa tyč zľahka nedotkne čela, pričom horné časti paží a lakte ostávajú nehybné.",
+   "Potom zdvihni záťaž tricepsami späť do východiskovej polohy a vydychuj.",
+   "Zopakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Lying Triceps Press"
+ },
+ {
+  "id": "fed-standing-dumbbell-triceps-extension",
+  "name": "Tricepsová extenzia s jednoručkou v stoji",
+  "primaryMuscle": "triceps",
+  "secondaryMuscles": [],
+  "equipment": "dumbbell",
+  "category": "strength",
+  "instructions": [
+   "Postav sa s jednoručkou v oboch rukách. Nohy maj v šírke ramien. Pomaly chyť jednoručku oboma rukami a zdvihni ju nad hlavu, kým nie sú ruky úplne vystreté.",
+   "Záťaž spočíva v dlaniach a palce ju obopínajú. Dlane smerujú nahor ku stropu. Toto je východisková poloha.",
+   "Horné časti paží maj blízko hlavy, lakte pri sebe a kolmo na podlahu. Spusti záťaž polkruhovým pohybom za hlavu, kým sa predlaktia nedotknú bicepsov. Tip: Horné časti paží ostávajú nehybné a hýbu sa len predlaktia. Pri tomto kroku nadychuj.",
+   "Vráť sa do východiskovej polohy zdvihnutím jednoručky tricepsami. Pri tomto kroku vydychuj.",
+   "Zopakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Standing Dumbbell Triceps Extension"
+ },
+ {
+  "id": "fed-close-grip-barbell-bench-press",
+  "name": "Tlak na lavičke s činkou úzkym úchopom",
+  "primaryMuscle": "triceps",
+  "secondaryMuscles": [
+   "chest",
+   "shoulders"
+  ],
+  "equipment": "barbell",
+  "category": "strength",
+  "instructions": [
+   "Ľahni si na rovnú lavičku. Úzkym úchopom (asi v šírke ramien) zdvihni tyč zo stojana a drž ju priamo nad sebou so zamknutými rukami. Toto je východisková poloha.",
+   "S nádychom pomaly klesaj, kým nepocítiš tyč na strede hrudníka. Tip: Na rozdiel od bežného tlaku na lavičke maj lakte stále blízko trupu, aby sa maximálne zapojili tricepsy.",
+   "Po sekundovej pauze vytlač tyč späť do východiskovej polohy tricepsami a vydychuj. Zamkni ruky v hornej polohe, drž sekundu a potom pomaly klesaj znova. Tip: Klesanie by malo trvať aspoň dvakrát dlhšie než výtlak.",
+   "Zopakuj pohyb predpísaný počet opakovaní.",
+   "Po skončení polož tyč späť na stojan."
+  ],
+  "unilateral": false,
+  "nameEn": "Close-Grip Barbell Bench Press"
+ },
+ {
+  "id": "fed-bench-dips",
+  "name": "Dipy na lavičke",
+  "primaryMuscle": "triceps",
+  "secondaryMuscles": [
+   "chest",
+   "shoulders"
+  ],
+  "equipment": "bodyweight",
+  "category": "strength",
+  "instructions": [
+   "Na toto cvičenie polož lavičku za chrbát. S lavičkou kolmo na telo a chrbtom k nej sa chyť jej okraja s vystretými rukami v šírke ramien. Nohy sú natiahnuté vpred, v páse ohnuté kolmo na trup. Toto je východisková poloha.",
+   "Pomaly spúšťaj telo s nádychom pokrčením lakťov, kým uhol medzi hornou časťou paže a predlaktím nebude o niečo menší než 90 stupňov. Tip: Lakte drž počas pohybu čo najbližšie k sebe. Predlaktia smerujú stále nadol.",
+   "Pomocou tricepsov zdvihni trup späť do východiskovej polohy.",
+   "Zopakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Bench Dips"
+ },
+ {
+  "id": "fed-cable-one-arm-tricep-extension",
+  "name": "Tricepsová extenzia na kladke jednou rukou",
+  "primaryMuscle": "triceps",
+  "secondaryMuscles": [],
+  "equipment": "cable",
+  "category": "strength",
+  "instructions": [
+   "Pravou rukou chyť jednoduchú rukoväť pripevnenú na hornej kladke podchvatom (dlaň nahor). Stoj priamo pred závažím.",
+   "Stiahni rukoväť nadol tak, aby bola horná časť paže a lakeť zafixované pri boku tela. Horná časť paže a predlaktie zvierajú ostrý uhol (menej než 90 stupňov). Druhú ruku môžeš držať pri páse a pre lepšiu rovnováhu môžeš mať jednu nohu vpredu a druhú vzadu. Toto je východisková poloha.",
+   "Napínaním tricepsu tlač rukoväť nadol k boku, kým nie je ruka vystretá. Pri pohybe vydychuj. Tip: Hýbu sa len predlaktia. Horné časti paží ostávajú stále nehybné.",
+   "Stiahni triceps a drž sekundu v tejto stiahnutej polohe.",
+   "Pomaly vráť rukoväť do východiskovej polohy.",
+   "Zopakuj odporúčaný počet opakovaní a potom vykonaj rovnaký pohyb s druhou rukou."
+  ],
+  "unilateral": true,
+  "nameEn": "Cable One Arm Tricep Extension"
+ },
+ {
+  "id": "fed-barbell-full-squat",
+  "name": "Hlboký drep s činkou",
+  "primaryMuscle": "quadriceps",
+  "secondaryMuscles": [
+   "calves",
+   "glutes",
+   "hamstrings",
+   "lower back"
+  ],
+  "equipment": "barbell",
+  "category": "strength",
+  "instructions": [
+   "Toto cvičenie je z bezpečnostných dôvodov najlepšie robiť v stojane na drepy. Najprv nastav tyč na stojane tesne nad úroveň ramien. Keď máš správnu výšku a tyč je naložená, podlez pod tyč a polož si ju na zadnú časť ramien (mierne pod krkom).",
+   "Uchop tyč oboma rukami po stranách a zdvihni ju zo stojana tak, že sa najprv odrazíš nohami a zároveň vystrieš trup.",
+   "Odstúp od stojana a postav sa do stredného postoja na šírku ramien s prstami mierne vytočenými von. Hlavu drž stále hore a chrbát rovný. Toto je tvoja východisková poloha.",
+   "Pomaly spúšťaj tyč pokrčením kolien a zasunutím bokov dozadu, pričom drž rovnú postavu a hlavu hore. Pokračuj dole, kým sa stehná nedotknú lýtok. Počas tejto fázy sa nadýchni.",
+   "Zdvíhaj tyč a vydychuj, pričom tlačíš do podlahy pätou alebo stredom chodidla, vystieraš nohy a natiahneš boky späť do východiskovej polohy.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Barbell Full Squat"
+ },
+ {
+  "id": "fed-barbell-squat",
+  "name": "Drep s činkou",
+  "primaryMuscle": "quadriceps",
+  "secondaryMuscles": [
+   "calves",
+   "glutes",
+   "hamstrings",
+   "lower back"
+  ],
+  "equipment": "barbell",
+  "category": "strength",
+  "instructions": [
+   "Toto cvičenie je z bezpečnostných dôvodov najlepšie robiť v stojane na drepy. Najprv nastav tyč na stojane tesne pod úroveň ramien. Keď máš správnu výšku a tyč je naložená, podlez pod tyč a polož si ju na zadnú časť ramien (mierne pod krkom).",
+   "Uchop tyč oboma rukami po stranách a zdvihni ju zo stojana tak, že sa najprv odrazíš nohami a zároveň vystrieš trup.",
+   "Odstúp od stojana a postav sa do stredného postoja na šírku ramien s prstami mierne vytočenými von. Hlavu drž stále hore a chrbát rovný. Toto je tvoja východisková poloha. (Poznámka: použijeme strednú stoju opísanú vyššie, ktorá rozvíja celkovú svalovú hmotu; môžeš však zvoliť ktorúkoľvek z troch postavení opísaných v časti o postavení chodidiel.)",
+   "Pomaly spúšťaj tyč pokrčením kolien a bokov, pričom drž rovnú postavu a hlavu hore. Pokračuj dole, kým uhol medzi stehnom a lýtkom nie je o trochu menší ako 90 stupňov. Počas tejto fázy sa nadýchni. Tip: Ak cvik robíš správne, predná strana kolien by mala tvoriť s prstami pomyselnú rovnú čiaru kolmú na smer dopredu. Ak sú kolená za touto čiarou (pred prstami), zbytočne zaťažuješ koleno a cvik robíš nesprávne.",
+   "Zdvíhaj tyč a vydychuj, pričom tlačíš do podlahy pätou a znova vystieraš nohy do východiskovej polohy.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Barbell Squat"
+ },
+ {
+  "id": "fed-front-barbell-squat",
+  "name": "Predný drep s činkou",
+  "primaryMuscle": "quadriceps",
+  "secondaryMuscles": [
+   "calves",
+   "glutes",
+   "hamstrings"
+  ],
+  "equipment": "barbell",
+  "category": "strength",
+  "instructions": [
+   "Toto cvičenie je z bezpečnostných dôvodov najlepšie robiť v stojane na drepy. Najprv nastav tyč na stojane podľa svojej výšky. Keď máš správnu výšku a tyč je naložená, priblíž ruky pod tyč, lakte drž vysoko a nadlaktia mierne nad rovnobežkou s podlahou. Polož tyč na predné časti ramien a prekríž ruky, aby si ju mal pod kontrolou.",
+   "Zdvihni tyč zo stojana tak, že sa najprv odrazíš nohami a zároveň vystrieš trup.",
+   "Odstúp od stojana a postav sa do stredného postoja na šírku ramien s prstami mierne vytočenými von. Hlavu drž stále hore, pretože pohľad dolu ti naruší rovnováhu, a chrbát drž rovný. Toto je tvoja východisková poloha. (Poznámka: použijeme strednú stoju opísanú vyššie, ktorá rozvíja celkovú svalovú hmotu; môžeš však zvoliť ktorúkoľvek z troch postavení opísaných v časti o postavení chodidiel.)",
+   "Pomaly spúšťaj tyč pokrčením kolien, pričom drž rovnú postavu a hlavu hore. Pokračuj dole, kým uhol medzi stehnom a lýtkom nie je o trochu menší ako 90 stupňov (stehná sú pod rovnobežkou s podlahou). Počas tejto fázy sa nadýchni. Tip: Ak cvik robíš správne, predná strana kolien by mala tvoriť s prstami pomyselnú rovnú čiaru kolmú na smer dopredu. Ak sú kolená za touto čiarou (pred prstami), zbytočne zaťažuješ koleno a cvik robíš nesprávne.",
+   "Zdvíhaj tyč a vydychuj, pričom tlačíš do podlahy hlavne stredom chodidla a znova vystieraš nohy do východiskovej polohy.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Front Barbell Squat"
+ },
+ {
+  "id": "fed-goblet-squat",
+  "name": "Goblet drep",
+  "primaryMuscle": "quadriceps",
+  "secondaryMuscles": [
+   "calves",
+   "glutes",
+   "hamstrings",
+   "shoulders"
+  ],
+  "equipment": "kettlebell",
+  "category": "strength",
+  "instructions": [
+   "Postav sa a drž ľahký kettlebell za rúčky tesne pri hrudi. Toto je tvoja východisková poloha.",
+   "Drep sa dole medzi nohy, kým sa stehná nedotknú lýtok. Hruď a hlavu drž hore a chrbát rovný.",
+   "V dolnej polohe sa zastav a lakťami tlač kolená von. Vráť sa do východiskovej polohy a opakuj 10 – 20 opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Goblet Squat"
+ },
+ {
+  "id": "fed-leg-press",
+  "name": "Tlak na nohy (leg press)",
+  "primaryMuscle": "quadriceps",
+  "secondaryMuscles": [
+   "calves",
+   "glutes",
+   "hamstrings"
+  ],
+  "equipment": "machine",
+  "category": "strength",
+  "instructions": [
+   "Sadni si do stroja na leg press a polož nohy na platformu pred sebou v strednom postoji (na šírku ramien). (Poznámka: použijeme strednú stoju opísanú vyššie, ktorá rozvíja celkovú svalovú hmotu; môžeš však zvoliť ktorúkoľvek z troch postavení opísaných v časti o postavení chodidiel.)",
+   "Uvoľni bezpečnostné tyče držiace zaťaženú platformu a vytlač platformu úplne hore, kým nemáš nohy úplne vystreté pred sebou. Tip: Kolená nezamykaj. Trup a nohy by mali zvierať pravý uhol 90 stupňov. Toto je tvoja východisková poloha.",
+   "S nádychom pomaly spúšťaj platformu, kým horná a dolná časť nôh nezvierajú uhol 90 stupňov.",
+   "S výdychom sa vráť do východiskovej polohy, pričom tlačíš hlavne pätami a zapájaš štvorhlavé stehenné svaly.",
+   "Opakuj odporúčaný počet opakovaní a po skončení nezabudni riadne zaistiť bezpečnostné poistky. Nechceš, aby ti plne naložená platforma spadla na telo."
+  ],
+  "unilateral": false,
+  "nameEn": "Leg Press"
+ },
+ {
+  "id": "fed-hack-squat",
+  "name": "Hack drep",
+  "primaryMuscle": "quadriceps",
+  "secondaryMuscles": [
+   "calves",
+   "glutes",
+   "hamstrings"
+  ],
+  "equipment": "machine",
+  "category": "strength",
+  "instructions": [
+   "Opri si chrbát o zadnú opierku stroja a zaháčkuj ramená pod ramenné vankúšiky.",
+   "Postav nohy na platformu v strednom postoji na šírku ramien s prstami mierne vytočenými von. Tip: Hlavu drž stále hore a chrbát mať stále na opierke.",
+   "Polož ruky na bočné rúčky stroja a uvoľni bezpečnostné tyče (pri väčšine strojov to urobíš otočením bočných rúčok z čelnej polohy do uhlopriečnej).",
+   "Teraz vystri nohy bez zamknutia kolien. Toto je tvoja východisková poloha. (Poznámka: použijeme strednú stoju opísanú vyššie, ktorá rozvíja celkovú svalovú hmotu; môžeš však zvoliť ktorúkoľvek z troch postavení opísaných v časti o postavení chodidiel.)",
+   "Pomaly spúšťaj záťaž pokrčením kolien, pričom drž rovnú postavu a hlavu hore (chrbát stále na opierke). Pokračuj dole, kým uhol medzi stehnom a lýtkom nie je o trochu menší ako 90 stupňov (stehná sú pod rovnobežkou s podlahou). Počas tejto fázy sa nadýchni. Tip: Ak cvik robíš správne, predná strana kolien by mala tvoriť s prstami pomyselnú rovnú čiaru kolmú na smer dopredu. Ak sú kolená za touto čiarou (pred prstami), zbytočne zaťažuješ koleno a cvik robíš nesprávne.",
+   "Zdvíhaj záťaž a vydychuj, pričom tlačíš do podlahy hlavne pätou a znova vystieraš nohy do východiskovej polohy.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Hack Squat"
+ },
+ {
+  "id": "fed-barbell-lunge",
+  "name": "Výpad s činkou",
+  "primaryMuscle": "quadriceps",
+  "secondaryMuscles": [
+   "calves",
+   "glutes",
+   "hamstrings"
+  ],
+  "equipment": "barbell",
+  "category": "strength",
+  "instructions": [
+   "Toto cvičenie je z bezpečnostných dôvodov najlepšie robiť v stojane na drepy. Najprv nastav tyč na stojane tesne pod úroveň ramien. Keď máš správnu výšku a tyč je naložená, podlez pod tyč a polož si ju na zadnú časť ramien (mierne pod krkom).",
+   "Uchop tyč oboma rukami po stranách a zdvihni ju zo stojana tak, že sa najprv odrazíš nohami a zároveň vystrieš trup.",
+   "Odstúp od stojana, vykroč pravou nohou dopredu a spusti sa cez boky, pričom drž trup vzpriamený a rovnováhu. Pri zostupe sa nadýchni. Poznámka: Pri klesaní nenechaj koleno ísť dopredu za prsty, zbytočne by to zaťažilo kolenný kĺb.",
+   "S výdychom sa odraz hlavne pätou a vráť sa do východiskovej polohy.",
+   "Opakuj pohyb odporúčaný počet opakovaní a potom cvič s ľavou nohou."
+  ],
+  "unilateral": true,
+  "nameEn": "Barbell Lunge"
+ },
+ {
+  "id": "fed-dumbbell-lunges",
+  "name": "Výpady s jednoručkami",
+  "primaryMuscle": "quadriceps",
+  "secondaryMuscles": [
+   "calves",
+   "glutes",
+   "hamstrings"
+  ],
+  "equipment": "dumbbell",
+  "category": "strength",
+  "instructions": [
+   "Postav sa vzpriamene a drž v rukách po stranách dve jednoručky. Toto je tvoja východisková poloha.",
+   "Vykroč pravou nohou dopredu asi o 60 cm od nohy, ktorá zostáva vzadu, a spusti hornú časť tela dole, pričom drž trup vzpriamený a rovnováhu. Pri zostupe sa nadýchni. Poznámka: Ako pri iných cvikoch, pri klesaní nenechaj koleno ísť dopredu za prsty, zbytočne by to zaťažilo kolenný kĺb. Dbaj na to, aby predná holeň zostala kolmo na podlahu.",
+   "S výdychom sa odraz hlavne pätou a vráť sa do východiskovej polohy.",
+   "Opakuj pohyb odporúčaný počet opakovaní a potom cvič s ľavou nohou."
+  ],
+  "unilateral": true,
+  "nameEn": "Dumbbell Lunges"
+ },
+ {
+  "id": "fed-split-squat-with-dumbbells",
+  "name": "Bulharský drep s jednoručkami",
+  "primaryMuscle": "quadriceps",
+  "secondaryMuscles": [
+   "glutes",
+   "hamstrings"
+  ],
+  "equipment": "dumbbell",
+  "category": "strength",
+  "instructions": [
+   "Postav sa do krokového postoja so zadnou nohou zvýšenou a prednou nohou vpredu.",
+   "Drž v každej ruke jednoručku a nechaj ich visieť po stranách. Toto je tvoja východisková poloha.",
+   "Začni klesať pokrčením kolena a bedra a spusti telo dole. Počas celého pohybu drž správne držanie tela. Predné koleno drž v línii s chodidlom.",
+   "V dolnej polohe sa odraz cez pätu, vystri koleno aj bedro a vráť sa do východiskovej polohy."
+  ],
+  "unilateral": true,
+  "nameEn": "Split Squat with Dumbbells"
+ },
+ {
+  "id": "fed-bodyweight-squat",
+  "name": "Drep s vlastnou váhou",
+  "primaryMuscle": "quadriceps",
+  "secondaryMuscles": [
+   "glutes",
+   "hamstrings"
+  ],
+  "equipment": "bodyweight",
+  "category": "strength",
+  "instructions": [
+   "Postav sa s nohami na šírku ramien. Ruky môžeš dať za hlavu. Toto je tvoja východisková poloha.",
+   "Začni pohyb pokrčením kolien a bokov a zasunutím bokov dozadu.",
+   "Ak vládzeš, pokračuj do plnej hĺbky a rýchlo pohyb otoč späť do východiskovej polohy. Pri drepe drž hlavu a hruď hore a tlač kolená von."
+  ],
+  "unilateral": false,
+  "nameEn": "Bodyweight Squat"
+ },
+ {
+  "id": "fed-leg-extensions",
+  "name": "Predkopávanie",
+  "primaryMuscle": "quadriceps",
+  "secondaryMuscles": [],
+  "equipment": "machine",
+  "category": "strength",
+  "instructions": [
+   "Na toto cvičenie potrebuješ stroj na predkopávanie. Najprv zvoľ záťaž a sadni si do stroja s nohami pod vankúšom (chodidlá smerujú dopredu) a rukami držiac bočné rúčky. Toto je tvoja východisková poloha. Tip: Vankúš si nastav tak, aby ti ležal na spodnej časti predkolenia (tesne nad chodidlami). Uisti sa tiež, že dolná a horná časť nohy zvierajú uhol 90 stupňov. Ak je uhol menší ako 90 stupňov, koleno je nad prstami, čo zbytočne zaťažuje kolenný kĺb. Ak je stroj takto konštruovaný, hľadaj iný stroj alebo pri cvičení nejdi nižšie, než dosiahneš uhol 90 stupňov.",
+   "S výdychom vystri nohy naplno pomocou štvorhlavých stehenných svalov. Dbaj na to, aby zvyšok tela zostal nehybne na sedadle. V stiahnutej polohe sa na sekundu zastav.",
+   "S nádychom pomaly spusti záťaž späť do pôvodnej polohy a dbaj na to, aby si neprekročil hranicu uhla 90 stupňov.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Leg Extensions"
+ },
+ {
+  "id": "fed-lying-leg-curls",
+  "name": "Zakopávanie v ľahu",
+  "primaryMuscle": "hamstrings",
+  "secondaryMuscles": [],
+  "equipment": "machine",
+  "category": "strength",
+  "instructions": [
+   "Nastav páku stroja podľa svojej výšky a ľahni si na brucho na stroj na zakopávanie tak, aby vankúš páky ležal na zadnej strane nôh (pár centimetrov pod lýtkami). Tip: Ak je to možné, použi stroj so šikmou opierkou, nie rovnou, pretože šikmá poloha lepšie zapája zadné stehenné svaly.",
+   "Drž trup rovno na lavičke, uisti sa, že máš nohy úplne natiahnuté, a uchop bočné rúčky stroja. Špičky nôh nasmeruj rovno (alebo môžeš použiť ktorúkoľvek z ďalších dvoch postavení opísaných v časti o postavení chodidiel). Toto je tvoja východisková poloha.",
+   "S výdychom pokrč nohy hore čo najviac, bez zdvíhania stehien z podložky. Keď dosiahneš úplné stiahnutie, na sekundu ho podrž.",
+   "S nádychom vráť nohy do východiskovej polohy. Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Lying Leg Curls"
+ },
+ {
+  "id": "fed-seated-leg-curl",
+  "name": "Zakopávanie v sede",
+  "primaryMuscle": "hamstrings",
+  "secondaryMuscles": [],
+  "equipment": "machine",
+  "category": "strength",
+  "instructions": [
+   "Nastav páku stroja podľa svojej výšky a sadni si tak, aby si mal chrbát opretý o zadnú opierku.",
+   "Polož zadnú stranu dolnej časti nôh na vankúšovú páku (pár centimetrov pod lýtkami) a zaisti stehenný vankúš na stehná tesne nad kolenami. Potom uchop bočné rúčky stroja, špičky nasmeruj rovno (alebo použi ktorúkoľvek z ďalších dvoch postavení) a uisti sa, že nohy sú úplne vystreté pred tebou. Toto je tvoja východisková poloha.",
+   "S výdychom stiahni páku stroja čo najviac k zadnej strane stehien pokrčením kolien. Trup drž stále nehybne. Stiahnutú polohu na sekundu podrž.",
+   "S nádychom sa pomaly vráť do východiskovej polohy.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Seated Leg Curl"
+ },
+ {
+  "id": "fed-standing-calf-raises",
+  "name": "Výpony na lýtka v stoji",
+  "primaryMuscle": "calves",
+  "secondaryMuscles": [],
+  "equipment": "machine",
+  "category": "strength",
+  "instructions": [
+   "Nastav vankúšovú páku stroja na výpony podľa svojej výšky.",
+   "Vlož ramená pod vankúše a nasmeruj špičky dopredu (alebo použi ktorúkoľvek z dvoch ďalších polôh opísaných na začiatku kapitoly). Priehlavky by mali byť pevne na podložke pre lýtka a päty voľne mimo nej. Vytlač páku hore vystretím bokov a kolien, kým nie si vzpriamený. Kolená drž mierne pokrčené, nikdy ich nezamykaj. Špičky smerujú dopredu, von alebo dovnútra podľa opisu na začiatku kapitoly. Toto je tvoja východisková poloha.",
+   "S výdychom zdvíhaj päty vystieraním členkov čo najvyššie a napni lýtka. Dbaj na to, aby koleno zostalo stále nehybné. V žiadnom momente sa nesmie pokrčiť. Stiahnutú polohu na sekundu podrž, kým sa začneš vracať dole.",
+   "S nádychom sa pomaly vráť do východiskovej polohy spúšťaním pát a ohýbaním členkov, kým nie sú lýtka natiahnuté.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Standing Calf Raises"
+ },
+ {
+  "id": "fed-seated-calf-raise",
+  "name": "Výpony na lýtka v sede",
+  "primaryMuscle": "calves",
+  "secondaryMuscles": [],
+  "equipment": "machine",
+  "category": "strength",
+  "instructions": [
+   "Sadni si do stroja a polož špičky na spodnú časť platformy tak, aby päty boli voľne mimo nej. Zvoľ si postavenie špičiek (dopredu, dovnútra alebo von) podľa opisu na začiatku kapitoly.",
+   "Vlož spodnú časť stehien pod vankúš páky, ktorý treba nastaviť podľa výšky stehien. Potom polož ruky na vankúš páky, aby sa nevyšmykol dopredu.",
+   "Mierne nadvihni páku zatlačením pát nahor a uvoľni bezpečnostnú tyč. Toto je tvoja východisková poloha.",
+   "Pomaly spúšťaj päty ohýbaním členkov, kým nie sú lýtka úplne natiahnuté. Pri tomto pohybe sa nadýchni.",
+   "Zdvihni päty vystretím členkov čo najvyššie, napni lýtka a vydýchni. Hornú polohu na sekundu podrž.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Seated Calf Raise"
+ },
+ {
+  "id": "fed-barbell-hip-thrust",
+  "name": "Hip thrust s činkou",
+  "primaryMuscle": "glutes",
+  "secondaryMuscles": [
+   "calves",
+   "hamstrings"
+  ],
+  "equipment": "barbell",
+  "category": "powerlifting",
+  "instructions": [
+   "Sadni si na zem s lavičkou priamo za sebou. Naloženú činku maj cez nohy. Hrubá tyč alebo vankúš na tyči môže výrazne zmierniť nepríjemný tlak pri tomto cviku.",
+   "Prevaľ tyč tak, aby bola priamo nad bokmi, a oprite sa o lavičku tak, aby sa lopatky nachádzali pri jej hornom okraji.",
+   "Začni pohyb tlakom cez chodidlá a vystieraj boky zvislo nahor cez tyč. Tvoju váhu nesú lopatky a chodidlá. Vystri sa čo najviac, potom pohyb otoč späť do východiskovej polohy."
+  ],
+  "unilateral": false,
+  "nameEn": "Barbell Hip Thrust"
+ },
+ {
+  "id": "fed-barbell-glute-bridge",
+  "name": "Mostík na zadok s činkou",
+  "primaryMuscle": "glutes",
+  "secondaryMuscles": [
+   "calves",
+   "hamstrings"
+  ],
+  "equipment": "barbell",
+  "category": "powerlifting",
+  "instructions": [
+   "Sadni si na zem s naloženou činkou cez nohy. Hrubá tyč alebo vankúš na tyči môže výrazne zmierniť nepríjemný tlak pri tomto cviku. Prevaľ tyč tak, aby bola priamo nad bokmi, a ľahni si naplocho na zem.",
+   "Začni pohyb tlakom cez päty a vystieraj boky zvislo nahor cez tyč. Tvoju váhu nesie horná časť chrbta a päty.",
+   "Vystri sa čo najviac, potom pohyb otoč späť do východiskovej polohy."
+  ],
+  "unilateral": false,
+  "nameEn": "Barbell Glute Bridge"
+ },
+ {
+  "id": "fed-dumbbell-step-ups",
+  "name": "Výstupy na step s jednoručkami",
+  "primaryMuscle": "quadriceps",
+  "secondaryMuscles": [
+   "calves",
+   "glutes",
+   "hamstrings"
+  ],
+  "equipment": "dumbbell",
+  "category": "strength",
+  "instructions": [
+   "Postav sa vzpriamene a drž v každej ruke jednoručku (dlane smerujú k bokom nôh).",
+   "Polož pravú nohu na vyvýšenú plošinu. Vystúp na plošinu vystretím bedra a kolena pravej nohy. Zdvihni telo hlavne pomocou päty a postav na plošinu aj ľavú nohu. Pri vynaložení sily na výstup vydýchni.",
+   "S nádychom zostúp ľavou nohou pokrčením bedra a kolena pravej nohy. Vráť sa do pôvodného postoja postavením pravej nohy vedľa ľavej v pôvodnej polohe.",
+   "Opakuj s pravou nohou odporúčaný počet opakovaní a potom cvič s ľavou nohou."
+  ],
+  "unilateral": true,
+  "nameEn": "Dumbbell Step Ups"
+ },
+ {
+  "id": "fed-crunches",
+  "name": "Skracovanie (crunch)",
+  "primaryMuscle": "abdominals",
+  "secondaryMuscles": [],
+  "equipment": "bodyweight",
+  "category": "strength",
+  "instructions": [
+   "Ľahni si na chrbát s chodidlami celými na zemi alebo opretými o lavičku s kolenami pokrčenými v uhle 90 stupňov. Ak máš nohy na lavičke, daj ich 7 – 10 cm od seba a špičky natoč dovnútra tak, aby sa dotýkali.",
+   "Teraz polož ruky zľahka po oboch stranách hlavy a lakte drž pri sebe. Tip: Nezamykaj prsty za hlavou.",
+   "Pritláčaj driek k podlahe, aby si lepšie izoloval brušné svaly, a začni dvíhať ramená od zeme.",
+   "Pokračuj v tlaku driekom k zemi čo najsilnejšie, kým napínaš brucho a vydychuješ. Ramená by sa mali zdvihnúť len asi 10 cm nad zem a driek by mal zostať na zemi. V hornej polohe brucho silno napni a podrž stiahnutie sekundu. Tip: Sústreď sa na pomalý, kontrolovaný pohyb a nepodvádzaj zotrvačnosťou.",
+   "Po sekundovom stiahnutí sa s nádychom pomaly vráť do východiskovej polohy.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Crunches"
+ },
+ {
+  "id": "fed-sit-up",
+  "name": "Sed-ľah",
+  "primaryMuscle": "abdominals",
+  "secondaryMuscles": [],
+  "equipment": "bodyweight",
+  "category": "strength",
+  "instructions": [
+   "Ľahni si na zem a nohy si zasuň pod niečo, čo sa nepohne, alebo ich nechaj držať partnera. Nohy máš pokrčené v kolenách.",
+   "Polož ruky za hlavu a prepleť prsty. Toto je východisková poloha.",
+   "Zdvihni hornú časť tela tak, aby so stehnami tvorila pomyselné písmeno V. Počas tejto fázy vydychuj.",
+   "Keď na sekundu ucítiš stiahnutie, spusti hornú časť tela späť do východiskovej polohy a nadýchni sa.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Sit-Up"
+ },
+ {
+  "id": "fed-plank",
+  "name": "Plank",
+  "primaryMuscle": "abdominals",
+  "secondaryMuscles": [],
+  "equipment": "bodyweight",
+  "category": "strength",
+  "instructions": [
+   "Zaujmi polohu na bruchu na podlahe, pričom sa opieraš o špičky nôh a predlaktia. Ruky sú pokrčené a priamo pod ramenami.",
+   "Telo drž stále rovné a v tejto polohe vydrž čo najdlhšie. Na zvýšenie náročnosti môžeš zdvihnúť ruku alebo nohu."
+  ],
+  "unilateral": false,
+  "nameEn": "Plank"
+ },
+ {
+  "id": "fed-hanging-leg-raise",
+  "name": "Zdvih nôh v zvise na hrazde",
+  "primaryMuscle": "abdominals",
+  "secondaryMuscles": [],
+  "equipment": "bodyweight",
+  "category": "strength",
+  "instructions": [
+   "Zavesa sa na hrazdu s oboma rukami vystretými nad sebou, širokým alebo stredným úchopom. Nohy visia rovno dole a panva je mierne podsadená dozadu. Toto je tvoja východisková poloha.",
+   "Zdvíhaj nohy, kým trup a nohy nezvierajú uhol 90 stupňov. Pri pohybe vydychuj a stiahnutie podrž asi sekundu.",
+   "S nádychom sa pomaly vráť do východiskovej polohy.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Hanging Leg Raise"
+ },
+ {
+  "id": "fed-cable-crunch",
+  "name": "Skracovanie na kladke (crunch)",
+  "primaryMuscle": "abdominals",
+  "secondaryMuscles": [],
+  "equipment": "cable",
+  "category": "strength",
+  "instructions": [
+   "Kľakni si pod vysokú kladku s lanovým nadstavcom.",
+   "Uchop lano a stiahni ho tak, aby ruky boli vedľa tváre.",
+   "Mierne sa predkloň v bokoch a nechaj záťaž prehnúť driek dozadu. Toto je tvoja východisková poloha.",
+   "S nehybnými bokmi skrč trup napnutím brucha tak, aby lakte smerovali k stredu stehien. Počas tejto fázy vydychuj a stiahnutie podrž sekundu.",
+   "S nádychom sa pomaly vráť do východiskovej polohy. Tip: Dbaj na to, aby si mal brucho napnuté počas celého pohybu. Nevoľ ani takú ťažkú záťaž, aby hlavnú prácu robil driek.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Cable Crunch"
+ },
+ {
+  "id": "fed-russian-twist",
+  "name": "Ruské otáčanie trupu",
+  "primaryMuscle": "abdominals",
+  "secondaryMuscles": [
+   "lower back"
+  ],
+  "equipment": "bodyweight",
+  "category": "strength",
+  "instructions": [
+   "Ľahni si na zem a nohy si zasuň pod niečo, čo sa nepohne, alebo ich nechaj držať partnera. Nohy máš pokrčené v kolenách.",
+   "Zdvihni hornú časť tela tak, aby so stehnami tvorila pomyselné písmeno V. Ruky máš úplne vystreté pred sebou kolmo na trup so spojenými dlaňami. Toto je východisková poloha.",
+   "Otoč trup doprava, kým nie sú ruky rovnobežne s podlahou, a pritom vydychuj.",
+   "Podrž stiahnutie sekundu a vráť sa do východiskovej polohy, pričom vydychuj. Potom sa otoč na opačnú stranu rovnakou technikou ako doprava.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Russian Twist"
+ },
+ {
+  "id": "fed-ab-roller",
+  "name": "Koliesko na brucho (ab roller)",
+  "primaryMuscle": "abdominals",
+  "secondaryMuscles": [
+   "shoulders"
+  ],
+  "equipment": "other",
+  "category": "strength",
+  "instructions": [
+   "Drž koliesko oboma rukami a kľakni si na zem.",
+   "Teraz polož koliesko na zem pred seba tak, aby si bol na všetkých štyroch (ako v kľuku na kolenách). Toto je tvoja východisková poloha.",
+   "Pomaly kotúľaj koliesko rovno dopredu a natiahni telo do rovnej polohy. Tip: Choď dole tak ďaleko, ako vládzeš, bez dotyku tela o podlahu. Počas tejto fázy sa nadýchni.",
+   "Po pauze v natiahnutej polohe sa začni sťahovať späť do východiskovej polohy a vydychuj. Tip: Choď pomaly a brucho drž stále napnuté."
+  ],
+  "unilateral": false,
+  "nameEn": "Ab Roller"
+ },
+ {
+  "id": "fed-mountain-climbers",
+  "name": "Horolezec",
+  "primaryMuscle": "quadriceps",
+  "secondaryMuscles": [
+   "chest",
+   "hamstrings",
+   "shoulders"
+  ],
+  "equipment": "other",
+  "category": "plyometrics",
+  "instructions": [
+   "Začni v polohe na kľuk, s váhou na rukách a špičkách. Pokrčením kolena a bedra prines jednu nohu tak, aby koleno bolo približne pod bokom. Toto je tvoja východisková poloha.",
+   "Explozívne vymeň polohy nôh: pokrčenú nohu vystri, kým nie je rovná a opretá o špičku, a druhú nohu prines dopredu s pokrčeným bedrom a kolenom. Opakuj striedavo 20 – 30 sekúnd."
+  ],
+  "unilateral": false,
+  "nameEn": "Mountain Climbers"
+ },
+ {
+  "id": "fed-one-arm-kettlebell-swings",
+  "name": "Švih s kettlebellom jednou rukou",
+  "primaryMuscle": "hamstrings",
+  "secondaryMuscles": [
+   "calves",
+   "glutes",
+   "lower back",
+   "shoulders"
+  ],
+  "equipment": "kettlebell",
+  "category": "strength",
+  "instructions": [],
+  "unilateral": true,
+  "nameEn": "One-Arm Kettlebell Swings"
+ },
+ {
+  "id": "fed-push-press",
+  "name": "Push press",
+  "primaryMuscle": "shoulders",
+  "secondaryMuscles": [
+   "quadriceps",
+   "triceps"
+  ],
+  "equipment": "barbell",
+  "category": "olympic weightlifting",
+  "instructions": [],
+  "unilateral": false,
+  "nameEn": "Push Press"
+ },
+ {
+  "id": "fed-machine-shoulder-military-press",
+  "name": "Tlak na ramená na stroji",
+  "primaryMuscle": "shoulders",
+  "secondaryMuscles": [
+   "triceps"
+  ],
+  "equipment": "machine",
+  "category": "strength",
+  "instructions": [
+   "Sadni si na stroj na tlak na ramená a nastav záťaž.",
+   "Chyť rúčky po bokoch, lakte drž pokrčené a v línii s trupom. Toto je východisková poloha.",
+   "Pri výdychu zdvihni rúčky a úplne vystri ruky. V hornej polohe zotrvaj so stiahnutými svalmi jednu sekundu.",
+   "Pri nádychu pomaly spusti rúčky späť do východiskovej polohy.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Machine Shoulder (Military) Press"
+ },
+ {
+  "id": "fed-leverage-chest-press",
+  "name": "Tlak na hrudník na pákovom stroji",
+  "primaryMuscle": "chest",
+  "secondaryMuscles": [
+   "shoulders",
+   "triceps"
+  ],
+  "equipment": "machine",
+  "category": "strength",
+  "instructions": [
+   "Nastav vhodnú záťaž kolíkom a upravi sedadlo podľa svojej výšky. Rúčky majú byť na začiatku pohybu pri spodnej alebo strednej časti prsných svalov.",
+   "Hruď a hlavu drž vzpriamene a lopatky stiahnuté k sebe. Toto je východisková poloha.",
+   "Odtláčaj rúčky dopredu vystieraním v lakťoch.",
+   "Po krátkej pauze v hornej polohe vráť záťaž tesne nad východiskovú polohu. Záťaž nespúšťaj až na doraz, kým nedokončíš sériu, aby svaly zostali pod napätím."
+  ],
+  "unilateral": false,
+  "nameEn": "Leverage Chest Press"
+ },
+ {
+  "id": "fed-smith-machine-squat",
+  "name": "Drep na Smithovom stroji",
+  "primaryMuscle": "quadriceps",
+  "secondaryMuscles": [
+   "calves",
+   "glutes",
+   "hamstrings",
+   "lower back"
+  ],
+  "equipment": "machine",
+  "category": "strength",
+  "instructions": [
+   "Najprv nastav tyč na výšku, ktorá zodpovedá tvojej postave. Keď je výška správna a tyč naložená, podstúp pod tyč a polož ju na zadnú časť ramien (mierne pod krkom).",
+   "Uchop tyč oboma rukami po stranách (dlane smerom dopredu), odomkni ju a zdvihni z držiakov tak, že sa súčasne odtlačíš nohami a vystrieš trup.",
+   "Postav nohy na šírku ramien s mierne vytočenými špičkami. Hlavu drž stále hore a chrbát rovný. Toto je východisková poloha. (Poznámka: Použitý je stredný postoj, ktorý rozvíja svaly celkovo, ale môžeš zvoliť aj iný postoj.)",
+   "Pomaly spúšťaj tyč pokrčením kolien, pričom drž rovnú postavu a hlavu hore. Klesaj, kým uhol medzi stehnom a lýtkom nie je o niečo menší ako 90 stupňov (stehná sú pod rovnobežkou s podlahou). Pri tejto fáze sa nadychuj. Tip: Ak cvik robíš správne, kolená sú v línii so špičkami a nepresahujú ich. Ak kolená presahujú špičky, zbytočne zaťažuješ koleno a cvik robíš nesprávne.",
+   "Pri výdychu dvíhaj tyč tlakom päty do podlahy, vystri nohy a vráť sa do východiskovej polohy.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Smith Machine Squat"
+ },
+ {
+  "id": "fed-smith-machine-bench-press",
+  "name": "Tlak na lavičke na Smithovom stroji",
+  "primaryMuscle": "chest",
+  "secondaryMuscles": [
+   "shoulders",
+   "triceps"
+  ],
+  "equipment": "machine",
+  "category": "strength",
+  "instructions": [
+   "Polož rovnú lavičku pod Smithov stroj. Nastav tyč do výšky, ktorú dosiahneš vo ľahu s takmer vystretými rukami. Po nastavení záťaže si ľahni na lavičku. Nadhmatom širším ako ramená odomkni tyč a drž ju priamo nad sebou s vystretými rukami. Toto je východisková poloha.",
+   "Pri nádychu pomaly klesaj, kým tyč nedosiahne stred hrudníka.",
+   "Po sekundovej pauze vytlač tyč späť do východiskovej polohy pri výdychu silou prsných svalov. Ruky vystri, chvíľu zotrvaj a potom opäť pomaly klesaj. Tip: Spúšťanie by malo trvať aspoň dvakrát dlhšie ako zdvih.",
+   "Opakuj pohyb predpísaný počet opakovaní.",
+   "Keď skončíš, zaveš tyč späť do držiakov."
+  ],
+  "unilateral": false,
+  "nameEn": "Smith Machine Bench Press"
+ },
+ {
+  "id": "fed-reverse-barbell-curl",
+  "name": "Curl s činkou podchvatom",
+  "primaryMuscle": "biceps",
+  "secondaryMuscles": [
+   "forearms"
+  ],
+  "equipment": "barbell",
+  "category": "strength",
+  "instructions": [
+   "Postav sa vzpriamene a drž činku v úchope na šírku ramien, lakte blízko pri trupe. Dlane smerujú nadol (nadhmat). Toto je východisková poloha.",
+   "Horné časti rúk drž nehybne a pri výdychu zdvíhaj činku napínaním bicepsov. Hýbu sa iba predlaktia. Pokračuj, kým nie sú bicepsy úplne stiahnuté a tyč je vo výške ramien. V hornej polohe chvíľu zotrvaj a svaly stiahni.",
+   "Pri nádychu pomaly vracaj tyč do východiskovej polohy.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Reverse Barbell Curl"
+ },
+ {
+  "id": "fed-farmer-s-walk",
+  "name": "Farmárska chôdza",
+  "primaryMuscle": "forearms",
+  "secondaryMuscles": [
+   "abdominals",
+   "glutes",
+   "hamstrings",
+   "lower back",
+   "quadriceps",
+   "traps"
+  ],
+  "equipment": "other",
+  "category": "strongman",
+  "instructions": [
+   "Na farmársku chôdzu sa dajú použiť rôzne pomôcky. Ak nie sú dostupné, môžeš použiť aj ťažké jednoručky alebo krátke tyče. Začni tak, že sa postavíš medzi pomôcky.",
+   "Po uchopení rúčok ich zdvihni tlakom cez päty, chrbát drž rovný a hlavu hore.",
+   "Choď krátkymi rýchlymi krokmi a nezabúdaj dýchať. Prejdi určenú vzdialenosť, zvyčajne 15 – 30 metrov, čo najrýchlejšie."
+  ],
+  "unilateral": false,
+  "nameEn": "Farmer's Walk"
+ },
+ {
+  "id": "fed-incline-dumbbell-flyes",
+  "name": "Rozpažovanie s jednoručkami na šikmej lavičke nahor",
+  "primaryMuscle": "chest",
+  "secondaryMuscles": [
+   "shoulders"
+  ],
+  "equipment": "dumbbell",
+  "category": "strength",
+  "instructions": [
+   "Drž v každej ruke jednoručku a ľahni si na lavičku nastavenú do sklonu najviac 30 stupňov.",
+   "Vystri ruky nad seba s miernym pokrčením v lakťoch.",
+   "Otoč zápästia tak, aby dlane smerovali k tebe. Tip: Malíčky sú vedľa seba. Toto je východisková poloha.",
+   "Pri nádychu pomaly spúšťaj ruky do strán, pričom ich drž vystreté a otáčaj zápästia, kým dlane nesmerujú k sebe. Tip: Na konci pohybu sú ruky po bokoch a dlane smerujú k stropu.",
+   "Pri výdychu vracaj jednoručky do východiskovej polohy opačným pohybom a otáčaj ruky tak, aby boli malíčky opäť vedľa seba. Tip: Pohyb prebieha len v ramennom kĺbe a v zápästí. V lakti sa nehýbeš.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Incline Dumbbell Flyes"
+ },
+ {
+  "id": "fed-low-cable-crossover",
+  "name": "Prekrížené kladky zdola",
+  "primaryMuscle": "chest",
+  "secondaryMuscles": [
+   "shoulders"
+  ],
+  "equipment": "cable",
+  "category": "strength",
+  "instructions": [
+   "Nastav kladky do nízkej polohy, zvoľ záťaž a chyť do každej ruky jednu rúčku.",
+   "Krok vpred, aby sa kladky napli. Dlane smerujú dopredu, ruky sú pod úrovňou pása a vystreté. Toto je východisková poloha.",
+   "S miernym pokrčením v lakťoch ťahaj ruky nahor a k stredu tela. Ruky sa stretnú pred hruďou s dlaňami smerom nahor.",
+   "Po krátkej pauze vráť ruky do východiskovej polohy."
+  ],
+  "unilateral": false,
+  "nameEn": "Low Cable Crossover"
+ },
+ {
+  "id": "fed-inverted-row",
+  "name": "Veslovanie v zvise pod tyčou",
+  "primaryMuscle": "middle back",
+  "secondaryMuscles": [
+   "lats"
+  ],
+  "equipment": "other",
+  "category": "strength",
+  "instructions": [
+   "Nastav tyč v stojane do výšky približne pása. Môžeš použiť aj Smithov stroj.",
+   "Chyť tyč širším úchopom ako ramená a zaveš sa pod ňou. Telo je rovné, päty na zemi a ruky úplne vystreté. Toto je východisková poloha.",
+   "Pokrč lakte a priťahuj hruď k tyči. Pri pohybe stiahni lopatky k sebe.",
+   "V hornej polohe sa zastav a vráť sa do východiskovej polohy.",
+   "Opakuj požadovaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Inverted Row"
+ },
+ {
+  "id": "fed-dumbbell-rear-lunge",
+  "name": "Výpad vzad s jednoručkami",
+  "primaryMuscle": "quadriceps",
+  "secondaryMuscles": [
+   "calves",
+   "glutes",
+   "hamstrings"
+  ],
+  "equipment": "dumbbell",
+  "category": "strength",
+  "instructions": [
+   "Postav sa vzpriamene s jednoručkou v každej ruke po bokoch tela. Toto je východisková poloha.",
+   "Urob krok vzad pravou nohou, približne 60 cm od ľavej nohy, a spusti telo nadol, pričom drž trup vzpriamene a rovnováhu. Pri klesaní sa nadychuj. Tip: Ako pri iných cvikoch, nedovoľ, aby koleno pri klesaní presiahlo špičku, zbytočne by si zaťažoval kolenný kĺb. Predná holeň má zostať kolmo na zem. Trup drž vzpriamene; dôležité sú pohyblivé ohýbače bedra. Dlhý výpad zaťažuje najmä sedacie svaly, krátky výpad štvorhlavý sval stehna.",
+   "Odtlač sa späť do východiskovej polohy a vydychuj. Tip: Ak chceš viac zapojiť štvorhlavý sval, odtláčaj sa prednou časťou chodidla. Ak chceš zapojiť sedacie svaly, tlač cez päty.",
+   "Teraz zopakuj s druhou nohou."
+  ],
+  "unilateral": true,
+  "nameEn": "Dumbbell Rear Lunge"
+ },
+ {
+  "id": "fed-reverse-crunch",
+  "name": "Reverzné skracovanie (crunch)",
+  "primaryMuscle": "abdominals",
+  "secondaryMuscles": [],
+  "equipment": "bodyweight",
+  "category": "strength",
+  "instructions": [
+   "Ľahni si na podlahu s úplne vystretými nohami a rukami popri trupe, dlane na podlahe. Ruky majú počas celého cviku zostať nehybné.",
+   "Zdvihni nohy tak, aby stehná boli kolmo na podlahu a chodidlá spolu a rovnobežne s podlahou. Toto je východisková poloha.",
+   "Pri nádychu priťahuj nohy k trupu, prevaľ panvu dozadu a zdvihni boky z podlahy. Na konci pohybu sa kolená dotýkajú hrude.",
+   "Chvíľu zotrvaj v stiahnutej polohe a pri výdychu vráť nohy do východiskovej polohy.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Reverse Crunch"
+ },
+ {
+  "id": "fed-seated-dumbbell-press",
+  "name": "Tlak s jednoručkami v sede",
+  "primaryMuscle": "shoulders",
+  "secondaryMuscles": [
+   "triceps"
+  ],
+  "equipment": "dumbbell",
+  "category": "strength",
+  "instructions": [
+   "Vezmi dve jednoručky, sadni si na lavičku na tlak na ramená alebo na univerzálnu lavičku s operadlom a polož jednoručky zvislo na stehná.",
+   "Postupne po jednej vynes jednoručky pomocou stehien do výšky ramien po oboch stranách.",
+   "Otoč zápästia tak, aby dlane smerovali dopredu. Toto je východisková poloha.",
+   "Pri výdychu tlač jednoručky nahor, kým sa hore nedotknú.",
+   "Po sekundovej pauze sa pri nádychu pomaly vráť do východiskovej polohy.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Seated Dumbbell Press"
+ },
+ {
+  "id": "fed-seated-barbell-military-press",
+  "name": "Military press s činkou v sede",
+  "primaryMuscle": "shoulders",
+  "secondaryMuscles": [
+   "triceps"
+  ],
+  "equipment": "barbell",
+  "category": "strength",
+  "instructions": [
+   "Sadni si na lavičku na military press s činkou za hlavou. Nechaj si tyč podať od pomocníka (je to šetrnejšie k rotátorovej manžete) alebo ju opatrne zdvihni sám nadhmatom (dlane smerom dopredu). Tip: Úchop má byť širší ako ramená a pri spúšťaní činky má vzniknúť pravý uhol medzi predlaktím a nadlaktím.",
+   "Keď tyč uchopíš správnym úchopom, zdvihni ju nad hlavu s vystretými rukami. Drž ju približne vo výške ramien a mierne pred hlavou. Toto je východisková poloha.",
+   "Pri nádychu pomaly spusti tyč ku kľúčnej kosti.",
+   "Pri výdychu zdvihni tyč späť do východiskovej polohy.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Seated Barbell Military Press"
+ },
+ {
+  "id": "fed-bent-over-two-dumbbell-row",
+  "name": "Veslovanie s dvoma jednoručkami v predklone",
+  "primaryMuscle": "middle back",
+  "secondaryMuscles": [
+   "biceps",
+   "lats",
+   "shoulders"
+  ],
+  "equipment": "dumbbell",
+  "category": "strength",
+  "instructions": [
+   "S jednoručkou v každej ruke (dlane smerom k trupu) mierne pokrč kolená a predkloň trup v páse. Chrbát drž rovný, kým nie je takmer rovnobežne s podlahou. Tip: Hlavu drž hore. Závažia visia priamo pred tebou, ruky sú kolmo na podlahu a trup. Toto je východisková poloha.",
+   "Trup drž nehybne a pri výdychu dvíhaj jednoručky k bokom, lakte blízko pri tele (predlaktiami nevyvíjaj žiadnu silu, len držia záťaž). V hornej polohe stiahni chrbtové svaly a chvíľu zotrvaj.",
+   "Pri nádychu pomaly spusti záťaž do východiskovej polohy.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Bent Over Two-Dumbbell Row"
+ },
+ {
+  "id": "fed-reverse-machine-flyes",
+  "name": "Zadné rozpažovanie na stroji",
+  "primaryMuscle": "shoulders",
+  "secondaryMuscles": [],
+  "equipment": "machine",
+  "category": "strength",
+  "instructions": [
+   "Nastav rúčky úplne dozadu. Zvoľ vhodnú záťaž a nastav výšku sedadla tak, aby rúčky boli vo výške ramien. Chyť rúčky s dlaňami smerom dovnútra. Toto je východisková poloha.",
+   "Polkruhovým pohybom ťahaj ruky do strán a dozadu a stiahni zadné časti ramien.",
+   "Ruky drž počas celého pohybu mierne pokrčené a pohyb nech prebieha len v ramennom kĺbe.",
+   "V zadnej polohe sa zastav a pomaly vráť záťaž do východiskovej polohy."
+  ],
+  "unilateral": false,
+  "nameEn": "Reverse Machine Flyes"
+ },
+ {
+  "id": "fed-leverage-iso-row",
+  "name": "Veslovanie na pákovom stroji",
+  "primaryMuscle": "lats",
+  "secondaryMuscles": [
+   "biceps",
+   "middle back"
+  ],
+  "equipment": "machine",
+  "category": "strength",
+  "instructions": [
+   "Nastav vhodnú záťaž kolíkom a výšku sedadla tak, aby boli rúčky vo výške hrudníka. Chyť rúčky neutrálnym alebo nadhmatovým úchopom. Toto je východisková poloha.",
+   "Priťahuj rúčky k trupu, stiahni lopatky k sebe a pokrč lakte.",
+   "V koncovej polohe sa zastav a potom pomaly vráť rúčky do východiskovej polohy. Pri viacerých opakovaniach záťaž nespúšťaj úplne na doraz, aby zaťažované svaly zostali pod napätím."
+  ],
+  "unilateral": false,
+  "nameEn": "Leverage Iso Row"
+ },
+ {
+  "id": "fed-machine-bicep-curl",
+  "name": "Bicepsový curl na stroji",
+  "primaryMuscle": "biceps",
+  "secondaryMuscles": [],
+  "equipment": "machine",
+  "category": "strength",
+  "instructions": [
+   "Nastav sedadlo do vhodnej výšky a zvoľ záťaž. Polož nadlaktia na opierky a chyť rúčky. Toto je východisková poloha.",
+   "Vykonaj pohyb pokrčením lakťa a priťahuj predlaktie k nadlaktiu.",
+   "V hornej polohe sa zastav a potom pomaly vráť záťaž do východiskovej polohy.",
+   "Záťaž nespúšťaj úplne na doraz, kým nedokončíš sériu, aby zaťažované svaly zostali pod napätím."
+  ],
+  "unilateral": false,
+  "nameEn": "Machine Bicep Curl"
+ },
+ {
+  "id": "fed-cable-shoulder-press",
+  "name": "Tlak na ramená na kladkách",
+  "primaryMuscle": "shoulders",
+  "secondaryMuscles": [
+   "triceps"
+  ],
+  "equipment": "cable",
+  "category": "strength",
+  "instructions": [
+   "Presuň kladky úplne dole a zvoľ vhodnú záťaž.",
+   "Postav sa priamo medzi stĺpy. Chyť lanká a drž ich vo výške ramien, dlane smerom dopredu. Toto je východisková poloha.",
+   "Hlavu a hruď drž hore a vystieraním v lakťoch tlač rúčky priamo nad hlavu.",
+   "Po pauze v hornej polohe sa vráť do východiskovej polohy a opakuj."
+  ],
+  "unilateral": false,
+  "nameEn": "Cable Shoulder Press"
+ },
+ {
+  "id": "fed-rack-pulls",
+  "name": "Mŕtvy ťah z výšky (rack pull)",
+  "primaryMuscle": "lower back",
+  "secondaryMuscles": [
+   "forearms",
+   "glutes",
+   "hamstrings",
+   "traps"
+  ],
+  "equipment": "barbell",
+  "category": "powerlifting",
+  "instructions": [
+   "Postav sa do silového stojana s tyčou na kolíkoch. Kolíky nastav do požadovanej výšky: tesne pod kolená, tesne nad ne alebo do polovice stehien. Postav sa k tyči v správnej polohe na mŕtvy ťah. Chodidlá sú pod bokmi, úchop na šírku ramien, chrbát prehnutý a boky vzadu, aby sa zapojili zadné stehenné svaly. Keďže záťaž býva ťažká, môžeš použiť striedavý úchop, hákový úchop alebo trhacie pásky.",
+   "S pohľadom dopredu vystri boky a kolená a ťahaj záťaž nahor a dozadu až do úplného vystretia. Na konci pohybu nezabudni stiahnuť ramená dozadu.",
+   "Vráť záťaž na kolíky a opakuj."
+  ],
+  "unilateral": false,
+  "nameEn": "Rack Pulls"
+ },
+ {
+  "id": "fed-palms-up-barbell-wrist-curl-over-a-bench",
+  "name": "Zdvih zápästí s činkou podchvatom na lavičke",
+  "primaryMuscle": "forearms",
+  "secondaryMuscles": [],
+  "equipment": "barbell",
+  "category": "strength",
+  "instructions": [
+   "Polož činku na jednu stranu rovnej lavičky.",
+   "Kľakni si na obe kolená tvárou k lavičke.",
+   "Chyť činku podhmatom (dlane nahor) a polož predlaktia na lavičku. Zápästia visia cez okraj.",
+   "Začni zdvihom zápästí nahor a vydychuj.",
+   "Pomaly spusti zápästia späť do východiskovej polohy a nadychuj sa.",
+   "Predlaktia majú zostať nehybné, na cvik sa hýbe iba zápästie.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Palms-Up Barbell Wrist Curl Over A Bench"
+ },
+ {
+  "id": "fed-cable-wrist-curl",
+  "name": "Zdvih zápästí na kladke",
+  "primaryMuscle": "forearms",
+  "secondaryMuscles": [],
+  "equipment": "cable",
+  "category": "strength",
+  "instructions": [
+   "Polož rovnú lavičku pred nízku kladku s rovnou tyčou.",
+   "Chyť tyč podhmatom (dlane nahor) v úzkom úchope až na šírku ramien a polož predlaktia na stehná. Zápästia visia tesne za kolenami.",
+   "Začni zdvihom zápästí nahor a vydychuj. Kontrakciu drž jednu sekundu.",
+   "Pomaly spusti zápästia späť do východiskovej polohy a nadychuj sa.",
+   "Predlaktia majú zostať nehybné, na cvik sa hýbe iba zápästie.",
+   "Opakuj odporúčaný počet opakovaní."
+  ],
+  "unilateral": false,
+  "nameEn": "Cable Wrist Curl"
+ }
+]
