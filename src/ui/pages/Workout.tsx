@@ -20,6 +20,7 @@ import {
   unfinishedSetCount,
 } from '../../domain/workout';
 import { Button, Card, Chip, EmptyState, ErrorNote, SectionTitle, Spinner, Tag } from '../components/basic';
+import { ExerciseThumb } from '../components/ExerciseImages';
 import { ExercisePicker } from '../components/ExercisePicker';
 import { NumberField } from '../components/NumberField';
 import { PlateCalculator } from '../components/PlateCalculator';
@@ -97,16 +98,29 @@ function RoutineCard({ routine, onStart, plannedToday }: { routine: Routine; onS
   return (
     <Card>
       <div className="flex items-start justify-between gap-3">
-        <div className="min-w-0">
-          <div className="flex items-center gap-2">
-            <p className="truncate text-lg font-semibold">{routine.name}</p>
+        <Link to={`/rutiny/${routine.id}/detail`} className="min-w-0 flex-1" aria-label={`Zobraziť rutinu ${routine.name}`}>
+          <div className="flex flex-wrap items-center gap-2">
+            <p className="text-lg font-semibold">{routine.name}</p>
             {routine.isSample && <Tag>Ukážka</Tag>}
             {plannedToday && <Tag tone="accent">Dnes</Tag>}
           </div>
-          <p className="mt-1 line-clamp-2 text-sm text-muted">
+          {routine.exercises.length > 0 && (
+            <div className="mt-2 flex gap-1.5 overflow-hidden">
+              {routine.exercises.slice(0, 4).map((e) => (
+                <ExerciseThumb key={e.id} id={e.exerciseId} count={lib?.byId(e.exerciseId)?.images ?? 0} />
+              ))}
+              {routine.exercises.length > 4 && (
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-card2 text-sm font-semibold text-muted">
+                  +{routine.exercises.length - 4}
+                </span>
+              )}
+            </div>
+          )}
+          <p className="mt-2 line-clamp-2 text-sm text-muted">
             {routine.exercises.map((e) => lib?.nameOf(e.exerciseId, e.exerciseName) ?? e.exerciseName).join(', ') || 'Bez cvikov'}
           </p>
-        </div>
+          <p className="mt-1 text-sm font-medium text-accent">Zobraziť cviky ›</p>
+        </Link>
         <Link
           to={`/rutiny/${routine.id}`}
           className="flex min-h-[44px] shrink-0 items-center px-2 font-medium text-accent"

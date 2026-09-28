@@ -16,6 +16,7 @@ import { HistoryDetail } from './pages/HistoryDetail';
 import { HistoryPage } from './pages/History';
 import { Home } from './pages/Home';
 import { MobilePreview } from './pages/MobilePreview';
+import { RoutineDetail } from './pages/RoutineDetail';
 import { RoutineEdit } from './pages/RoutineEdit';
 import { SettingsPage } from './pages/Settings';
 import { WorkoutPage } from './pages/Workout';
@@ -69,6 +70,7 @@ export function App() {
             <Route index element={<Home />} />
             <Route path="trening" element={<WorkoutPage />} />
             <Route path="rutiny/:id" element={<RoutineEdit />} />
+            <Route path="rutiny/:id/detail" element={<RoutineDetail />} />
             <Route path="historia" element={<HistoryPage />} />
             <Route path="historia/kalendar" element={<CalendarPage />} />
             <Route path="historia/statistiky" element={<StatsPage />} />

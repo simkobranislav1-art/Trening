@@ -27,7 +27,7 @@ export function ExerciseImages({ id, count, name }: { id: string; count: number;
 }
 
 /** Malý náhľad do zoznamov; bez fotky sa nezobrazí nič. */
-export function ExerciseThumb({ id, count }: { id: string; count: number }) {
+export function ExerciseThumb({ id, count, large }: { id: string; count: number; large?: boolean }) {
   const [failed, setFailed] = useState(false);
   if (!count || failed) return null;
   return (
@@ -35,7 +35,7 @@ export function ExerciseThumb({ id, count }: { id: string; count: number }) {
       src={url(id, 0)}
       alt=""
       loading="lazy"
-      className="h-12 w-12 shrink-0 rounded-lg bg-card2 object-cover"
+      className={`shrink-0 rounded-lg bg-card2 object-cover ${large ? 'h-16 w-16' : 'h-12 w-12'}`}
       onError={() => setFailed(true)}
     />
   );

@@ -6,6 +6,7 @@ import { uid } from '../../domain/format';
 import type { Routine } from '../../domain/types';
 import { moveItem, reorder, sessionFromRoutine, toggleSupersetWithNext } from '../../domain/workout';
 import { Button, Card, EmptyState, ErrorNote, Field, Spinner } from '../components/basic';
+import { ExerciseThumb } from '../components/ExerciseImages';
 import { ExercisePicker } from '../components/ExercisePicker';
 import { PageHeader } from '../components/PageHeader';
 import { ConfirmDialog } from '../components/Sheet';
@@ -70,7 +71,10 @@ export function RoutineEdit() {
         {routine.exercises.length === 0 && <EmptyState title="Bez cvikov" hint="Pridaj aspoň jeden cvik." />}
         {routine.exercises.map((re, i) => (
           <Card key={re.id} className={`!p-3 ${re.supersetId ? 'border-l-4 border-accent' : ''}`}>
-            <p className="mb-2 px-1 text-lg font-semibold">{lib.nameOf(re.exerciseId, re.exerciseName)}</p>
+            <div className="mb-2 flex items-center gap-3 px-1">
+              <ExerciseThumb id={re.exerciseId} count={lib.byId(re.exerciseId)?.images ?? 0} />
+              <p className="text-lg font-semibold leading-tight">{lib.nameOf(re.exerciseId, re.exerciseName)}</p>
+            </div>
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-1" role="group" aria-label={`Počet sérií, ${lib.nameOf(re.exerciseId, re.exerciseName)}`}>
                 <Button
