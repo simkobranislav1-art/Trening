@@ -9,7 +9,6 @@ React · TypeScript · Vite · Tailwind CSS · Dexie.js (IndexedDB) · vite-plug
 ## Spustenie na Macu
 
 ```bash
-cd fitness
 npm install
 npm run dev        # http://localhost:5173  (vývoj)
 ```
