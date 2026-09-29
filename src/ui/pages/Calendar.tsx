@@ -99,7 +99,7 @@ export function CalendarPage() {
               >
                 {c.date.getDate()}
                 <span className="flex h-2 items-center gap-0.5">
-                  {done > 0 && <span className={`h-2 w-2 rounded-full ${isSel ? 'bg-white' : 'bg-accent'}`} />}
+                  {done > 0 && <span className={`h-2 w-2 rounded-full ${isSel ? 'bg-white' : 'bg-good'}`} />}
                   {planned && <span className={`h-2 w-2 rounded-full border-2 ${isSel ? 'border-white' : 'border-accent'}`} />}
                 </span>
               </button>
@@ -108,7 +108,7 @@ export function CalendarPage() {
         </div>
         <p className="mt-2 flex gap-4 text-xs text-muted">
           <span>
-            <span className="mr-1 inline-block h-2 w-2 rounded-full bg-accent" />
+            <span className="mr-1 inline-block h-2 w-2 rounded-full bg-good" />
             odcvičené
           </span>
           <span>

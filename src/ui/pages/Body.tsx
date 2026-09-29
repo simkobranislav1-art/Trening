@@ -104,7 +104,7 @@ export function BodyPage() {
               <div className="mb-2 flex items-end justify-between">
                 <p className="tnum text-3xl font-bold">{latest ? `${fmtNumber(latest[metric] as number)} ${m.unit}` : '–'}</p>
                 {change !== null && (
-                  <p className={`tnum font-semibold ${change === 0 ? 'text-muted' : change < 0 ? 'text-accent-ink' : 'text-warn'}`}>
+                  <p className={`t-num text-[16px] ${change === 0 ? 'text-muted' : change < 0 ? 'text-good' : 'text-warn'}`}>
                     {change > 0 ? '+' : ''}
                     {fmtNumber(Math.round(change * 10) / 10)} {m.unit}
                   </p>

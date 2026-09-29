@@ -100,7 +100,7 @@ export function Stat({ label, value, unit, tone }: { label: string; value: React
   return (
     <div className="rounded-2xl bg-surface p-4">
       <p className="text-[13px] font-medium text-muted">{label}</p>
-      <p className={`t-num mt-1.5 text-[34px] ${tone === 'accent' ? 'text-accent-ink' : ''}`}>
+      <p className={`t-num mt-1.5 text-[28px] ${tone === 'accent' ? 'text-good' : ''}`}>
         {value}
         {unit && <span className="ml-1 text-[20px] font-medium text-muted">{unit}</span>}
       </p>
@@ -155,10 +155,10 @@ export function Tag({ children, tone = 'muted' }: { children: ReactNode; tone?: 
   const t = {
     muted: 'bg-raised text-muted',
     accent: 'bg-accent text-on-accent',
-    good: 'bg-accent text-on-accent',
+    good: 'bg-good/20 text-good',
   }[tone];
   return (
-    <span className={`inline-block rounded-md px-1.5 py-[3px] font-display text-[12px] font-semibold uppercase leading-none tracking-[0.1em] ${t}`}>
+    <span className={`inline-block rounded-md px-1.5 py-[3px] text-[11px] font-bold uppercase leading-none tracking-[0.06em] ${t}`}>
       {children}
     </span>
   );
@@ -190,7 +190,7 @@ export function Toggle({
       <span className={`relative h-[30px] w-[52px] shrink-0 rounded-full transition-colors ${checked ? 'bg-accent' : 'bg-raised'}`}>
         <span
           className={`absolute top-[3px] h-6 w-6 rounded-full shadow transition-all ${
-            checked ? 'left-[25px] bg-on-accent' : 'left-[3px] bg-ink/90'
+            checked ? 'left-[25px] bg-white' : 'left-[3px] bg-ink/90'
           }`}
         />
       </span>

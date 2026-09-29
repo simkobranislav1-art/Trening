@@ -45,7 +45,7 @@ export function NumberField({
         setText(t);
         onChange(n);
       }}
-      className={`t-num rounded-xl bg-raised text-center text-ink placeholder:font-medium placeholder:text-faint focus:outline-none focus:ring-2 focus:ring-accent-ink/70 ${className}`}
+      className={`t-num rounded-xl bg-raised font-bold text-center text-ink placeholder:font-medium placeholder:text-faint focus:outline-none focus:ring-2 focus:ring-accent-ink/70 ${className}`}
     />
   );
 }

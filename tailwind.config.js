@@ -16,13 +16,13 @@ export default {
         accent: c('accent'),
         'accent-ink': c('accent-ink'),
         'on-accent': c('on-accent'),
+        good: c('good'),
         warn: c('warn'),
         danger: c('danger'),
       },
       borderRadius: { lg: '0.5rem', xl: '0.75rem', '2xl': '1rem', '3xl': '1.25rem' },
       fontFamily: {
-        sans: ['"Inter Variable"', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
-        display: ['"Barlow Condensed"', '"Inter Variable"', 'system-ui', 'sans-serif'],
+        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Text"', '"Inter Variable"', 'system-ui', 'sans-serif'],
       },
       keyframes: {
         'sheet-up': { from: { transform: 'translateY(24px)', opacity: '0' }, to: { transform: 'translateY(0)', opacity: '1' } },

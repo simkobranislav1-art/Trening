@@ -105,7 +105,7 @@ export function ExerciseDetail() {
                     title={RECORD_LABEL[r.kind]}
                     subtitle={`${fmtDate(r.achievedAt)} · ${fmtNumber(r.weight)} kg × ${r.reps}`}
                     trailing={
-                      <span className="t-num whitespace-nowrap text-[30px] text-accent-ink">
+                      <span className="t-num whitespace-nowrap text-[22px] text-good">
                         {fmtNumber(Math.round(r.value * 10) / 10)}
                         <span className="ml-1 text-[16px] text-muted">kg</span>
                       </span>
@@ -144,7 +144,7 @@ export function ExerciseDetail() {
           <>
             <SectionTitle>Návod</SectionTitle>
             <Card>
-              <ol className="list-decimal space-y-3 pl-5 text-[16px] leading-relaxed marker:font-display marker:text-[18px] marker:font-semibold marker:text-accent-ink">
+              <ol className="list-decimal space-y-3 pl-5 text-[16px] leading-relaxed marker:font-semibold marker:text-muted">
                 {ex.instructions.map((s, i) => (
                   <li key={i}>{s}</li>
                 ))}

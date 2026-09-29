@@ -106,7 +106,7 @@ export function SettingsPage() {
         <Button small aria-label={dec.label} disabled={dec.disabled} onClick={dec.fn} className="!w-11 !px-0 text-xl">
           −
         </Button>
-        <span className="t-num w-[68px] text-center text-[26px]" aria-live="polite">
+        <span className="t-num w-[68px] text-center text-[20px]" aria-live="polite">
           {value}
         </span>
         <Button small aria-label={inc.label} disabled={inc.disabled} onClick={inc.fn} className="!w-11 !px-0 text-xl">
@@ -179,7 +179,7 @@ export function SettingsPage() {
         </Group>
 
         <SectionTitle>Záloha a synchronizácia</SectionTitle>
-        {msg && (msg.ok ? <p className="mb-3 rounded-xl bg-accent/15 px-4 py-3 text-[15px] text-accent-ink" role="status">{msg.text}</p> : <ErrorNote>{msg.text}</ErrorNote>)}
+        {msg && (msg.ok ? <p className="mb-3 rounded-xl bg-good/15 px-4 py-3 text-[15px] text-good" role="status">{msg.text}</p> : <ErrorNote>{msg.text}</ErrorNote>)}
         <Button variant="primary" block onClick={onExport}>
           Exportovať zálohu
         </Button>

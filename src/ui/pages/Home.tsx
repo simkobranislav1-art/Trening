@@ -114,7 +114,7 @@ export function Home() {
                 title={lib.byId(r.exerciseId)?.name ?? 'Cvik'}
                 subtitle={`${KIND_LABEL[r.kind]} · ${fmtShortDate(r.achievedAt)}`}
                 trailing={
-                  <span className="t-num text-[26px] text-accent-ink">
+                  <span className="t-num text-[20px] text-good">
                     {fmtNumber(Math.round(r.value * 10) / 10)}
                     <span className="ml-0.5 text-[15px] text-muted">kg</span>
                   </span>

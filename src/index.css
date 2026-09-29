@@ -1,7 +1,4 @@
 @import '@fontsource-variable/inter/wght.css';
-@import '@fontsource/barlow-condensed/500.css';
-@import '@fontsource/barlow-condensed/600.css';
-@import '@fontsource/barlow-condensed/700.css';
 
 @tailwind base;
 @tailwind components;
@@ -14,32 +11,34 @@
  * - čísla a nadpisy: Barlow Condensed, text: Inter.
  */
 :root {
-  --bg: 27 29 35;
-  --surface: 38 41 49;
-  --raised: 51 55 65;
-  --line: 62 66 77;
-  --ink: 240 241 244;
-  --muted: 156 161 173;
-  --faint: 112 117 130;
-  --accent: 208 255 62;
-  --accent-ink: 208 255 62;
-  --on-accent: 20 24 4;
+  --bg: 22 24 29;
+  --surface: 33 36 43;
+  --raised: 46 50 59;
+  --line: 55 59 69;
+  --ink: 244 245 247;
+  --muted: 154 160 172;
+  --faint: 108 114 127;
+  --accent: 10 132 255;
+  --accent-ink: 64 156 255;
+  --on-accent: 255 255 255;
+  --good: 52 199 89;
   --warn: 255 190 70;
-  --danger: 255 110 100;
+  --danger: 255 105 97;
   color-scheme: dark;
 }
 
 :root.light {
-  --bg: 242 242 239;
+  --bg: 242 243 247;
   --surface: 255 255 255;
-  --raised: 236 236 232;
-  --line: 224 224 219;
-  --ink: 16 16 16;
-  --muted: 104 104 110;
-  --faint: 160 160 165;
-  --accent: 196 244 40;
-  --accent-ink: 66 110 0;
-  --on-accent: 12 14 0;
+  --raised: 235 237 242;
+  --line: 222 225 232;
+  --ink: 17 18 22;
+  --muted: 104 110 122;
+  --faint: 160 165 175;
+  --accent: 0 122 255;
+  --accent-ink: 0 110 230;
+  --on-accent: 255 255 255;
+  --good: 36 160 70;
   --warn: 184 120 0;
   --danger: 214 40 40;
   color-scheme: light;
@@ -56,7 +55,7 @@ body {
   letter-spacing: -0.006em;
   -webkit-tap-highlight-color: transparent;
   overscroll-behavior-y: none;
-  font-feature-settings: 'cv11', 'ss03';
+  
 }
 
 button,
@@ -98,7 +97,7 @@ textarea {
     @apply text-[13px] font-semibold leading-none tracking-[0.01em] text-muted;
   }
   .t-num {
-    @apply font-display font-semibold leading-none tabular-nums tracking-normal;
+    @apply font-semibold leading-none tabular-nums tracking-[-0.02em];
   }
   .press {
     @apply transition-[transform,opacity,background-color] duration-100 active:scale-[0.98] active:opacity-80;

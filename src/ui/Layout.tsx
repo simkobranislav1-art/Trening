@@ -29,7 +29,7 @@ function ActiveBanner() {
         <span className="h-2 w-2 animate-pulse rounded-full bg-on-accent" aria-hidden />
         {session.status === 'paused' ? 'Tréning pozastavený' : 'Prebieha tréning'}
       </span>
-      <span className="t-num text-[24px]">{fmtClock(elapsedSeconds(session, now))}</span>
+      <span className="t-num text-[20px]">{fmtClock(elapsedSeconds(session, now))}</span>
     </Link>
   );
 }

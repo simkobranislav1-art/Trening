@@ -173,7 +173,7 @@ function ActiveWorkout({ session }: { session: WorkoutSession }) {
         }
         action={
           <div className="flex items-center gap-2">
-            <span className="t-num text-[28px]" aria-label="Čas tréningu">
+            <span className="t-num text-[22px]" aria-label="Čas tréningu">
               {fmtClock(elapsedSeconds(session, now))}
             </span>
             <Button small onClick={() => update(paused ? resumeSession : pauseSession)}>
@@ -390,11 +390,11 @@ function RestBar({
       <div
         role="timer"
         aria-live="off"
-        className={`flex items-center justify-between gap-2 rounded-2xl px-4 py-2.5 ${over ? 'bg-accent text-on-accent' : 'bg-surface'}`}
+        className={`flex items-center justify-between gap-2 rounded-2xl px-4 py-2.5 ${over ? 'bg-good text-white' : 'bg-surface'}`}
       >
         <div>
-          <p className={`t-label ${over ? '!text-on-accent' : ''}`}>{over ? 'Prestávka skončila' : 'Prestávka'}</p>
-          <p className={`t-num mt-1.5 text-[44px] ${over ? '' : 'text-accent-ink'}`}>{over ? '0:00' : fmtClock(remaining)}</p>
+          <p className={`t-label ${over ? '!text-white' : ''}`}>{over ? 'Prestávka skončila' : 'Prestávka'}</p>
+          <p className={`t-num mt-1.5 text-[36px] ${over ? '' : 'text-accent-ink'}`}>{over ? '0:00' : fmtClock(remaining)}</p>
         </div>
         <div className="flex gap-2">
           <Button small onClick={() => shift(-15)} aria-label="Skrátiť o 15 sekúnd">
@@ -403,7 +403,7 @@ function RestBar({
           <Button small onClick={() => shift(15)} aria-label="Predĺžiť o 15 sekúnd">
             +15
           </Button>
-          <Button small variant={over ? 'secondary' : 'secondary'} className={over ? '!bg-on-accent !text-accent' : ''} onClick={() => onChange(null)}>
+          <Button small variant={over ? 'secondary' : 'secondary'} className={over ? '!bg-white/25 !text-white' : ''} onClick={() => onChange(null)}>
             {over ? 'Hotovo' : 'Preskočiť'}
           </Button>
         </div>
@@ -544,13 +544,13 @@ function ExerciseCard({
           const prev = prevFor(s);
           const effortKey = settings.effortMode;
           return (
-            <li key={s.id} className={`rounded-xl px-1 py-1 transition-colors ${s.done ? 'bg-accent/[0.12]' : ''}`}>
+            <li key={s.id} className={`rounded-xl px-1 py-1 transition-colors ${s.done ? 'bg-good/15' : ''}`}>
               <div className="grid grid-cols-[44px_1fr_84px_72px_52px] items-center gap-1.5">
                 <button
                   type="button"
                   onClick={() => setEditSet(s.id)}
                   aria-label={`Séria ${label}, typ: ${TYPE_LABEL[s.type]}. Ťuknutím zmeníš typ, poznámku alebo sériu odstrániš.`}
-                  className={`t-num relative h-14 rounded-xl text-[24px] ${
+                  className={`t-num relative h-14 rounded-xl text-[18px] ${
                     s.type === 'warmup' ? 'bg-warn/20 text-warn' : s.type === 'drop' ? 'bg-ink/15 text-ink' : 'bg-raised text-muted'
                   }`}
                 >
@@ -562,7 +562,7 @@ function ExerciseCard({
                   disabled={!prev}
                   onClick={() => prev && setSet(s.id, { weight: prev.weight, reps: prev.reps })}
                   aria-label={prev ? `Použiť minulý výkon ${fmtNumber(prev.weight ?? 0)} kg × ${prev.reps}` : 'Bez minulého výkonu'}
-                  className="t-num h-14 rounded-xl text-[17px] font-medium !text-faint disabled:opacity-40"
+                  className="t-num h-14 rounded-xl text-[14px] font-medium !text-faint disabled:opacity-40"
                 >
                   {prev ? `${fmtNumber(prev.weight ?? 0)}×${prev.reps}` : '–'}
                 </button>
@@ -573,7 +573,7 @@ function ExerciseCard({
                   placeholder={prev?.weight != null ? fmtNumber(prev.weight) : '0'}
                   max={999}
                   onChange={(v) => setSet(s.id, { weight: v })}
-                  className="h-14 w-full text-[30px]"
+                  className="h-14 w-full text-[22px]"
                 />
                 <NumberField
                   label={`Opakovania, séria ${label}`}
@@ -581,7 +581,7 @@ function ExerciseCard({
                   placeholder={prev?.reps != null ? String(prev.reps) : '0'}
                   max={999}
                   onChange={(v) => setSet(s.id, { reps: v })}
-                  className="h-14 w-full text-[30px]"
+                  className="h-14 w-full text-[22px]"
                 />
                 <button
                   type="button"
@@ -599,7 +599,7 @@ function ExerciseCard({
                     });
                     onCompleted();
                   }}
-                  className={`press flex h-14 items-center justify-center rounded-xl ${s.done ? 'bg-accent text-on-accent' : 'bg-raised text-faint'}`}
+                  className={`press flex h-14 items-center justify-center rounded-xl ${s.done ? 'bg-good text-white' : 'bg-raised text-faint'}`}
                 >
                   <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" strokeWidth="3" aria-hidden className={s.done ? 'animate-pop' : ''}>
                     <path d="M5 12.5l4.5 4.5L19 7.5" strokeLinecap="round" strokeLinejoin="round" />

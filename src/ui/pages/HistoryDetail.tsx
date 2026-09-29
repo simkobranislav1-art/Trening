@@ -76,7 +76,7 @@ export function HistoryDetail() {
           ].map(([label, value]) => (
             <div key={label} className="rounded-2xl bg-surface px-3 py-3">
               <p className="text-[12px] font-medium text-muted">{label}</p>
-              <p className="t-num mt-1.5 whitespace-nowrap text-[26px]">{value}</p>
+              <p className="t-num mt-1.5 whitespace-nowrap text-[20px]">{value}</p>
             </div>
           ))}
         </div>
@@ -101,8 +101,8 @@ export function HistoryDetail() {
                     const eff = effort && set[effort] != null ? ` · ${effort.toUpperCase()} ${fmtNumber(set[effort]!)}` : '';
                     return (
                       <li key={set.id} className="flex items-center gap-3">
-                        <span className="t-num w-7 text-center text-[22px] text-faint">{label}</span>
-                        <span className="t-num text-[26px]">
+                        <span className="t-num w-7 text-center text-[16px] text-faint">{label}</span>
+                        <span className="t-num text-[19px]">
                           {fmtNumber(set.weight ?? 0)}<span className="text-[17px] text-muted"> kg × </span>{set.reps ?? 0}
                         </span>
                         <span className="text-sm text-muted">{eff}</span>
