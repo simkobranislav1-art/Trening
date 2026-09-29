@@ -3,6 +3,7 @@ import { clearAll, exportAll, importAll, mergeFromBackup, removeSampleRoutines, 
 import { parseBackup, type BackupFile } from '../../domain/backup';
 import { fmtClock, fmtDate, fmtNumber } from '../../domain/format';
 import { Button, Chip, ErrorNote, Group, Row, SectionTitle, Spinner, Toggle } from '../components/basic';
+import { HevyImportSheet } from '../components/HevyImportSheet';
 import { PageHeader } from '../components/PageHeader';
 import { ConfirmDialog } from '../components/Sheet';
 import { useRoutines, useSettings } from '../hooks/data';
@@ -40,6 +41,7 @@ export function SettingsPage() {
   const [pending, setPending] = useState<{ text: string; summary: string } | null>(null);
   const [confirmClear, setConfirmClear] = useState(false);
   const [confirmSamples, setConfirmSamples] = useState(false);
+  const [hevy, setHevy] = useState(false);
 
   if (!settings || !routines) return (<><PageHeader title="Nastavenia" /><Spinner /></>);
 
@@ -189,6 +191,7 @@ export function SettingsPage() {
         </p>
         <Group>
           <Row title="Zlúčiť zálohu z iného zariadenia" subtitle="Synchronizácia cez súbor, nič sa nestratí." chevron onClick={() => mergeRef.current?.click()} />
+          <Row title="Importovať z Hevy (CSV)" subtitle="Tréningy a merania z exportu Hevy, nič sa nemaže." chevron onClick={() => setHevy(true)} />
           <Row title="Importovať a nahradiť všetko" subtitle="Prepíše dáta v tomto zariadení." chevron onClick={() => fileRef.current?.click()} />
         </Group>
         <input ref={mergeRef} type="file" accept="application/json,.json" className="hidden" aria-label="Vybrať súbor zálohy na zlúčenie" onChange={(e) => onMergeFile(e.target.files?.[0])} />
@@ -208,6 +211,7 @@ export function SettingsPage() {
         </Group>
       </div>
 
+      <HevyImportSheet open={hevy} onClose={() => setHevy(false)} />
       <ConfirmDialog
         open={!!pending}
         danger

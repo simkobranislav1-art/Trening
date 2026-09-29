@@ -1,6 +1,7 @@
 import { BACKUP_APP, createBackup, parseBackup, type BackupData, type BackupFile } from '../domain/backup';
 import { computePersonalRecords } from '../domain/calc';
 import { uid } from '../domain/format';
+import type { HevyImportData } from '../domain/hevyImport';
 import { mergeBackups, type MergeStats } from '../domain/merge';
 import { sampleRoutines } from '../domain/samples';
 import {
@@ -216,6 +217,50 @@ export async function clearAll(db: FitnessDB = defaultDb): Promise<void> {
     await Promise.all(db.tables.map((t) => t.clear()));
     await db.settings.put({ ...DEFAULT_SETTINGS, samplesSeeded: true });
   });
+}
+
+export interface HevyImportResult {
+  routines: number;
+  sessions: number;
+  customExercises: number;
+  bodyEntries: number;
+  alreadyThere: number;
+}
+
+/**
+ * Zapíše dáta z Hevy. Nič nemaže ani neprepisuje: záznamy, ktoré už existujú (rovnaké ID),
+ * sa preskočia, takže import sa dá bezpečne zopakovať.
+ */
+export async function importHevyData(
+  data: HevyImportData,
+  db: FitnessDB = defaultDb,
+  options: { routines?: boolean } = {},
+): Promise<HevyImportResult> {
+  const result = await db.transaction('rw', [db.sessions, db.customExercises, db.bodyEntries, db.routines, db.tombstones], async () => {
+    const haveSessions = new Set(await db.sessions.bulkGet(data.sessions.map((s) => s.id)).then((r) => r.filter(Boolean).map((s) => s!.id)));
+    const haveCustom = new Set(await db.customExercises.bulkGet(data.customExercises.map((c) => c.id)).then((r) => r.filter(Boolean).map((c) => c!.id)));
+    const haveBody = new Set(await db.bodyEntries.bulkGet(data.bodyEntries.map((b) => b.id)).then((r) => r.filter(Boolean).map((b) => b!.id)));
+    const newSessions = data.sessions.filter((s) => !haveSessions.has(s.id));
+    const newCustom = data.customExercises.filter((c) => !haveCustom.has(c.id));
+    const newBody = data.bodyEntries.filter((b) => !haveBody.has(b.id));
+    const wantRoutines = options.routines ? data.routines : [];
+    const haveRoutines = new Set(await db.routines.bulkGet(wantRoutines.map((r) => r.id)).then((r) => r.filter(Boolean).map((x) => x!.id)));
+    const newRoutines = wantRoutines.filter((r) => !haveRoutines.has(r.id));
+    await db.tombstones.bulkDelete([...newSessions.map((s) => s.id), ...newCustom.map((c) => c.id), ...newBody.map((b) => b.id), ...newRoutines.map((r) => r.id)]);
+    await db.customExercises.bulkAdd(newCustom);
+    await db.sessions.bulkAdd(newSessions);
+    await db.bodyEntries.bulkAdd(newBody);
+    await db.routines.bulkAdd(newRoutines);
+    return {
+      routines: newRoutines.length,
+      sessions: newSessions.length,
+      customExercises: newCustom.length,
+      bodyEntries: newBody.length,
+      alreadyThere: data.sessions.length - newSessions.length,
+    };
+  });
+  await rebuildPersonalRecords(db);
+  return result;
 }
 
 export const newCustomExercise = (): CustomExercise => {
