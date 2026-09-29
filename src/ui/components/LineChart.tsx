@@ -32,9 +32,9 @@ export function LineChart({
         role="img"
         aria-label={`${caption}: od ${fmtNumber(Math.round(points[0].value * 10) / 10)} do ${fmtNumber(Math.round(last.value * 10) / 10)} ${unit}`}
       >
-        <path d={path} fill="none" stroke="rgb(var(--accent))" strokeWidth="2.5" strokeLinejoin="round" strokeLinecap="round" />
+        <path d={path} fill="none" stroke="rgb(var(--accent-ink))" strokeWidth="2.5" strokeLinejoin="round" strokeLinecap="round" />
         {points.map((p, i) => (
-          <circle key={p.date + i} cx={x(i)} cy={y(p.value)} r={i === points.length - 1 ? 4.5 : 3} fill="rgb(var(--accent))" />
+          <circle key={p.date + i} cx={x(i)} cy={y(p.value)} r={i === points.length - 1 ? 4.5 : 3} fill="rgb(var(--accent-ink))" />
         ))}
         <text x={pad.l} y={H - 5} fontSize="10" fill="rgb(var(--muted))">
           {fmtShortDate(points[0].date)}

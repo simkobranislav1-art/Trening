@@ -60,7 +60,7 @@ export function CalendarPage() {
             type="button"
             aria-label="Predchádzajúci mesiac"
             onClick={() => setCursor(new Date(cursor.getFullYear(), cursor.getMonth() - 1, 1))}
-            className="flex h-11 w-11 items-center justify-center rounded-full bg-card text-2xl"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-surface text-2xl"
           >
             ‹
           </button>
@@ -69,7 +69,7 @@ export function CalendarPage() {
             type="button"
             aria-label="Nasledujúci mesiac"
             onClick={() => setCursor(new Date(cursor.getFullYear(), cursor.getMonth() + 1, 1))}
-            className="flex h-11 w-11 items-center justify-center rounded-full bg-card text-2xl"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-surface text-2xl"
           >
             ›
           </button>
@@ -95,11 +95,11 @@ export function CalendarPage() {
                 onClick={() => setSelected(c.key)}
                 className={`flex min-h-[48px] flex-col items-center justify-center gap-1 rounded-xl text-[15px] ${
                   c.inMonth ? '' : 'opacity-35'
-                } ${isSel ? 'bg-accent text-white' : c.key === todayKey ? 'bg-card2 font-bold' : 'bg-card'}`}
+                } ${isSel ? 'bg-accent text-on-accent' : c.key === todayKey ? 'bg-raised font-bold' : 'bg-surface'}`}
               >
                 {c.date.getDate()}
                 <span className="flex h-2 items-center gap-0.5">
-                  {done > 0 && <span className={`h-2 w-2 rounded-full ${isSel ? 'bg-white' : 'bg-good'}`} />}
+                  {done > 0 && <span className={`h-2 w-2 rounded-full ${isSel ? 'bg-white' : 'bg-accent'}`} />}
                   {planned && <span className={`h-2 w-2 rounded-full border-2 ${isSel ? 'border-white' : 'border-accent'}`} />}
                 </span>
               </button>
@@ -108,7 +108,7 @@ export function CalendarPage() {
         </div>
         <p className="mt-2 flex gap-4 text-xs text-muted">
           <span>
-            <span className="mr-1 inline-block h-2 w-2 rounded-full bg-good" />
+            <span className="mr-1 inline-block h-2 w-2 rounded-full bg-accent" />
             odcvičené
           </span>
           <span>

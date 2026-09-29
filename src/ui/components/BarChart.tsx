@@ -12,7 +12,7 @@ export function BarChart({
 }) {
   const max = Math.max(...bars.map((b) => b.value), 1);
   const W = 320;
-  const H = 130;
+  const H = 96;
   const gap = 8;
   const bw = (W - gap * (bars.length - 1)) / bars.length;
   return (
@@ -22,7 +22,7 @@ export function BarChart({
         const x = i * (bw + gap);
         return (
           <g key={i}>
-            <rect x={x} y={H - h} width={bw} height={h} rx="4" fill="rgb(var(--accent))" opacity={i === bars.length - 1 ? 1 : 0.55} />
+            <rect x={x} y={H - h} width={bw} height={h} rx="4" fill="rgb(var(--accent-ink))" opacity={i === bars.length - 1 ? 1 : 0.55} />
             {b.value > 0 && (
               <text x={x + bw / 2} y={H - h - 5} fontSize="10" textAnchor="middle" fill="rgb(var(--ink))">
                 {format(b.value)}

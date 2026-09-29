@@ -53,7 +53,7 @@ export function SortableList({ items, onReorder }: { items: Item[]; onReorder: (
               rowRefs.current[i] = el;
             }}
             style={{ transform: `translateY(${shift}px)`, transition: drag && i === drag.from ? 'none' : 'transform 120ms' }}
-            className={`flex min-h-[60px] items-center gap-2 rounded-xl bg-card2 px-2 ${
+            className={`flex min-h-[60px] items-center gap-2 rounded-xl bg-raised px-2 ${
               drag?.from === i ? 'relative z-10 shadow-xl ring-2 ring-accent' : ''
             }`}
           >

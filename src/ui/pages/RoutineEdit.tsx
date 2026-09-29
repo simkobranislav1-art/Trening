@@ -67,7 +67,7 @@ export function RoutineEdit() {
           <textarea className="field min-h-[80px]" value={routine.note} onChange={(e) => patch({ note: e.target.value })} />
         </Field>
 
-        <h2 className="mt-2 text-sm font-semibold uppercase tracking-wide text-muted">Cviky</h2>
+        <h2 className="t-label mt-2">Cviky</h2>
         {routine.exercises.length === 0 && <EmptyState title="Bez cvikov" hint="Pridaj aspoň jeden cvik." />}
         {routine.exercises.map((re, i) => (
           <Card key={re.id} className={`!p-3 ${re.supersetId ? 'border-l-4 border-accent' : ''}`}>

@@ -7,7 +7,7 @@ const Svg = ({ children }: { children: ReactNode }) => (
     height="26"
     fill="none"
     stroke="currentColor"
-    strokeWidth="2"
+    strokeWidth="1.8"
     strokeLinecap="round"
     strokeLinejoin="round"
     aria-hidden

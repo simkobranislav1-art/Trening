@@ -32,7 +32,7 @@ export function ExercisePicker({
             selected={new Set(sel.map((e) => e.id))}
             onPick={(e) => setSel((s) => (s.some((x) => x.id === e.id) ? s.filter((x) => x.id !== e.id) : [...s, e]))}
           />
-          <div className="sticky bottom-0 -mx-5 mt-4 bg-card px-5 pb-2 pt-3">
+          <div className="sticky bottom-0 -mx-5 mt-4 bg-surface px-5 pb-2 pt-3">
             <Button
               variant="primary"
               block

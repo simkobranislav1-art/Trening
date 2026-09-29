@@ -48,7 +48,7 @@ export function PlateCalculator({ settings, initial }: { settings: AppSettings; 
             ) : (
               <ul className="flex flex-wrap gap-2">
                 {result.perSide.map((p) => (
-                  <li key={p.plate} className="rounded-xl bg-accent/15 px-4 py-2 text-lg font-bold text-accent">
+                  <li key={p.plate} className="rounded-xl bg-accent/15 px-4 py-2 text-lg font-bold text-accent-ink">
                     {p.count} × {fmtNumber(p.plate)} kg
                   </li>
                 ))}

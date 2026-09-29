@@ -11,7 +11,7 @@ export function ExerciseImages({ id, count, name }: { id: string; count: number;
   return (
     <div className={`mb-4 grid gap-2 ${shown.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
       {shown.map((i) => (
-        <figure key={i} className="overflow-hidden rounded-2xl bg-card">
+        <figure key={i} className="overflow-hidden rounded-2xl bg-surface">
           <img
             src={url(id, i)}
             alt={`${name} – ${labels[i]?.toLowerCase() ?? `fotka ${i + 1}`}`}
@@ -35,7 +35,7 @@ export function ExerciseThumb({ id, count, large }: { id: string; count: number;
       src={url(id, 0)}
       alt=""
       loading="lazy"
-      className={`shrink-0 rounded-lg bg-card2 object-cover ${large ? 'h-16 w-16' : 'h-12 w-12'}`}
+      className={`shrink-0 rounded-lg bg-raised object-cover ${large ? 'h-16 w-16' : 'h-12 w-12'}`}
       onError={() => setFailed(true)}
     />
   );

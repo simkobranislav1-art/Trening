@@ -78,7 +78,7 @@ export function StatsPage() {
                       <span className="font-medium">{muscleLabel(r.muscle)}</span>
                       <span className="tnum text-muted">{fmtSets(r.sets)}</span>
                     </div>
-                    <div className="h-2.5 overflow-hidden rounded-full bg-card2" role="presentation">
+                    <div className="h-2.5 overflow-hidden rounded-full bg-raised" role="presentation">
                       <div className="h-full rounded-full bg-accent" style={{ width: `${(r.sets / maxSets) * 100}%` }} />
                     </div>
                   </li>

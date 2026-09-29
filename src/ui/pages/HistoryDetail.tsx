@@ -68,19 +68,17 @@ export function HistoryDetail() {
         }
       />
       <div className="px-4 pb-8">
-        <div className="grid grid-cols-3 gap-3">
-          <Card className="!p-3">
-            <p className="text-xs text-muted">Trvanie</p>
-            <p className="tnum text-lg font-bold">{fmtDuration(s.durationSec ?? 0)}</p>
-          </Card>
-          <Card className="!p-3">
-            <p className="text-xs text-muted">Série</p>
-            <p className="tnum text-lg font-bold">{doneSetCount(s.exercises)}</p>
-          </Card>
-          <Card className="!p-3">
-            <p className="text-xs text-muted">Objem</p>
-            <p className="tnum text-lg font-bold">{fmtVolume(workoutVolume(s.exercises))}</p>
-          </Card>
+        <div className="grid grid-cols-3 gap-2">
+          {[
+            ['Trvanie', fmtDuration(s.durationSec ?? 0)],
+            ['Série', String(doneSetCount(s.exercises))],
+            ['Objem', fmtVolume(workoutVolume(s.exercises))],
+          ].map(([label, value]) => (
+            <div key={label} className="rounded-2xl bg-surface px-3 py-3">
+              <p className="text-[12px] font-medium text-muted">{label}</p>
+              <p className="t-num mt-1.5 whitespace-nowrap text-[26px]">{value}</p>
+            </div>
+          ))}
         </div>
 
         <div className="mt-4 flex flex-col gap-4">
@@ -90,7 +88,7 @@ export function HistoryDetail() {
             return (
               <Card key={e.id}>
                 <div className="flex items-start justify-between gap-2">
-                  <Link to={`/cviky/${encodeURIComponent(e.exerciseId)}`} className="text-lg font-bold text-accent">
+                  <Link to={`/cviky/${encodeURIComponent(e.exerciseId)}`} className="text-[19px] font-semibold leading-tight">
                     {lib.nameOf(e.exerciseId, e.exerciseName)}
                   </Link>
                   {exPrs.length > 0 && <Tag tone="good">Rekord</Tag>}
@@ -103,9 +101,9 @@ export function HistoryDetail() {
                     const eff = effort && set[effort] != null ? ` · ${effort.toUpperCase()} ${fmtNumber(set[effort]!)}` : '';
                     return (
                       <li key={set.id} className="flex items-center gap-3">
-                        <span className="w-7 text-center font-bold text-muted">{label}</span>
-                        <span className="text-lg font-semibold">
-                          {fmtNumber(set.weight ?? 0)} kg × {set.reps ?? 0}
+                        <span className="t-num w-7 text-center text-[22px] text-faint">{label}</span>
+                        <span className="t-num text-[26px]">
+                          {fmtNumber(set.weight ?? 0)}<span className="text-[17px] text-muted"> kg × </span>{set.reps ?? 0}
                         </span>
                         <span className="text-sm text-muted">{eff}</span>
                         {set.note && <span className="min-w-0 truncate text-sm text-muted">„{set.note}“</span>}

@@ -71,7 +71,7 @@ export function ExerciseBrowser({
       {shown.length === 0 ? (
         <EmptyState title="Nič sa nenašlo" hint={emptyHint ?? 'Skús upraviť hľadanie alebo filtre.'} />
       ) : (
-        <ul className="divide-y divide-line overflow-hidden rounded-2xl bg-card">
+        <ul className="divide-y divide-line overflow-hidden rounded-2xl bg-surface">
           {shown.map((e) => {
             const isSel = selected?.has(e.id);
             return (
@@ -80,7 +80,7 @@ export function ExerciseBrowser({
                   type="button"
                   onClick={() => onPick(e)}
                   aria-pressed={selected ? isSel : undefined}
-                  className={`flex min-h-[64px] w-full items-center gap-3 px-4 py-2 text-left active:bg-card2 ${
+                  className={`flex min-h-[64px] w-full items-center gap-3 px-4 py-2 text-left active:bg-raised ${
                     isSel ? 'bg-accent/15' : ''
                   }`}
                 >
@@ -93,7 +93,7 @@ export function ExerciseBrowser({
                   </span>
                   {e.custom && <Tag tone="accent">Vlastný</Tag>}
                   {hiddenIds?.has(e.id) && <Tag>Skrytý</Tag>}
-                  {isSel && <span className="text-xl text-accent">✓</span>}
+                  {isSel && <span className="text-xl text-accent-ink">✓</span>}
                 </button>
               </li>
             );

@@ -87,7 +87,7 @@ export function ExerciseForm() {
                   aria-pressed={ex.secondaryMuscles.includes(k)}
                   onClick={() => toggleSecondary(k)}
                   className={`min-h-[40px] rounded-full px-4 text-[15px] ${
-                    ex.secondaryMuscles.includes(k) ? 'bg-accent text-white' : 'bg-card2'
+                    ex.secondaryMuscles.includes(k) ? 'bg-accent text-on-accent' : 'bg-raised'
                   }`}
                 >
                   {v}

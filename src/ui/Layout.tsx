@@ -23,53 +23,51 @@ function ActiveBanner() {
   return (
     <Link
       to="/trening"
-      className="mx-4 mb-3 flex min-h-[52px] items-center justify-between rounded-2xl bg-accent px-4 font-semibold text-white md:mx-0"
+      className="press mx-4 mb-3 flex min-h-[52px] items-center justify-between rounded-2xl bg-accent px-4 text-on-accent md:mx-0"
     >
-      <span>{session.status === 'paused' ? 'Tréning pozastavený' : 'Prebieha tréning'}</span>
-      <span className="tnum">{fmtClock(elapsedSeconds(session, now))} ›</span>
+      <span className="flex items-center gap-2 font-semibold">
+        <span className="h-2 w-2 animate-pulse rounded-full bg-on-accent" aria-hidden />
+        {session.status === 'paused' ? 'Tréning pozastavený' : 'Prebieha tréning'}
+      </span>
+      <span className="t-num text-[24px]">{fmtClock(elapsedSeconds(session, now))}</span>
     </Link>
   );
 }
 
+const sideLink = (isActive: boolean) =>
+  `flex min-h-[46px] items-center gap-3 rounded-xl px-3 text-[16px] font-medium transition-colors ${
+    isActive ? 'bg-raised text-ink' : 'text-muted hover:text-ink'
+  }`;
+
 export function Layout() {
   const { error } = useWorkout();
   return (
-    <div className="min-h-dvh md:pl-60">
-      <aside className="fixed inset-y-0 left-0 z-30 hidden w-60 flex-col border-r border-line bg-card px-3 py-6 md:flex">
-        <p className="mb-6 px-3 text-xl font-bold">Tréning</p>
+    <div className="min-h-dvh md:pl-64">
+      <aside className="fixed inset-y-0 left-0 z-30 hidden w-64 flex-col border-r border-line bg-bg px-4 py-8 md:flex">
+        <p className="mb-8 px-3 text-[24px] font-bold tracking-[-0.02em]">
+          Trén<span className="text-accent-ink">ing</span>
+        </p>
         <nav aria-label="Hlavná navigácia" className="flex flex-col gap-1">
           {NAV.map((n) => (
-            <NavLink
-              key={n.to}
-              to={n.to}
-              end={n.end}
-              className={({ isActive }) =>
-                `flex min-h-[48px] items-center gap-3 rounded-xl px-3 font-medium ${
-                  isActive ? 'bg-accent/15 text-accent' : 'text-muted hover:bg-card2'
-                }`
-              }
-            >
-              {n.icon}
-              {n.label}
+            <NavLink key={n.to} to={n.to} end={n.end} className={({ isActive }) => sideLink(isActive)}>
+              {({ isActive }) => (
+                <>
+                  <span className={isActive ? 'text-accent-ink' : ''}>{n.icon}</span>
+                  {n.label}
+                </>
+              )}
             </NavLink>
           ))}
         </nav>
         {!IN_FRAME && (
-          <NavLink
-            to="/nahlad"
-            className={({ isActive }) =>
-              `mt-auto flex min-h-[48px] items-center gap-3 rounded-xl px-3 font-medium ${
-                isActive ? 'bg-accent/15 text-accent' : 'text-muted hover:bg-card2'
-              }`
-            }
-          >
+          <NavLink to="/nahlad" className={({ isActive }) => `${sideLink(isActive)} mt-auto`}>
             <PhoneIcon />
             Mobilný náhľad
           </NavLink>
         )}
       </aside>
 
-      <main className="mx-auto w-full max-w-3xl pb-[calc(6rem+env(safe-area-inset-bottom))] md:pb-10">
+      <main className="mx-auto w-full max-w-3xl pb-[calc(6.5rem+env(safe-area-inset-bottom))] md:pb-12">
         {error && (
           <p role="alert" className="m-4 rounded-xl bg-danger/15 px-4 py-3 text-danger">
             {error}
@@ -81,7 +79,7 @@ export function Layout() {
 
       <nav
         aria-label="Hlavná navigácia"
-        className="pb-safe fixed inset-x-0 bottom-0 z-30 border-t border-line bg-card/95 backdrop-blur md:hidden"
+        className="pb-safe fixed inset-x-0 bottom-0 z-30 bg-bg/80 shadow-[0_-0.5px_0_rgb(var(--line))] backdrop-blur-xl md:hidden"
       >
         <ul className="grid grid-cols-5">
           {NAV.map((n) => (
@@ -90,8 +88,8 @@ export function Layout() {
                 to={n.to}
                 end={n.end}
                 className={({ isActive }) =>
-                  `flex min-h-[60px] flex-col items-center justify-center gap-0.5 text-[11px] font-medium ${
-                    isActive ? 'text-accent' : 'text-muted'
+                  `flex min-h-[58px] flex-col items-center justify-center gap-1 text-[11px] font-semibold ${
+                    isActive ? 'text-accent-ink' : 'text-faint'
                   }`
                 }
               >

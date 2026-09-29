@@ -1,9 +1,8 @@
 import { useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { clearAll, exportAll, importAll, mergeFromBackup, removeSampleRoutines, updateSettings } from '../../db/repo';
 import { parseBackup, type BackupFile } from '../../domain/backup';
 import { fmtClock, fmtDate, fmtNumber } from '../../domain/format';
-import { Button, Card, Chip, ErrorNote, SectionTitle, Spinner, Toggle } from '../components/basic';
+import { Button, Chip, ErrorNote, Group, Row, SectionTitle, Spinner, Toggle } from '../components/basic';
 import { PageHeader } from '../components/PageHeader';
 import { ConfirmDialog } from '../components/Sheet';
 import { useRoutines, useSettings } from '../hooks/data';
@@ -97,66 +96,67 @@ export function SettingsPage() {
     }
   };
 
+  const stepper = (label: string, hint: string, value: string, dec: { label: string; disabled: boolean; fn: () => void }, inc: { label: string; disabled: boolean; fn: () => void }) => (
+    <div className="flex min-h-[64px] items-center justify-between gap-3 px-4 py-2">
+      <div className="min-w-0">
+        <p className="text-[17px] font-medium">{label}</p>
+        <p className="text-[14px] leading-snug text-muted">{hint}</p>
+      </div>
+      <div className="flex shrink-0 items-center gap-1">
+        <Button small aria-label={dec.label} disabled={dec.disabled} onClick={dec.fn} className="!w-11 !px-0 text-xl">
+          −
+        </Button>
+        <span className="t-num w-[68px] text-center text-[26px]" aria-live="polite">
+          {value}
+        </span>
+        <Button small aria-label={inc.label} disabled={inc.disabled} onClick={inc.fn} className="!w-11 !px-0 text-xl">
+          +
+        </Button>
+      </div>
+    </div>
+  );
+
   return (
     <>
       <PageHeader title="Nastavenia" />
       <div className="px-4 pb-8">
         <SectionTitle>Vzhľad</SectionTitle>
-        <Card>
-          <p className="mb-2 font-medium">Téma</p>
-          <div className="flex gap-2" role="group" aria-label="Téma">
-            <Chip active={settings.theme === 'dark'} onClick={() => updateSettings({ theme: 'dark' })}>
-              Tmavá
-            </Chip>
-            <Chip active={settings.theme === 'light'} onClick={() => updateSettings({ theme: 'light' })}>
-              Svetlá
-            </Chip>
+        <Group>
+          <div className="flex min-h-[60px] items-center justify-between gap-3 px-4 py-2">
+            <p className="text-[17px] font-medium">Téma</p>
+            <div className="flex gap-2" role="group" aria-label="Téma">
+              <Chip active={settings.theme === 'dark'} onClick={() => updateSettings({ theme: 'dark' })}>
+                Tmavá
+              </Chip>
+              <Chip active={settings.theme === 'light'} onClick={() => updateSettings({ theme: 'light' })}>
+                Svetlá
+              </Chip>
+            </div>
           </div>
-        </Card>
+        </Group>
 
         <SectionTitle>Tréning</SectionTitle>
-        <Card>
-          <div className="flex min-h-[56px] items-center justify-between gap-3">
-            <div>
-              <p className="font-medium">Predvolená prestávka</p>
-              <p className="text-sm text-muted">Spustí sa po dokončení série.</p>
-            </div>
-            <div className="flex items-center gap-1">
-              <Button small aria-label="Skrátiť prestávku" disabled={settings.restSeconds <= 15} onClick={() => updateSettings({ restSeconds: settings.restSeconds - 15 })}>
-                −
-              </Button>
-              <span className="tnum w-14 text-center text-lg font-bold" aria-live="polite">
-                {fmtClock(settings.restSeconds)}
-              </span>
-              <Button small aria-label="Predĺžiť prestávku" disabled={settings.restSeconds >= 600} onClick={() => updateSettings({ restSeconds: settings.restSeconds + 15 })}>
-                +
-              </Button>
-            </div>
-          </div>
-          <div className="border-t border-line" />
+        <Group>
+          {stepper(
+            'Prestávka',
+            'Po dokončení série.',
+            fmtClock(settings.restSeconds),
+            { label: 'Skrátiť prestávku', disabled: settings.restSeconds <= 15, fn: () => updateSettings({ restSeconds: settings.restSeconds - 15 }) },
+            { label: 'Predĺžiť prestávku', disabled: settings.restSeconds >= 600, fn: () => updateSettings({ restSeconds: settings.restSeconds + 15 }) },
+          )}
           <Toggle
             checked={settings.restSound}
             onChange={(v) => updateSettings({ restSound: v })}
             label="Zvuk na konci prestávky"
-            hint="Pípne, keď prestávka skončí (aplikácia musí byť otvorená)."
+            hint="Aplikácia musí byť otvorená."
           />
-          <div className="border-t border-line" />
-          <div className="flex min-h-[56px] items-center justify-between gap-3">
-            <div>
-              <p className="font-medium">Krok navýšenia váhy</p>
-              <p className="text-sm text-muted">Pre návrh váhy v tréningu.</p>
-            </div>
-            <div className="flex items-center gap-1">
-              <Button small aria-label="Menší krok" disabled={settings.progressionStep <= 1.25} onClick={() => updateSettings({ progressionStep: settings.progressionStep - 1.25 })}>
-                −
-              </Button>
-              <span className="tnum w-16 text-center text-lg font-bold">{fmtNumber(settings.progressionStep)} kg</span>
-              <Button small aria-label="Väčší krok" disabled={settings.progressionStep >= 10} onClick={() => updateSettings({ progressionStep: settings.progressionStep + 1.25 })}>
-                +
-              </Button>
-            </div>
-          </div>
-          <div className="border-t border-line" />
+          {stepper(
+            'Krok váhy',
+            'Pre návrh váhy.',
+            fmtNumber(settings.progressionStep),
+            { label: 'Menší krok', disabled: settings.progressionStep <= 1.25, fn: () => updateSettings({ progressionStep: settings.progressionStep - 1.25 }) },
+            { label: 'Väčší krok', disabled: settings.progressionStep >= 10, fn: () => updateSettings({ progressionStep: settings.progressionStep + 1.25 }) },
+          )}
           <Toggle
             checked={settings.showEffort}
             onChange={(v) => updateSettings({ showEffort: v })}
@@ -164,76 +164,48 @@ export function SettingsPage() {
             hint="Voliteľné pole pri každej sérii."
           />
           {settings.showEffort && (
-            <div className="flex gap-2 pb-1" role="group" aria-label="Typ náročnosti">
-              <Chip active={settings.effortMode === 'rpe'} onClick={() => updateSettings({ effortMode: 'rpe' })}>
-                RPE
-              </Chip>
-              <Chip active={settings.effortMode === 'rir'} onClick={() => updateSettings({ effortMode: 'rir' })}>
-                RIR
-              </Chip>
+            <div className="flex items-center justify-between gap-3 px-4 py-3">
+              <p className="text-[17px] font-medium">Typ náročnosti</p>
+              <div className="flex gap-2" role="group" aria-label="Typ náročnosti">
+                <Chip active={settings.effortMode === 'rpe'} onClick={() => updateSettings({ effortMode: 'rpe' })}>
+                  RPE
+                </Chip>
+                <Chip active={settings.effortMode === 'rir'} onClick={() => updateSettings({ effortMode: 'rir' })}>
+                  RIR
+                </Chip>
+              </div>
             </div>
           )}
-        </Card>
+        </Group>
 
-        <SectionTitle>Dáta</SectionTitle>
-        <Card className="flex flex-col gap-3">
-          <p className="text-sm text-muted">
-            Všetko je uložené iba v tomto zariadení. Zálohuj si dáta pravidelne, najmä pred vymazaním údajov Safari.
-          </p>
-          {msg && (msg.ok ? <p className="rounded-xl bg-good/15 px-4 py-3 text-good" role="status">{msg.text}</p> : <ErrorNote>{msg.text}</ErrorNote>)}
-          <p className="text-sm font-medium">
-            {settings.lastBackupAt ? `Posledná záloha: ${fmtDate(settings.lastBackupAt)}` : 'Zatiaľ si nezálohoval.'}
-          </p>
-          <Button block variant="primary" onClick={onExport}>
-            Exportovať dáta (JSON)
-          </Button>
-          <Button block onClick={() => mergeRef.current?.click()}>
-            Zlúčiť zálohu z iného zariadenia
-          </Button>
-          <p className="-mt-1 text-sm text-muted">
-            Synchronizácia: exportuj na jednom zariadení, na druhom zálohu zlúč. Nič sa nestratí, nastavenia ostanú.
-          </p>
-          <Button block onClick={() => fileRef.current?.click()}>
-            Importovať a nahradiť všetko
-          </Button>
-          <input
-            ref={mergeRef}
-            type="file"
-            accept="application/json,.json"
-            className="hidden"
-            aria-label="Vybrať súbor zálohy na zlúčenie"
-            onChange={(e) => onMergeFile(e.target.files?.[0])}
-          />
-          <input
-            ref={fileRef}
-            type="file"
-            accept="application/json,.json"
-            className="hidden"
-            aria-label="Vybrať súbor zálohy"
-            onChange={(e) => onPickFile(e.target.files?.[0])}
-          />
-          {sampleCount > 0 && (
-            <Button block onClick={() => setConfirmSamples(true)}>
-              Odstrániť ukážkové rutiny ({sampleCount})
-            </Button>
-          )}
-          <Button variant="danger" block onClick={() => setConfirmClear(true)}>
-            Vymazať všetky dáta
-          </Button>
-        </Card>
+        <SectionTitle>Záloha a synchronizácia</SectionTitle>
+        {msg && (msg.ok ? <p className="mb-3 rounded-xl bg-accent/15 px-4 py-3 text-[15px] text-accent-ink" role="status">{msg.text}</p> : <ErrorNote>{msg.text}</ErrorNote>)}
+        <Button variant="primary" block onClick={onExport}>
+          Exportovať zálohu
+        </Button>
+        <p className="mb-3 mt-2 px-1 text-[13px] text-muted">
+          {settings.lastBackupAt ? `Posledná záloha: ${fmtDate(settings.lastBackupAt)}. ` : 'Zatiaľ si nezálohoval. '}
+          Dáta sú iba v tomto zariadení, preto zálohuj pravidelne.
+        </p>
+        <Group>
+          <Row title="Zlúčiť zálohu z iného zariadenia" subtitle="Synchronizácia cez súbor, nič sa nestratí." chevron onClick={() => mergeRef.current?.click()} />
+          <Row title="Importovať a nahradiť všetko" subtitle="Prepíše dáta v tomto zariadení." chevron onClick={() => fileRef.current?.click()} />
+        </Group>
+        <input ref={mergeRef} type="file" accept="application/json,.json" className="hidden" aria-label="Vybrať súbor zálohy na zlúčenie" onChange={(e) => onMergeFile(e.target.files?.[0])} />
+        <input ref={fileRef} type="file" accept="application/json,.json" className="hidden" aria-label="Vybrať súbor zálohy" onChange={(e) => onPickFile(e.target.files?.[0])} />
 
         <SectionTitle>Ďalšie</SectionTitle>
-        <Card className="divide-y divide-line !p-0">
-          <Link to="/kotuce" className="flex min-h-[56px] items-center justify-between px-4 font-medium">
-            Kalkulačka kotúčov <span className="text-muted">›</span>
-          </Link>
-          <Link to="/telo" className="flex min-h-[56px] items-center justify-between px-4 font-medium">
-            Telesná váha a miery <span className="text-muted">›</span>
-          </Link>
-          <Link to="/nastavenia/o-aplikacii" className="flex min-h-[56px] items-center justify-between px-4 font-medium">
-            O aplikácii a licencie <span className="text-muted">›</span>
-          </Link>
-        </Card>
+        <Group>
+          <Row to="/kotuce" title="Kalkulačka kotúčov" chevron />
+          <Row to="/telo" title="Telesná váha a miery" chevron />
+          <Row to="/nastavenia/o-aplikacii" title="O aplikácii a licencie" chevron />
+        </Group>
+
+        <SectionTitle>Údaje</SectionTitle>
+        <Group>
+          {sampleCount > 0 && <Row title={`Odstrániť ukážkové rutiny (${sampleCount})`} onClick={() => setConfirmSamples(true)} />}
+          <Row title="Vymazať všetky dáta" danger onClick={() => setConfirmClear(true)} />
+        </Group>
       </div>
 
       <ConfirmDialog

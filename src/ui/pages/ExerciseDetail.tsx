@@ -3,10 +3,10 @@ import { Link, useParams } from 'react-router-dom';
 import { updateSettings } from '../../db/repo';
 import { estimate1RM } from '../../domain/calc';
 import { categoryLabel, equipmentLabel, muscleLabel } from '../../domain/exercises';
-import { fmtDate, fmtKg, fmtNumber } from '../../domain/format';
+import { fmtDate, fmtNumber } from '../../domain/format';
 import { buildHistoryIndex, currentRecords, exerciseStats, progressSeries } from '../../domain/stats';
 import type { RecordKind, WorkoutSet } from '../../domain/types';
-import { Button, Card, EmptyState, SectionTitle, Spinner, Tag } from '../components/basic';
+import { Button, Card, EmptyState, Group, Row, SectionTitle, Spinner, Stat, Tag } from '../components/basic';
 import { ExerciseImages } from '../components/ExerciseImages';
 import { LineChart } from '../components/LineChart';
 import { PageHeader } from '../components/PageHeader';
@@ -89,26 +89,31 @@ export function ExerciseDetail() {
           <>
             <div className="grid grid-cols-2 gap-3">
               <Stat label="Posledný výkon" value={stats.last ? lastSummary(stats.last.sets) : '–'} />
-              <Stat label="Najvyššia váha" value={fmtKg(stats.maxWeight)} />
-              <Stat label="Najlepšie opakovania" value={String(stats.bestReps)} />
-              <Stat label="Odhadované 1RM" value={fmtKg(Math.round(stats.best1RM * 10) / 10)} />
+              <Stat label="Najvyššia váha" value={fmtNumber(stats.maxWeight)} unit="kg" />
+              <Stat label="Najlepšie opakovania" value={stats.bestReps} />
+              <Stat label="Odhadované 1RM" value={fmtNumber(Math.round(stats.best1RM * 10) / 10)} unit="kg" tone="accent" />
             </div>
 
             <SectionTitle>Osobné rekordy</SectionTitle>
-            <Card className="divide-y divide-line !p-0">
-              {recs.length === 0 && <p className="p-4 text-muted">Zatiaľ žiadne.</p>}
-              {recs.map((r) => (
-                <div key={r.kind} className="flex items-center justify-between gap-3 p-4">
-                  <div>
-                    <p className="font-semibold">{RECORD_LABEL[r.kind]}</p>
-                    <p className="text-sm text-muted">
-                      {fmtDate(r.achievedAt)} · {fmtNumber(r.weight)} kg × {r.reps}
-                    </p>
-                  </div>
-                  <p className="tnum shrink-0 whitespace-nowrap text-xl font-bold">{fmtNumber(Math.round(r.value * 10) / 10)}&nbsp;kg</p>
-                </div>
-              ))}
-            </Card>
+            {recs.length === 0 ? (
+              <p className="px-1 text-muted">Zatiaľ žiadne.</p>
+            ) : (
+              <Group>
+                {recs.map((r) => (
+                  <Row
+                    key={r.kind}
+                    title={RECORD_LABEL[r.kind]}
+                    subtitle={`${fmtDate(r.achievedAt)} · ${fmtNumber(r.weight)} kg × ${r.reps}`}
+                    trailing={
+                      <span className="t-num whitespace-nowrap text-[30px] text-accent-ink">
+                        {fmtNumber(Math.round(r.value * 10) / 10)}
+                        <span className="ml-1 text-[16px] text-muted">kg</span>
+                      </span>
+                    }
+                  />
+                ))}
+              </Group>
+            )}
 
             <SectionTitle>Progres</SectionTitle>
             <Card>
@@ -139,12 +144,12 @@ export function ExerciseDetail() {
           <>
             <SectionTitle>Návod</SectionTitle>
             <Card>
-              <ol className="list-decimal space-y-3 pl-5 leading-relaxed">
+              <ol className="list-decimal space-y-3 pl-5 text-[16px] leading-relaxed marker:font-display marker:text-[18px] marker:font-semibold marker:text-accent-ink">
                 {ex.instructions.map((s, i) => (
                   <li key={i}>{s}</li>
                 ))}
               </ol>
-              {!ex.custom && <p className="mt-4 text-xs text-muted">Návod je v angličtine (zdroj: Free Exercise DB).</p>}
+              {!ex.custom && <p className="mt-4 text-xs text-muted">Návod preložený z Free Exercise DB.</p>}
             </Card>
           </>
         )}
@@ -165,14 +170,5 @@ export function ExerciseDetail() {
 function lastSummary(sets: WorkoutSet[]): string {
   const work = sets.filter((s) => s.done && s.type !== 'warmup');
   const top = work.reduce<WorkoutSet | null>((a, s) => (!a || (s.weight ?? 0) > (a.weight ?? 0) ? s : a), null);
-  return top ? `${fmtNumber(top.weight ?? 0)} × ${top.reps}` : '–';
-}
-
-function Stat({ label, value }: { label: string; value: string }) {
-  return (
-    <Card>
-      <p className="text-sm text-muted">{label}</p>
-      <p className="tnum mt-1 text-2xl font-bold">{value}</p>
-    </Card>
-  );
+  return top ? `${fmtNumber(top.weight ?? 0)}×${top.reps}` : '–';
 }

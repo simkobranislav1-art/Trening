@@ -28,7 +28,7 @@ function ThemeSync() {
     if (!settings) return;
     const light = settings.theme === 'light';
     document.documentElement.classList.toggle('light', light);
-    document.querySelector('meta[name=theme-color]')?.setAttribute('content', light ? '#f4f5f8' : '#08080a');
+    document.querySelector('meta[name=theme-color]')?.setAttribute('content', light ? '#f2f2ef' : '#000000');
     try {
       localStorage.setItem('theme', settings.theme);
     } catch {

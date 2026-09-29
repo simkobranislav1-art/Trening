@@ -66,7 +66,7 @@ export function RoutineDetail() {
                 <li key={re.id}>
                   <Link
                     to={`/cviky/${encodeURIComponent(re.exerciseId)}`}
-                    className={`block h-full overflow-hidden rounded-2xl bg-card ${re.supersetId ? 'ring-2 ring-accent' : ''}`}
+                    className={`block h-full overflow-hidden rounded-2xl bg-surface ${re.supersetId ? 'ring-2 ring-accent' : ''}`}
                   >
                     {!!ex?.images && (
                       <img
@@ -84,7 +84,7 @@ export function RoutineDetail() {
                         {fmtSets(re.sets)}
                         {ex ? ` · ${muscleLabel(ex.primaryMuscle)}` : ''}
                       </p>
-                      {re.supersetId && <p className="mt-1 text-xs font-semibold text-accent">Superset</p>}
+                      {re.supersetId && <p className="mt-1 text-xs font-semibold text-accent-ink">Superset</p>}
                       {re.note && <p className="mt-1 text-sm text-muted">{re.note}</p>}
                     </div>
                   </Link>
