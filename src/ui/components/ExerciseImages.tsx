@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { DumbbellIcon } from './Icons';
 
 const url = (id: string, n: number): string => `${import.meta.env.BASE_URL}exercises/${id}-${n}.webp`;
 
@@ -11,7 +12,7 @@ export function ExerciseImages({ id, count, name }: { id: string; count: number;
   return (
     <div className={`mb-4 grid gap-2 ${shown.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
       {shown.map((i) => (
-        <figure key={i} className="overflow-hidden rounded-2xl bg-surface">
+        <figure key={i} className="overflow-hidden rounded-xl bg-surface">
           <img
             src={url(id, i)}
             alt={`${name} – ${labels[i]?.toLowerCase() ?? `fotka ${i + 1}`}`}
@@ -19,7 +20,7 @@ export function ExerciseImages({ id, count, name }: { id: string; count: number;
             className="aspect-[4/3] w-full object-cover"
             onError={() => setFailed((f) => new Set(f).add(i))}
           />
-          <figcaption className="px-3 py-1.5 text-xs text-muted">{labels[i] ?? `Fotka ${i + 1}`}</figcaption>
+          <figcaption className="px-3 py-1.5 text-[13px] text-muted">{labels[i] ?? `Fotka ${i + 1}`}</figcaption>
         </figure>
       ))}
     </div>
@@ -35,7 +36,30 @@ export function ExerciseThumb({ id, count, large }: { id: string; count: number;
       src={url(id, 0)}
       alt=""
       loading="lazy"
-      className={`shrink-0 rounded-lg bg-raised object-cover ${large ? 'h-16 w-16' : 'h-12 w-12'}`}
+      className={`shrink-0 rounded-lg bg-surface object-cover ${large ? 'h-16 w-16' : 'h-12 w-12'}`}
+      onError={() => setFailed(true)}
+    />
+  );
+}
+
+/** Kruhový náhľad cviku ako v Hevy; bez fotky ikona činky. */
+export function ExerciseAvatar({ id, count, size = 48 }: { id: string; count: number; size?: number }) {
+  const [failed, setFailed] = useState(false);
+  const style = { width: size, height: size };
+  if (!count || failed) {
+    return (
+      <span style={style} className="flex shrink-0 items-center justify-center rounded-full bg-surface text-muted" aria-hidden>
+        <DumbbellIcon />
+      </span>
+    );
+  }
+  return (
+    <img
+      src={url(id, 0)}
+      alt=""
+      style={style}
+      loading="lazy"
+      className="shrink-0 rounded-full bg-white object-cover"
       onError={() => setFailed(true)}
     />
   );

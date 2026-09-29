@@ -23,20 +23,20 @@ function ActiveBanner() {
   return (
     <Link
       to="/trening"
-      className="press mx-4 mb-3 flex min-h-[52px] items-center justify-between rounded-2xl bg-accent px-4 text-on-accent md:mx-0"
+      className="press mx-4 mb-3 flex min-h-[48px] items-center justify-between rounded-[10px] bg-accent px-4 text-on-accent md:mx-0"
     >
       <span className="flex items-center gap-2 font-semibold">
         <span className="h-2 w-2 animate-pulse rounded-full bg-on-accent" aria-hidden />
         {session.status === 'paused' ? 'Tréning pozastavený' : 'Prebieha tréning'}
       </span>
-      <span className="t-num text-[20px]">{fmtClock(elapsedSeconds(session, now))}</span>
+      <span className="t-num text-[18px]">{fmtClock(elapsedSeconds(session, now))}</span>
     </Link>
   );
 }
 
 const sideLink = (isActive: boolean) =>
-  `flex min-h-[46px] items-center gap-3 rounded-xl px-3 text-[16px] font-medium transition-colors ${
-    isActive ? 'bg-raised text-ink' : 'text-muted hover:text-ink'
+  `flex min-h-[46px] items-center gap-3 rounded-[10px] px-3 text-[16px] transition-colors ${
+    isActive ? 'bg-surface text-ink' : 'text-muted hover:text-ink'
   }`;
 
 export function Layout() {
@@ -79,17 +79,17 @@ export function Layout() {
 
       <nav
         aria-label="Hlavná navigácia"
-        className="pb-safe fixed inset-x-0 bottom-0 z-30 bg-bg/80 shadow-[0_-0.5px_0_rgb(var(--line))] backdrop-blur-xl md:hidden"
+        className="pointer-events-none fixed inset-x-0 bottom-0 z-30 px-3 pb-[calc(10px+env(safe-area-inset-bottom))] md:hidden"
       >
-        <ul className="grid grid-cols-5">
+        <ul className="pointer-events-auto mx-auto grid max-w-md grid-cols-5 gap-0.5 rounded-full border border-white/10 bg-surface/70 p-1.5 shadow-[0_8px_30px_rgba(0,0,0,0.45)] backdrop-blur-2xl backdrop-saturate-150">
           {NAV.map((n) => (
             <li key={n.to}>
               <NavLink
                 to={n.to}
                 end={n.end}
                 className={({ isActive }) =>
-                  `flex min-h-[58px] flex-col items-center justify-center gap-1 text-[11px] font-semibold ${
-                    isActive ? 'text-accent-ink' : 'text-faint'
+                  `flex min-h-[52px] flex-col items-center justify-center gap-0.5 rounded-full text-[10.5px] font-medium transition-colors ${
+                    isActive ? 'bg-white/10 text-accent-ink' : 'text-ink/80'
                   }`
                 }
               >

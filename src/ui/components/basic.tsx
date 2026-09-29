@@ -1,5 +1,6 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
+import { ChevronLeftIcon } from './Icons';
 
 type Variant = 'primary' | 'secondary' | 'danger' | 'ghost';
 
@@ -20,22 +21,56 @@ export function Button({ variant = 'secondary', block, small, className = '', ty
   return (
     <button
       type={type}
-      className={`press inline-flex items-center justify-center gap-2 font-semibold disabled:pointer-events-none disabled:opacity-35 ${
-        small ? 'min-h-[44px] rounded-xl px-4 text-[15px]' : 'min-h-[52px] rounded-[14px] px-5 text-[16px]'
+      className={`press inline-flex items-center justify-center gap-2 font-medium disabled:pointer-events-none disabled:opacity-35 ${
+        small ? 'min-h-[40px] rounded-[10px] px-4 text-[16px]' : 'min-h-[48px] rounded-[10px] px-5 text-[17px]'
       } ${block ? 'w-full' : ''} ${VARIANTS[variant]} ${className}`}
       {...rest}
     />
   );
 }
 
-/** Zoskupený zoznam (ako v iOS Nastaveniach): riadky oddelené jemnou čiarou. */
-export function Group({ children, className = '' }: { children: ReactNode; className?: string }) {
-  return <div className={`divide-y divide-line overflow-hidden rounded-2xl bg-surface ${className}`}>{children}</div>;
+/** Okrúhle tlačidlo s ikonou (späť, časovač, viac…). */
+export function CircleButton({
+  children,
+  label,
+  onClick,
+  to,
+  className = '',
+}: {
+  children: ReactNode;
+  label: string;
+  onClick?: () => void;
+  to?: string;
+  className?: string;
+}) {
+  const cls = `press flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface text-ink ${className}`;
+  if (to) {
+    return (
+      <Link to={to} aria-label={label} className={cls}>
+        {children}
+      </Link>
+    );
+  }
+  return (
+    <button type="button" aria-label={label} onClick={onClick} className={cls}>
+      {children}
+    </button>
+  );
 }
 
-/** Jednoduchá plocha, keď nejde o zoznam riadkov. */
+export const BackButton = ({ onClick }: { onClick: () => void }) => (
+  <CircleButton label="Späť" onClick={onClick}>
+    <ChevronLeftIcon />
+  </CircleButton>
+);
+
+/** Zoskupený zoznam: riadky oddelené jemnou čiarou. */
+export function Group({ children, className = '' }: { children: ReactNode; className?: string }) {
+  return <div className={`divide-y divide-line overflow-hidden rounded-xl bg-surface ${className}`}>{children}</div>;
+}
+
 export function Card({ children, className = '' }: { children: ReactNode; className?: string }) {
-  return <div className={`rounded-2xl bg-surface p-4 ${className}`}>{children}</div>;
+  return <div className={`rounded-xl bg-surface p-4 ${className}`}>{children}</div>;
 }
 
 interface RowProps {
@@ -51,24 +86,24 @@ interface RowProps {
   disabled?: boolean;
 }
 
-/** Riadok zoznamu; s `to` je odkaz, s `onClick` tlačidlo. Min. výška 56 px. */
+/** Riadok zoznamu; s `to` je odkaz, s `onClick` tlačidlo. */
 export function Row({ title, subtitle, leading, trailing, to, onClick, chevron, danger, label, disabled }: RowProps) {
   const body = (
     <>
       {leading}
       <span className="min-w-0 flex-1">
-        <span className={`block text-[17px] font-medium leading-snug ${danger ? 'text-danger' : ''}`}>{title}</span>
-        {subtitle && <span className="mt-0.5 block text-[14px] leading-snug text-muted">{subtitle}</span>}
+        <span className={`block text-[17px] leading-snug ${danger ? 'text-danger' : ''}`}>{title}</span>
+        {subtitle && <span className="mt-0.5 block text-[15px] leading-snug text-muted">{subtitle}</span>}
       </span>
       {trailing && <span className="shrink-0 text-muted">{trailing}</span>}
       {chevron && (
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.2" className="shrink-0 text-faint" aria-hidden>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.4" className="shrink-0 text-faint" aria-hidden>
           <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       )}
     </>
   );
-  const cls = 'flex min-h-[56px] w-full items-center gap-3 px-4 py-2.5 text-left active:bg-raised/70 transition-colors';
+  const cls = 'flex min-h-[52px] w-full items-center gap-3 px-4 py-2.5 text-left transition-colors active:bg-raised';
   if (to) {
     return (
       <Link to={to} className={cls} aria-label={label}>
@@ -86,10 +121,11 @@ export function Row({ title, subtitle, leading, trailing, to, onClick, chevron, 
   return <div className={cls}>{body}</div>;
 }
 
+/** Nadpis sekcie ako v Hevy: biely, stredne veľký, akcia vpravo. */
 export function SectionTitle({ children, action }: { children: ReactNode; action?: ReactNode }) {
   return (
-    <div className="mb-2 mt-6 flex items-center justify-between px-1">
-      <h2 className="t-label">{children}</h2>
+    <div className="mb-3 mt-7 flex min-h-[32px] items-center justify-between">
+      <h2 className="text-[22px] font-medium leading-tight tracking-[-0.015em]">{children}</h2>
       {action}
     </div>
   );
@@ -98,11 +134,11 @@ export function SectionTitle({ children, action }: { children: ReactNode; action
 /** Číslo s popisom. */
 export function Stat({ label, value, unit, tone }: { label: string; value: ReactNode; unit?: string; tone?: 'accent' }) {
   return (
-    <div className="rounded-2xl bg-surface p-4">
-      <p className="text-[13px] font-medium text-muted">{label}</p>
-      <p className={`t-num mt-1.5 text-[28px] ${tone === 'accent' ? 'text-good' : ''}`}>
+    <div className="rounded-xl bg-surface p-4">
+      <p className="text-[14px] text-muted">{label}</p>
+      <p className={`t-num mt-2 text-[26px] ${tone === 'accent' ? 'text-good' : ''}`}>
         {value}
-        {unit && <span className="ml-1 text-[20px] font-medium text-muted">{unit}</span>}
+        {unit && <span className="ml-1 text-[17px] text-muted">{unit}</span>}
       </p>
     </div>
   );
@@ -110,8 +146,8 @@ export function Stat({ label, value, unit, tone }: { label: string; value: React
 
 export function EmptyState({ title, hint, action }: { title: string; hint?: string; action?: ReactNode }) {
   return (
-    <div className="flex flex-col items-center gap-2 rounded-2xl bg-surface px-6 py-7 text-center">
-      <p className="t-title">{title}</p>
+    <div className="flex flex-col items-center gap-2 rounded-xl bg-surface px-6 py-7 text-center">
+      <p className="text-[18px] font-medium">{title}</p>
       {hint && <p className="max-w-xs text-[15px] text-muted">{hint}</p>}
       {action}
     </div>
@@ -129,22 +165,20 @@ export function Spinner({ label = 'Načítavam…' }: { label?: string }) {
 
 export function ErrorNote({ children }: { children: ReactNode }) {
   return (
-    <p role="alert" className="mb-3 rounded-xl bg-danger/15 px-4 py-3 text-[15px] text-danger">
+    <p role="alert" className="mb-3 rounded-[10px] bg-danger/15 px-4 py-3 text-[15px] text-danger">
       {children}
     </p>
   );
 }
 
-/** Filtrovací čip; aktívny je neutrálny (biely), aby signálna farba zostala pre hlavné akcie. */
+/** Čip ako v Hevy: aktívny je modrý. */
 export function Chip({ active, onClick, children }: { active?: boolean; onClick?: () => void; children: ReactNode }) {
   return (
     <button
       type="button"
       aria-pressed={active}
       onClick={onClick}
-      className={`press min-h-[40px] shrink-0 rounded-full px-4 text-[15px] font-medium ${
-        active ? 'bg-ink text-bg' : 'bg-raised text-ink'
-      }`}
+      className={`press min-h-[36px] shrink-0 rounded-full px-4 text-[16px] ${active ? 'bg-accent text-on-accent' : 'bg-raised text-ink'}`}
     >
       {children}
     </button>
@@ -154,14 +188,10 @@ export function Chip({ active, onClick, children }: { active?: boolean; onClick?
 export function Tag({ children, tone = 'muted' }: { children: ReactNode; tone?: 'muted' | 'accent' | 'good' }) {
   const t = {
     muted: 'bg-raised text-muted',
-    accent: 'bg-accent text-on-accent',
+    accent: 'bg-accent/20 text-accent-ink',
     good: 'bg-good/20 text-good',
   }[tone];
-  return (
-    <span className={`inline-block rounded-md px-1.5 py-[3px] text-[11px] font-bold uppercase leading-none tracking-[0.06em] ${t}`}>
-      {children}
-    </span>
-  );
+  return <span className={`inline-block rounded-md px-1.5 py-[3px] text-[11px] font-semibold uppercase leading-none tracking-[0.04em] ${t}`}>{children}</span>;
 }
 
 export function Toggle({
@@ -181,18 +211,14 @@ export function Toggle({
       role="switch"
       aria-checked={checked}
       onClick={() => onChange(!checked)}
-      className="flex min-h-[60px] w-full items-center justify-between gap-4 px-4 py-2 text-left"
+      className="flex min-h-[56px] w-full items-center justify-between gap-4 px-4 py-2 text-left"
     >
       <span>
-        <span className="block text-[17px] font-medium">{label}</span>
+        <span className="block text-[17px]">{label}</span>
         {hint && <span className="mt-0.5 block text-[14px] leading-snug text-muted">{hint}</span>}
       </span>
-      <span className={`relative h-[30px] w-[52px] shrink-0 rounded-full transition-colors ${checked ? 'bg-accent' : 'bg-raised'}`}>
-        <span
-          className={`absolute top-[3px] h-6 w-6 rounded-full shadow transition-all ${
-            checked ? 'left-[25px] bg-white' : 'left-[3px] bg-ink/90'
-          }`}
-        />
+      <span className={`relative h-[31px] w-[51px] shrink-0 rounded-full transition-colors ${checked ? 'bg-good' : 'bg-raised'}`}>
+        <span className={`absolute top-[2px] h-[27px] w-[27px] rounded-full bg-white shadow transition-all ${checked ? 'left-[22px]' : 'left-[2px]'}`} />
       </span>
     </button>
   );
@@ -201,7 +227,7 @@ export function Toggle({
 export function Field({ label, children, hint }: { label: string; children: ReactNode; hint?: string }) {
   return (
     <label className="block">
-      <span className="mb-1.5 block px-1 text-[13px] font-medium text-muted">{label}</span>
+      <span className="mb-1.5 block px-1 text-[13px] uppercase tracking-[0.04em] text-muted">{label}</span>
       {children}
       {hint && <span className="mt-1 block px-1 text-[13px] text-muted">{hint}</span>}
     </label>

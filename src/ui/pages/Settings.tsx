@@ -103,13 +103,13 @@ export function SettingsPage() {
         <p className="text-[14px] leading-snug text-muted">{hint}</p>
       </div>
       <div className="flex shrink-0 items-center gap-1">
-        <Button small aria-label={dec.label} disabled={dec.disabled} onClick={dec.fn} className="!w-11 !px-0 text-xl">
+        <Button small aria-label={dec.label} disabled={dec.disabled} onClick={dec.fn} className="!w-10 !px-0 text-xl">
           −
         </Button>
         <span className="t-num w-[68px] text-center text-[20px]" aria-live="polite">
           {value}
         </span>
-        <Button small aria-label={inc.label} disabled={inc.disabled} onClick={inc.fn} className="!w-11 !px-0 text-xl">
+        <Button small aria-label={inc.label} disabled={inc.disabled} onClick={inc.fn} className="!w-10 !px-0 text-xl">
           +
         </Button>
       </div>

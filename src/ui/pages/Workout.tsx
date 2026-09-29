@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { doneSetCount, workoutVolume } from '../../domain/calc';
 import { plannedRoutineId } from '../../domain/calendar';
-import { fmtClock, fmtNumber, fmtSets, fmtVolume } from '../../domain/format';
+import { fmtClock, fmtNumber, fmtVolume } from '../../domain/format';
 import { buildHistoryIndex, type HistoryEntry } from '../../domain/stats';
 import { suggestNext } from '../../domain/suggest';
 import type { AppSettings, Exercise, SetType, WorkoutExercise, WorkoutSession, WorkoutSet } from '../../domain/types';
@@ -19,7 +19,20 @@ import {
   toggleSupersetWithNext,
   unfinishedSetCount,
 } from '../../domain/workout';
-import { Button, Card, Chip, EmptyState, ErrorNote, Group, Row, SectionTitle, Spinner, Tag } from '../components/basic';
+import { Button, Chip, CircleButton, EmptyState, ErrorNote, SectionTitle, Spinner, Tag } from '../components/basic';
+import { ExerciseAvatar } from '../components/ExerciseImages';
+import {
+  CheckIcon,
+  ChevronDownIcon,
+  ClipboardIcon,
+  MoreIcon,
+  MoreVerticalIcon,
+  PauseIcon,
+  PlayIcon,
+  PlusIcon,
+  SearchIcon,
+  TimerIcon,
+} from '../components/Icons';
 import { ExercisePicker } from '../components/ExercisePicker';
 import { NumberField } from '../components/NumberField';
 import { PlateCalculator } from '../components/PlateCalculator';
@@ -54,65 +67,76 @@ function StartWorkout() {
     }
   };
 
+  const lib = useLibrary();
   return (
     <>
       <PageHeader title="Tréning" />
       <div className="px-4 pb-6">
         {error && <ErrorNote>{error}</ErrorNote>}
-        <Button block className="!min-h-[60px] !rounded-2xl !text-[18px]" onClick={() => begin(newSession('Tréning', []))}>
-          Prázdny tréning
-        </Button>
+        <button
+          type="button"
+          onClick={() => begin(newSession('Tréning', []))}
+          className="press flex min-h-[48px] w-full items-center gap-3 rounded-[10px] bg-surface px-4 text-[18px]"
+        >
+          <PlusIcon />
+          Začať prázdny tréning
+        </button>
 
         <SectionTitle
           action={
-            <button type="button" onClick={() => nav('/rutiny/nova')} className="press min-h-[44px] px-1 text-[15px] font-semibold text-accent-ink">
-              + Nová rutina
+            <button type="button" onClick={() => nav('/rutiny/nova')} aria-label="Nová rutina" className="press flex h-10 w-10 items-center justify-center rounded-full text-ink">
+              <PlusIcon size={24} />
             </button>
           }
         >
           Rutiny
         </SectionTitle>
-        {!routines ? (
+
+        <div className="grid grid-cols-2 gap-3">
+          <button type="button" onClick={() => nav('/rutiny/nova')} className="press flex min-h-[48px] items-center gap-3 rounded-[10px] bg-surface px-4 text-[18px]">
+            <ClipboardIcon />
+            Nová rutina
+          </button>
+          <button type="button" onClick={() => nav('/cviky')} className="press flex min-h-[48px] items-center gap-3 rounded-[10px] bg-surface px-4 text-[18px]">
+            <SearchIcon />
+            Cviky
+          </button>
+        </div>
+
+        <p className="mb-3 mt-6 flex items-center gap-2 text-[17px] text-muted">
+          <span aria-hidden>▾</span> Moje rutiny{routines ? ` (${routines.length})` : ''}
+        </p>
+
+        {!routines || !lib ? (
           <Spinner />
         ) : routines.length === 0 ? (
-          <EmptyState
-            title="Žiadne rutiny"
-            hint="Rutina je šablóna cvikov, z ktorej spustíš tréning jedným ťuknutím."
-            action={<Button variant="primary" onClick={() => nav('/rutiny/nova')}>Vytvoriť rutinu</Button>}
-          />
+          <EmptyState title="Žiadne rutiny" hint="Rutina je šablóna cvikov, z ktorej spustíš tréning jedným ťuknutím." />
         ) : (
-          <Group>
+          <div className="flex flex-col gap-3">
             {routines.map((r) => (
-              <div key={r.id} className="flex items-center">
-                <div className="min-w-0 flex-1">
-                  <Row
-                    to={`/rutiny/${r.id}/detail`}
-                    label={`Zobraziť rutinu ${r.name}`}
-                    title={
-                      <span className="flex flex-wrap items-center gap-2">
-                        {r.name}
-                        {r.isSample && <Tag>Ukážka</Tag>}
-                        {r.id === todayPlanId && <Tag tone="accent">Dnes</Tag>}
-                      </span>
-                    }
-                    subtitle={`${r.exercises.length} cvikov · ${fmtSets(r.exercises.reduce((a, e) => a + e.sets, 0))}`}
-                  />
+              <div key={r.id} className="rounded-xl bg-surface p-4">
+                <div className="flex items-start justify-between gap-2">
+                  <Link to={`/rutiny/${r.id}/detail`} className="min-w-0 flex-1" aria-label={`Zobraziť rutinu ${r.name}`}>
+                    <p className="flex flex-wrap items-center gap-2 text-[20px] font-medium leading-tight">
+                      {r.name}
+                      {r.isSample && <Tag>Ukážka</Tag>}
+                      {r.id === todayPlanId && <Tag tone="accent">Dnes</Tag>}
+                    </p>
+                    <p className="mt-1.5 line-clamp-2 text-[16px] leading-snug text-muted">
+                      {r.exercises.map((e) => lib.nameOf(e.exerciseId, e.exerciseName)).join(', ') || 'Bez cvikov'}
+                    </p>
+                  </Link>
+                  <Link to={`/rutiny/${r.id}`} aria-label={`Upraviť rutinu ${r.name}`} className="press -mr-2 -mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-ink">
+                    <MoreIcon />
+                  </Link>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => begin(sessionFromRoutine(r))}
-                  aria-label={`Spustiť tréning ${r.name}`}
-                  className="press mr-4 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent text-on-accent"
-                >
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden>
-                    <path d="M8 5.5v13a1 1 0 001.5.86l10.4-6.5a1 1 0 000-1.72L9.5 4.64A1 1 0 008 5.5z" />
-                  </svg>
-                </button>
+                <Button variant="primary" block small className="mt-3 !min-h-[42px] !text-[17px]" onClick={() => begin(sessionFromRoutine(r))}>
+                  Spustiť rutinu
+                </Button>
               </div>
             ))}
-          </Group>
+          </div>
         )}
-        <p className="mt-3 px-1 text-[13px] text-muted">Ťuk na rutinu zobrazí cviky a fotky, ▶ spustí tréning.</p>
       </div>
     </>
   );
@@ -158,33 +182,54 @@ function ActiveWorkout({ session }: { session: WorkoutSession }) {
 
   return (
     <>
-      <PageHeader
-        title={session.name || 'Tréning'}
-        subtitle={paused ? 'Pozastavené' : undefined}
-        titleAction={
+      <header className="pt-safe sticky top-0 z-20 bg-surface/90 shadow-[0_0.5px_0_rgb(var(--line))] backdrop-blur-xl">
+        <div className="flex min-h-[60px] items-center gap-2.5 px-4 py-2">
+          <CircleButton label="Domov" to="/" className="!bg-raised">
+            <ChevronDownIcon />
+          </CircleButton>
+          <button type="button" onClick={() => setRenameOpen(true)} className="min-w-0 flex-1 truncate text-left text-[18px]" aria-label="Premenovať tréning">
+            {session.name || 'Tréning'}
+          </button>
+          <CircleButton
+            label={paused ? 'Pokračovať v tréningu' : 'Pozastaviť tréning'}
+            onClick={() => update(paused ? resumeSession : pauseSession)}
+            className="!bg-raised"
+          >
+            {paused ? <PlayIcon /> : <PauseIcon />}
+          </CircleButton>
+          <CircleButton label={`Spustiť prestávku ${fmtClock(settings.restSeconds)}`} onClick={() => startRest(settings.restSeconds)} className="!bg-raised">
+            <TimerIcon />
+          </CircleButton>
           <button
             type="button"
-            onClick={() => setRenameOpen(true)}
-            aria-label="Premenovať tréning"
-            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-lg text-muted"
+            onClick={() => setConfirmFinish(true)}
+            className="press h-10 shrink-0 rounded-full bg-accent px-4 text-[17px] font-medium text-on-accent"
           >
-            ✎
+            Ukončiť
           </button>
-        }
-        action={
-          <div className="flex items-center gap-2">
-            <span className="t-num text-[22px]" aria-label="Čas tréningu">
-              {fmtClock(elapsedSeconds(session, now))}
-            </span>
-            <Button small onClick={() => update(paused ? resumeSession : pauseSession)}>
-              {paused ? 'Pokračovať' : 'Pauza'}
-            </Button>
-          </div>
-        }
-      />
-      <RestBar session={session} settings={settings} onStart={startRest} onChange={(iso) => update((s) => ({ ...s, restEndsAt: iso }))} />
+        </div>
+      </header>
 
-      <div className="flex flex-col gap-4 px-4 pb-6 pt-2">
+      <div className="grid grid-cols-3 gap-2 border-b border-line px-4 py-3.5" aria-label="Priebeh tréningu">
+        <div>
+          <p className="text-[14px] text-muted">{paused ? 'Pozastavené' : 'Trvanie'}</p>
+          <p className="t-num mt-1.5 text-[22px] text-accent-ink" aria-label="Čas tréningu">
+            {fmtClock(elapsedSeconds(session, now))}
+          </p>
+        </div>
+        <div>
+          <p className="text-[14px] text-muted">Objem</p>
+          <p className="t-num mt-1.5 text-[22px]">{fmtVolume(workoutVolume(session.exercises))}</p>
+        </div>
+        <div>
+          <p className="text-[14px] text-muted">Série</p>
+          <p className="t-num mt-1.5 text-[22px]">{doneSets}</p>
+        </div>
+      </div>
+
+      <RestBar session={session} settings={settings} onChange={(iso) => update((s) => ({ ...s, restEndsAt: iso }))} />
+
+      <div className="flex flex-col gap-9 px-4 pb-6 pt-5">
         {error && <ErrorNote>{error}</ErrorNote>}
         {session.exercises.length === 0 && (
           <EmptyState title="Prázdny tréning" hint="Pridaj cviky a začni zapisovať série." />
@@ -194,10 +239,11 @@ function ActiveWorkout({ session }: { session: WorkoutSession }) {
           const samePrev = !!sid && session.exercises[i - 1]?.supersetId === sid;
           const sameNext = !!sid && session.exercises[i + 1]?.supersetId === sid;
           return (
-            <ExerciseCard
+            <ExerciseSection
               key={we.id}
               we={we}
               displayName={lib.nameOf(we.exerciseId, we.exerciseName)}
+              imageCount={lib.byId(we.exerciseId)?.images ?? 0}
               total={session.exercises.length}
               supersetPos={sid ? (samePrev ? (sameNext ? 'middle' : 'last') : 'first') : null}
               canLink={i < session.exercises.length - 1}
@@ -216,19 +262,20 @@ function ActiveWorkout({ session }: { session: WorkoutSession }) {
           );
         })}
 
-        <div className="flex gap-3">
+        <div className="flex flex-col gap-3">
           <Button variant="primary" block onClick={() => setPicker(true)}>
-            + Pridať cvik
+            <PlusIcon size={20} />
+            Pridať cvik
           </Button>
           {session.exercises.length > 1 && (
             <Button block onClick={() => setReorderOpen(true)}>
-              Poradie
+              Zmeniť poradie cvikov
             </Button>
           )}
         </div>
 
         <label className="block">
-          <span className="mb-1.5 block text-sm font-medium text-muted">Poznámka k tréningu</span>
+          <span className="t-label mb-2 block">Poznámka k tréningu</span>
           <textarea
             className="field min-h-[80px]"
             value={session.note}
@@ -236,15 +283,10 @@ function ActiveWorkout({ session }: { session: WorkoutSession }) {
           />
         </label>
 
-        <p className="text-center text-sm text-muted">
-          Ťuk na číslo série mení typ: číslo = pracovná, Z = zahrievacia, D = drop set. Zahrievacie série sa
-          nezapočítavajú do objemu ani rekordov.
-        </p>
-
-        <div className="flex flex-col gap-3">
-          <Button variant="primary" block className="!bg-accent" onClick={() => setConfirmFinish(true)}>
-            Ukončiť tréning
-          </Button>
+        <div>
+          <p className="mb-3 text-center text-[13px] text-muted">
+            Ťuk na číslo série: typ (pracovná, zahrievacia, drop), poznámka, odstránenie. Zahrievacie série sa nezapočítavajú do objemu ani rekordov.
+          </p>
           <Button variant="danger" block onClick={() => setConfirmDiscard(true)}>
             Zahodiť tréning
           </Button>
@@ -307,7 +349,7 @@ function ActiveWorkout({ session }: { session: WorkoutSession }) {
           </>
         ) : (
           <>
-            <p className="tnum mb-2 text-lg">
+            <p className="t-num mb-2 text-[18px]">
               {doneSets} dokončených sérií · {fmtVolume(workoutVolume(session.exercises))}
             </p>
             {unfinishedSetCount(session) > 0 && (
@@ -348,12 +390,10 @@ function ActiveWorkout({ session }: { session: WorkoutSession }) {
 function RestBar({
   session,
   settings,
-  onStart,
   onChange,
 }: {
   session: WorkoutSession;
   settings: AppSettings;
-  onStart: (sec: number) => void;
   onChange: (iso: string | null) => void;
 }) {
   const now = useNow(250);
@@ -374,38 +414,29 @@ function RestBar({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [over, session.restEndsAt]);
 
-  const stick = 'sticky top-[calc(52px+env(safe-area-inset-top))] z-10 bg-bg/85 px-4 pb-2 pt-1 backdrop-blur-xl';
-  if (remaining === null || end === null) {
-    return (
-      <div className={stick}>
-        <Button small block className="!bg-surface" onClick={() => onStart(settings.restSeconds)}>
-          Spustiť prestávku · {fmtClock(settings.restSeconds)}
-        </Button>
-      </div>
-    );
-  }
+  if (remaining === null || end === null) return null;
   const shift = (sec: number) => onChange(new Date(end + sec * 1000).toISOString());
   return (
-    <div className={stick}>
+    <div className="sticky top-[calc(60px+env(safe-area-inset-top))] z-10 bg-bg/85 px-4 py-2 backdrop-blur-xl">
       <div
         role="timer"
         aria-live="off"
-        className={`flex items-center justify-between gap-2 rounded-2xl px-4 py-2.5 ${over ? 'bg-good text-white' : 'bg-surface'}`}
+        className={`flex items-center gap-3 rounded-xl px-4 py-2 ${over ? 'bg-good text-white' : 'bg-surface'}`}
       >
-        <div>
-          <p className={`t-label ${over ? '!text-white' : ''}`}>{over ? 'Prestávka skončila' : 'Prestávka'}</p>
-          <p className={`t-num mt-1.5 text-[36px] ${over ? '' : 'text-accent-ink'}`}>{over ? '0:00' : fmtClock(remaining)}</p>
-        </div>
-        <div className="flex gap-2">
-          <Button small onClick={() => shift(-15)} aria-label="Skrátiť o 15 sekúnd">
+        <TimerIcon size={22} />
+        <p className={`t-num min-w-[64px] text-[26px] ${over ? '' : 'text-accent-ink'}`} aria-label={over ? 'Prestávka skončila' : 'Zostávajúci čas prestávky'}>
+          {over ? '0:00' : fmtClock(remaining)}
+        </p>
+        <div className="ml-auto flex gap-1.5">
+          <button type="button" onClick={() => shift(-15)} aria-label="Skrátiť o 15 sekúnd" className="press h-9 rounded-lg bg-raised px-3 text-[15px]">
             −15
-          </Button>
-          <Button small onClick={() => shift(15)} aria-label="Predĺžiť o 15 sekúnd">
+          </button>
+          <button type="button" onClick={() => shift(15)} aria-label="Predĺžiť o 15 sekúnd" className="press h-9 rounded-lg bg-raised px-3 text-[15px]">
             +15
-          </Button>
-          <Button small variant={over ? 'secondary' : 'secondary'} className={over ? '!bg-white/25 !text-white' : ''} onClick={() => onChange(null)}>
+          </button>
+          <button type="button" onClick={() => onChange(null)} className={`press h-9 rounded-lg px-3 text-[15px] ${over ? 'bg-white/25' : 'bg-raised'}`}>
             {over ? 'Hotovo' : 'Preskočiť'}
-          </Button>
+          </button>
         </div>
       </div>
     </div>
@@ -418,9 +449,10 @@ const TYPE_LABEL: Record<SetType, string> = { working: 'Pracovná', warmup: 'Zah
 
 type SupersetPos = 'first' | 'middle' | 'last' | null;
 
-function ExerciseCard({
+function ExerciseSection({
   we,
   displayName,
+  imageCount,
   total,
   supersetPos,
   canLink,
@@ -435,6 +467,7 @@ function ExerciseCard({
 }: {
   we: WorkoutExercise;
   displayName: string;
+  imageCount: number;
   total: number;
   supersetPos: SupersetPos;
   canLink: boolean;
@@ -476,112 +509,106 @@ function ExerciseCard({
 
   const editing = we.sets.find((s) => s.id === editSet) ?? null;
   let workingNo = 0;
+  const cols = 'grid-cols-[38px_1fr_78px_78px_38px]';
 
   return (
-    <Card
-      className={`!p-3 ${supersetPos ? 'border-l-[3px] border-accent' : ''} ${
-        supersetPos === 'first' || supersetPos === 'middle' ? '!mb-[-0.5rem] !rounded-b-md' : ''
-      } ${supersetPos === 'last' || supersetPos === 'middle' ? '!rounded-t-md' : ''}`}
+    <section
+      aria-label={displayName}
+      className={`${supersetPos ? 'border-l-2 border-accent pl-3' : ''} ${
+        supersetPos === 'first' || supersetPos === 'middle' ? '-mb-5' : ''
+      }`}
     >
-      {supersetPos === 'first' && <p className="t-label mb-1.5 px-1 !text-accent-ink">Superset</p>}
-      <div className="mb-2 flex items-center justify-between gap-2 px-1">
-        <div className="min-w-0">
-          <Link to={`/cviky/${encodeURIComponent(we.exerciseId)}`} className="block text-[19px] font-semibold leading-tight tracking-[-0.01em]">
-            {displayName}
-          </Link>
-          {last && (
-            <p className="tnum truncate text-sm text-muted">
-              Minule:{' '}
-              {last.sets
-                .filter((s) => s.done && s.type !== 'warmup')
-                .map((s) => `${fmtNumber(s.weight ?? 0)}×${s.reps}`)
-                .join(' · ') || '–'}
-            </p>
-          )}
-        </div>
+      {supersetPos === 'first' && <p className="t-label mb-2 !text-accent-ink">Superset</p>}
+      <div className="flex items-center gap-3">
+        <Link to={`/cviky/${encodeURIComponent(we.exerciseId)}`} aria-label={`Detail cviku ${displayName}`}>
+          <ExerciseAvatar id={we.exerciseId} count={imageCount} />
+        </Link>
+        <Link to={`/cviky/${encodeURIComponent(we.exerciseId)}`} className="min-w-0 flex-1 text-[20px] leading-tight text-accent-ink">
+          {displayName}
+        </Link>
         <button
           type="button"
           onClick={() => setMenu(true)}
           aria-label={`Možnosti cviku ${displayName}`}
-          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-raised text-2xl leading-none"
+          className="press -mr-2 flex h-10 w-10 shrink-0 items-center justify-center rounded-full"
         >
-          ⋯
+          <MoreVerticalIcon />
         </button>
       </div>
-      {we.note && (
-        <button type="button" onClick={() => setMenu(true)} className="mb-2 w-full rounded-lg bg-raised px-3 py-2 text-left text-sm text-muted">
-          {we.note}
-        </button>
-      )}
+
+      <input
+        aria-label={`Poznámka ku cviku ${displayName}`}
+        placeholder="Pridať poznámku…"
+        value={we.note}
+        onChange={(e) => onChange((x) => ({ ...x, note: e.target.value }))}
+        className="mt-3 w-full bg-transparent py-1 text-[17px] text-ink placeholder:text-muted focus:outline-none"
+      />
+
       {suggestion && we.sets.some((s) => !s.done && s.type !== 'warmup' && (s.weight === null || s.reps === null)) && (
-        <button
-          type="button"
-          onClick={applySuggestion}
-          className="mb-2 flex min-h-[44px] w-full items-center justify-between gap-2 rounded-xl bg-accent/10 px-3 py-2 text-left"
-        >
+        <button type="button" onClick={applySuggestion} className="press mt-2 flex w-full items-center gap-2 py-1 text-left text-[16px] text-accent-ink">
+          <TimerIcon size={20} />
           <span>
-            <span className="block text-sm font-semibold text-accent-ink">
-              Návrh: {fmtNumber(suggestion.weight)} kg × {suggestion.reps}
-            </span>
-            <span className="block text-xs text-muted">{suggestion.reason}</span>
+            Návrh: {fmtNumber(suggestion.weight)} kg × {suggestion.reps}
+            <span className="text-muted"> · {suggestion.reason}</span>
           </span>
-          <span className="shrink-0 text-sm font-semibold text-accent-ink">Použiť</span>
         </button>
       )}
 
-      <div className="t-label mb-1.5 grid grid-cols-[44px_1fr_84px_72px_52px] items-center gap-1.5 px-1 !text-[12px] !font-medium !text-faint">
-        <span className="text-center">Séria</span>
-        <span className="text-center">Minule</span>
-        <span className="text-center">kg</span>
-        <span className="text-center">Opak.</span>
-        <span />
+      <div className={`t-label mb-2 mt-4 grid ${cols} items-center gap-2 px-1 text-center`}>
+        <span>Sér.</span>
+        <span>Minule</span>
+        <span>{'kg'}</span>
+        <span>Opak.</span>
+        <span className="flex justify-center">
+          <CheckIcon size={16} />
+        </span>
       </div>
 
-      <ul className="flex flex-col gap-1.5">
+      <ul className="flex flex-col gap-1">
         {we.sets.map((s) => {
           if (s.type !== 'warmup') workingNo += 1;
           const label = s.type === 'warmup' ? 'Z' : s.type === 'drop' ? 'D' : String(workingNo);
           const prev = prevFor(s);
           const effortKey = settings.effortMode;
           return (
-            <li key={s.id} className={`rounded-xl px-1 py-1 transition-colors ${s.done ? 'bg-good/15' : ''}`}>
-              <div className="grid grid-cols-[44px_1fr_84px_72px_52px] items-center gap-1.5">
+            <li key={s.id} className={`rounded-lg px-1 py-[3px] transition-colors ${s.done ? 'bg-good/15' : ''}`}>
+              <div className={`grid ${cols} items-center gap-2`}>
                 <button
                   type="button"
                   onClick={() => setEditSet(s.id)}
                   aria-label={`Séria ${label}, typ: ${TYPE_LABEL[s.type]}. Ťuknutím zmeníš typ, poznámku alebo sériu odstrániš.`}
-                  className={`t-num relative h-14 rounded-xl text-[18px] ${
-                    s.type === 'warmup' ? 'bg-warn/20 text-warn' : s.type === 'drop' ? 'bg-ink/15 text-ink' : 'bg-raised text-muted'
+                  className={`press relative h-[38px] rounded-lg text-[18px] font-medium ${
+                    s.type === 'warmup' ? 'bg-raised text-warn' : s.type === 'drop' ? 'bg-raised text-accent-ink' : 'bg-raised'
                   }`}
                 >
                   {label}
-                  {s.note && <span aria-hidden className="absolute right-1.5 top-1.5 h-2 w-2 rounded-full bg-accent" />}
+                  {s.note && <span aria-hidden className="absolute right-1 top-1 h-1.5 w-1.5 rounded-full bg-accent-ink" />}
                 </button>
                 <button
                   type="button"
                   disabled={!prev}
                   onClick={() => prev && setSet(s.id, { weight: prev.weight, reps: prev.reps })}
                   aria-label={prev ? `Použiť minulý výkon ${fmtNumber(prev.weight ?? 0)} kg × ${prev.reps}` : 'Bez minulého výkonu'}
-                  className="t-num h-14 rounded-xl text-[14px] font-medium !text-faint disabled:opacity-40"
+                  className="t-num h-[38px] whitespace-nowrap text-[16px] text-muted disabled:opacity-40"
                 >
-                  {prev ? `${fmtNumber(prev.weight ?? 0)}×${prev.reps}` : '–'}
+                  {prev ? `${fmtNumber(prev.weight ?? 0)}kg × ${prev.reps}` : '–'}
                 </button>
                 <NumberField
                   decimal
                   label={`Váha v kg, séria ${label}`}
                   value={s.weight}
-                  placeholder={prev?.weight != null ? fmtNumber(prev.weight) : '0'}
+                  placeholder={prev?.weight != null ? fmtNumber(prev.weight) : ''}
                   max={999}
                   onChange={(v) => setSet(s.id, { weight: v })}
-                  className="h-14 w-full text-[22px]"
+                  className="h-[38px] w-full text-[19px]"
                 />
                 <NumberField
                   label={`Opakovania, séria ${label}`}
                   value={s.reps}
-                  placeholder={prev?.reps != null ? String(prev.reps) : '0'}
+                  placeholder={prev?.reps != null ? String(prev.reps) : ''}
                   max={999}
                   onChange={(v) => setSet(s.id, { reps: v })}
-                  className="h-14 w-full text-[22px]"
+                  className="h-[38px] w-full text-[19px]"
                 />
                 <button
                   type="button"
@@ -599,16 +626,16 @@ function ExerciseCard({
                     });
                     onCompleted();
                   }}
-                  className={`press flex h-14 items-center justify-center rounded-xl ${s.done ? 'bg-good text-white' : 'bg-raised text-faint'}`}
+                  className={`press flex h-[38px] items-center justify-center rounded-lg ${s.done ? 'bg-good text-white' : 'bg-raised text-muted'}`}
                 >
-                  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" strokeWidth="3" aria-hidden className={s.done ? 'animate-pop' : ''}>
-                    <path d="M5 12.5l4.5 4.5L19 7.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
+                  <span className={s.done ? 'animate-pop' : ''}>
+                    <CheckIcon size={22} />
+                  </span>
                 </button>
               </div>
               {settings.showEffort && (
-                <div className="mt-1 flex items-center justify-end gap-2 pr-1">
-                  <span className="text-sm text-muted">{effortKey === 'rpe' ? 'RPE' : 'RIR'}</span>
+                <div className="mt-1.5 flex items-center justify-end gap-2 pr-1">
+                  <span className="text-[14px] text-muted">{effortKey === 'rpe' ? 'RPE' : 'RIR'}</span>
                   <NumberField
                     decimal={effortKey === 'rpe'}
                     label={`${effortKey === 'rpe' ? 'RPE' : 'RIR'}, séria ${label}`}
@@ -616,34 +643,24 @@ function ExerciseCard({
                     max={10}
                     placeholder="–"
                     onChange={(v) => setSet(s.id, { [effortKey]: v })}
-                    className="h-11 w-20 text-lg"
+                    className="h-[34px] w-16 text-[17px]"
                   />
                 </div>
               )}
-              {s.note && <p className="mt-1 px-2 text-sm text-muted">{s.note}</p>}
+              {s.note && <p className="mt-1 px-1 text-[14px] text-muted">{s.note}</p>}
             </li>
           );
         })}
       </ul>
 
-      <div className="mt-3 flex gap-2">
-        <Button block small onClick={() => onChange((e) => ({ ...e, sets: [...e.sets, newSet()] }))}>
-          + Séria
-        </Button>
-        <Button
-          block
-          small
-          disabled={we.sets.length === 0}
-          onClick={() =>
-            onChange((e) => {
-              const l = e.sets[e.sets.length - 1];
-              return { ...e, sets: [...e.sets, newSet({ type: l.type, weight: l.weight, reps: l.reps })] };
-            })
-          }
-        >
-          Duplikovať sériu
-        </Button>
-      </div>
+      <button
+        type="button"
+        onClick={() => onChange((e) => ({ ...e, sets: [...e.sets, newSet()] }))}
+        className="press mt-3 flex h-[42px] w-full items-center justify-center gap-2 rounded-lg bg-surface text-[17px]"
+      >
+        <PlusIcon size={20} />
+        Pridať sériu
+      </button>
 
       <Sheet open={!!editing} onClose={() => setEditSet(null)} title="Séria">
         {editing && (
@@ -656,14 +673,10 @@ function ExerciseCard({
               ))}
             </div>
             <label className="mb-4 block">
-              <span className="mb-1.5 block text-sm font-medium text-muted">Poznámka k sérii</span>
-              <textarea
-                className="field min-h-[80px]"
-                value={editing.note ?? ''}
-                onChange={(e) => setSet(editing.id, { note: e.target.value })}
-              />
+              <span className="t-label mb-2 block">Poznámka k sérii</span>
+              <textarea className="field !bg-raised min-h-[80px]" value={editing.note ?? ''} onChange={(e) => setSet(editing.id, { note: e.target.value })} />
             </label>
-            <p className="mb-4 text-sm text-muted">Zahrievacie série sa nezapočítavajú do objemu ani rekordov.</p>
+            <p className="mb-4 text-[14px] text-muted">Zahrievacie série sa nezapočítavajú do objemu ani rekordov.</p>
             <div className="flex flex-col gap-3">
               <Button variant="primary" onClick={() => setEditSet(null)}>
                 Hotovo
@@ -685,24 +698,37 @@ function ExerciseCard({
       </Sheet>
 
       <Sheet open={menu} onClose={() => setMenu(false)} title={displayName}>
-        <label className="mb-4 block">
-          <span className="mb-1.5 block text-sm font-medium text-muted">Poznámka ku cviku</span>
-          <textarea className="field min-h-[90px]" value={we.note} onChange={(e) => onChange((x) => ({ ...x, note: e.target.value }))} />
-        </label>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-2.5">
           <Button
             onClick={() => {
               setMenu(false);
               setPlates(true);
             }}
+            className="!bg-raised"
           >
             Kalkulačka kotúčov
           </Button>
+          <Button
+            disabled={we.sets.length === 0}
+            className="!bg-raised"
+            onClick={() => {
+              onChange((e) => {
+                const l = e.sets[e.sets.length - 1];
+                return { ...e, sets: [...e.sets, newSet({ type: l.type, weight: l.weight, reps: l.reps })] };
+              });
+              setMenu(false);
+            }}
+          >
+            Duplikovať poslednú sériu
+          </Button>
           {canLink && (
-            <Button onClick={onToggleLink}>{linkedToNext ? 'Zrušiť superset s nasledujúcim' : 'Superset s nasledujúcim cvikom'}</Button>
+            <Button onClick={onToggleLink} className="!bg-raised">
+              {linkedToNext ? 'Zrušiť superset s nasledujúcim' : 'Superset s nasledujúcim cvikom'}
+            </Button>
           )}
           {total > 1 && (
             <Button
+              className="!bg-raised"
               onClick={() => {
                 setMenu(false);
                 onReorderRequest();
@@ -721,16 +747,10 @@ function ExerciseCard({
           >
             Odstrániť cvik z tréningu
           </Button>
-          <Button variant="primary" onClick={() => setMenu(false)}>
-            Hotovo
-          </Button>
         </div>
       </Sheet>
       <Sheet open={plates} onClose={() => setPlates(false)} title="Kalkulačka kotúčov">
-        <PlateCalculator
-          settings={settings}
-          initial={we.sets.find((x) => !x.done && x.weight)?.weight ?? suggestion?.weight ?? null}
-        />
+        <PlateCalculator settings={settings} initial={we.sets.find((x) => !x.done && x.weight)?.weight ?? suggestion?.weight ?? null} />
       </Sheet>
       <ConfirmDialog
         open={confirmRemove}
@@ -744,6 +764,6 @@ function ExerciseCard({
           onRemove();
         }}
       />
-    </Card>
+    </section>
   );
 }

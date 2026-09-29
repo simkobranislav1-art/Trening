@@ -8,7 +8,7 @@ import {
 } from '../../domain/exercises';
 import type { Exercise } from '../../domain/types';
 import { Chip, EmptyState, Tag } from './basic';
-import { ExerciseThumb } from './ExerciseImages';
+import { ExerciseAvatar } from './ExerciseImages';
 
 /** Vyhľadávanie a filtre + zoznam cvikov. Ťuknutie volá `onPick`. */
 export function ExerciseBrowser({
@@ -84,10 +84,10 @@ export function ExerciseBrowser({
                     isSel ? 'bg-accent/15' : ''
                   }`}
                 >
-                  <ExerciseThumb id={e.id} count={e.images ?? 0} />
+                  <ExerciseAvatar id={e.id} count={e.images ?? 0} size={44} />
                   <span className="min-w-0 flex-1">
-                    <span className="block truncate font-semibold">{e.name}</span>
-                    <span className="block truncate text-sm text-muted">
+                    <span className="block truncate text-[17px]">{e.name}</span>
+                    <span className="block truncate text-[14px] text-muted">
                       {muscleLabel(e.primaryMuscle)} · {equipmentLabel(e.equipment)}
                     </span>
                   </span>

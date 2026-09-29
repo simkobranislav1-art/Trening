@@ -6,7 +6,9 @@ import { doneSetCount, exerciseVolume, workoutVolume } from '../../domain/calc';
 import { fmtDate, fmtDuration, fmtNumber, fmtTime, fmtVolume } from '../../domain/format';
 import type { WorkoutSession } from '../../domain/types';
 import { sessionFromPast } from '../../domain/workout';
-import { Button, Card, EmptyState, SectionTitle, Spinner, Tag } from '../components/basic';
+import { Button, EmptyState, SectionTitle, Spinner, Tag } from '../components/basic';
+import { ExerciseAvatar } from '../components/ExerciseImages';
+import { PencilIcon } from '../components/Icons';
 import { PageHeader } from '../components/PageHeader';
 import { ConfirmDialog, Sheet } from '../components/Sheet';
 import { useLibrary, useRecords, useSettings } from '../hooks/data';
@@ -57,13 +59,13 @@ export function HistoryDetail() {
           <button
             type="button"
             aria-label="Premenovať tréning"
-            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-lg text-muted"
+            className="press flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-muted"
             onClick={() => {
               setNameDraft(s.name);
               setRenameOpen(true);
             }}
           >
-            ✎
+            <PencilIcon />
           </button>
         }
       />
@@ -81,38 +83,41 @@ export function HistoryDetail() {
           ))}
         </div>
 
-        <div className="mt-4 flex flex-col gap-4">
+        <div className="mt-8 flex flex-col gap-8">
           {s.exercises.map((e) => {
             const exPrs = prs.filter((r) => r.exerciseId === e.exerciseId);
             let n = 0;
             return (
-              <Card key={e.id}>
-                <div className="flex items-start justify-between gap-2">
-                  <Link to={`/cviky/${encodeURIComponent(e.exerciseId)}`} className="text-[19px] font-semibold leading-tight">
-                    {lib.nameOf(e.exerciseId, e.exerciseName)}
-                  </Link>
+              <section key={e.id} aria-label={lib.nameOf(e.exerciseId, e.exerciseName)}>
+                <Link to={`/cviky/${encodeURIComponent(e.exerciseId)}`} className="flex items-center gap-3">
+                  <ExerciseAvatar id={e.exerciseId} count={lib.byId(e.exerciseId)?.images ?? 0} />
+                  <span className="min-w-0 flex-1 text-[20px] leading-tight text-accent-ink">{lib.nameOf(e.exerciseId, e.exerciseName)}</span>
                   {exPrs.length > 0 && <Tag tone="good">Rekord</Tag>}
+                </Link>
+                {e.note && <p className="mt-2 text-[16px] text-muted">{e.note}</p>}
+                <div className="t-label -mx-4 mt-3 grid grid-cols-[64px_1fr] px-4 pb-2">
+                  <span>Séria</span>
+                  <span>Výkon</span>
                 </div>
-                {e.note && <p className="mt-1 text-sm text-muted">{e.note}</p>}
-                <ul className="tnum mt-3 space-y-1.5">
-                  {e.sets.map((set) => {
+                <ul className="-mx-4">
+                  {e.sets.map((set, i) => {
                     if (set.type !== 'warmup') n += 1;
                     const label = set.type === 'warmup' ? 'Z' : set.type === 'drop' ? 'D' : String(n);
                     const eff = effort && set[effort] != null ? ` · ${effort.toUpperCase()} ${fmtNumber(set[effort]!)}` : '';
                     return (
-                      <li key={set.id} className="flex items-center gap-3">
-                        <span className="t-num w-7 text-center text-[16px] text-faint">{label}</span>
-                        <span className="t-num text-[19px]">
-                          {fmtNumber(set.weight ?? 0)}<span className="text-[17px] text-muted"> kg × </span>{set.reps ?? 0}
+                      <li key={set.id} className={`grid min-h-[46px] grid-cols-[64px_1fr] items-center px-4 text-[18px] ${i % 2 === 1 ? 'bg-surface' : ''}`}>
+                        <span className={set.type === 'warmup' ? 'text-warn' : set.type === 'drop' ? 'text-accent-ink' : ''}>{label}</span>
+                        <span className="t-num">
+                          {fmtNumber(set.weight ?? 0)} kg × {set.reps ?? 0}
+                          <span className="text-[15px] text-muted">{eff}</span>
+                          {set.note && <span className="ml-2 text-[14px] text-muted">„{set.note}“</span>}
                         </span>
-                        <span className="text-sm text-muted">{eff}</span>
-                        {set.note && <span className="min-w-0 truncate text-sm text-muted">„{set.note}“</span>}
                       </li>
                     );
                   })}
                 </ul>
-                <p className="tnum mt-2 text-sm text-muted">Objem cviku: {fmtVolume(exerciseVolume(e))}</p>
-              </Card>
+                <p className="mt-2 text-[14px] text-muted">Objem cviku: {fmtVolume(exerciseVolume(e))}</p>
+              </section>
             );
           })}
         </div>

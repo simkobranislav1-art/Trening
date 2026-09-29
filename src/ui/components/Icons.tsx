@@ -1,13 +1,13 @@
 import type { ReactNode } from 'react';
 
-const Svg = ({ children }: { children: ReactNode }) => (
+const Svg = ({ children, size = 26, sw = 1.8 }: { children: ReactNode; size?: number; sw?: number }) => (
   <svg
     viewBox="0 0 24 24"
-    width="26"
-    height="26"
+    width={size}
+    height={size}
     fill="none"
     stroke="currentColor"
-    strokeWidth="1.8"
+    strokeWidth={sw}
     strokeLinecap="round"
     strokeLinejoin="round"
     aria-hidden
@@ -18,8 +18,8 @@ const Svg = ({ children }: { children: ReactNode }) => (
 
 export const HomeIcon = () => (
   <Svg>
-    <path d="M3 11l9-8 9 8" />
-    <path d="M5 10v10h5v-6h4v6h5V10" />
+    <path d="M3.5 11L12 3.5 20.5 11" />
+    <path d="M5.5 9.5V20h4.5v-5.5h4V20h4.5V9.5" />
   </Svg>
 );
 export const DumbbellIcon = () => (
@@ -48,5 +48,68 @@ export const PhoneIcon = () => (
   <Svg>
     <rect x="7" y="2.5" width="10" height="19" rx="2.5" />
     <path d="M11 18.5h2" />
+  </Svg>
+);
+export const PlusIcon = ({ size = 22 }: { size?: number }) => (
+  <Svg size={size} sw={2}>
+    <path d="M12 5v14M5 12h14" />
+  </Svg>
+);
+export const CheckIcon = ({ size = 22, sw = 2.2 }: { size?: number; sw?: number }) => (
+  <Svg size={size} sw={sw}>
+    <path d="M5 12.5l4.5 4.5L19 7.5" />
+  </Svg>
+);
+export const ChevronLeftIcon = () => (
+  <Svg size={24} sw={2.2}>
+    <path d="M15 5l-7 7 7 7" />
+  </Svg>
+);
+export const ChevronDownIcon = () => (
+  <Svg size={24} sw={2.2}>
+    <path d="M5 9l7 7 7-7" />
+  </Svg>
+);
+export const MoreVerticalIcon = () => (
+  <Svg size={24} sw={2.6}>
+    <path d="M12 5.5h.01M12 12h.01M12 18.5h.01" />
+  </Svg>
+);
+export const MoreIcon = () => (
+  <Svg size={24} sw={2.6}>
+    <path d="M5.5 12h.01M12 12h.01M18.5 12h.01" />
+  </Svg>
+);
+export const TimerIcon = ({ size = 22 }: { size?: number }) => (
+  <Svg size={size} sw={1.9}>
+    <circle cx="12" cy="13.5" r="7.5" />
+    <path d="M12 9.5v4l2.5 1.5M9.5 3h5" />
+  </Svg>
+);
+export const PauseIcon = () => (
+  <Svg size={22} sw={2.2}>
+    <path d="M9 6v12M15 6v12" />
+  </Svg>
+);
+export const PlayIcon = () => (
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden>
+    <path d="M8 5.5v13a1 1 0 001.5.86l10.4-6.5a1 1 0 000-1.72L9.5 4.64A1 1 0 008 5.5z" />
+  </svg>
+);
+export const ClipboardIcon = () => (
+  <Svg size={22}>
+    <rect x="5" y="4" width="14" height="17" rx="2" />
+    <path d="M9 4V3h6v1M9 10h6M9 14h6" />
+  </Svg>
+);
+export const SearchIcon = () => (
+  <Svg size={22}>
+    <circle cx="11" cy="11" r="7" />
+    <path d="M20 20l-4-4" />
+  </Svg>
+);
+export const PencilIcon = () => (
+  <Svg size={20}>
+    <path d="M4 20l1-4L16.5 4.5a2 2 0 013 3L8 19l-4 1z" />
   </Svg>
 );

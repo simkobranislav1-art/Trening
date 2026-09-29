@@ -11,36 +11,36 @@
  * - čísla a nadpisy: Barlow Condensed, text: Inter.
  */
 :root {
-  --bg: 22 24 29;
-  --surface: 33 36 43;
-  --raised: 46 50 59;
-  --line: 55 59 69;
-  --ink: 244 245 247;
-  --muted: 154 160 172;
-  --faint: 108 114 127;
-  --accent: 10 132 255;
-  --accent-ink: 64 156 255;
+  --bg: 0 0 0;
+  --surface: 28 28 30;
+  --raised: 44 44 46;
+  --line: 58 58 60;
+  --ink: 255 255 255;
+  --muted: 152 152 157;
+  --faint: 99 99 102;
+  --accent: 59 130 246;
+  --accent-ink: 77 145 255;
   --on-accent: 255 255 255;
   --good: 52 199 89;
-  --warn: 255 190 70;
-  --danger: 255 105 97;
+  --warn: 252 232 138;
+  --danger: 255 69 58;
   color-scheme: dark;
 }
 
 :root.light {
-  --bg: 242 243 247;
+  --bg: 242 242 247;
   --surface: 255 255 255;
-  --raised: 235 237 242;
-  --line: 222 225 232;
-  --ink: 17 18 22;
-  --muted: 104 110 122;
-  --faint: 160 165 175;
-  --accent: 0 122 255;
-  --accent-ink: 0 110 230;
+  --raised: 239 239 244;
+  --line: 216 216 222;
+  --ink: 0 0 0;
+  --muted: 108 108 114;
+  --faint: 165 165 170;
+  --accent: 47 122 246;
+  --accent-ink: 30 105 230;
   --on-accent: 255 255 255;
-  --good: 36 160 70;
-  --warn: 184 120 0;
-  --danger: 214 40 40;
+  --good: 40 170 75;
+  --warn: 150 110 0;
+  --danger: 220 40 35;
   color-scheme: light;
 }
 
@@ -51,8 +51,8 @@ body,
 }
 
 body {
-  @apply bg-bg font-sans text-[16px] leading-[1.4] text-ink antialiased;
-  letter-spacing: -0.006em;
+  @apply bg-bg font-sans text-[17px] leading-[1.35] text-ink antialiased;
+  letter-spacing: -0.01em;
   -webkit-tap-highlight-color: transparent;
   overscroll-behavior-y: none;
   
@@ -81,23 +81,24 @@ textarea {
 
 @layer components {
   .field {
-    @apply w-full rounded-xl bg-raised px-4 py-3 text-base text-ink placeholder:text-faint focus:outline-none focus:ring-2 focus:ring-accent-ink/60;
+    @apply w-full rounded-[10px] bg-surface px-4 py-3 text-[17px] text-ink placeholder:text-faint focus:outline-none focus:ring-1 focus:ring-accent-ink;
   }
   .tnum {
     font-variant-numeric: tabular-nums;
   }
   /* Typografická stupnica */
+  /* Typografia ako v iOS: bežné váhy, dôraz farbou a veľkosťou, nie tučnosťou */
   .t-large {
-    @apply text-[28px] font-bold leading-[1.1] tracking-[-0.02em];
+    @apply text-[30px] font-medium leading-[1.1] tracking-[-0.02em];
   }
   .t-title {
-    @apply text-[20px] font-semibold leading-tight tracking-[-0.015em];
+    @apply text-[22px] font-medium leading-tight tracking-[-0.015em];
   }
   .t-label {
-    @apply text-[13px] font-semibold leading-none tracking-[0.01em] text-muted;
+    @apply text-[13px] font-normal uppercase leading-none tracking-[0.04em] text-muted;
   }
   .t-num {
-    @apply font-semibold leading-none tabular-nums tracking-[-0.02em];
+    @apply font-normal leading-none tabular-nums tracking-[-0.01em];
   }
   .press {
     @apply transition-[transform,opacity,background-color] duration-100 active:scale-[0.98] active:opacity-80;

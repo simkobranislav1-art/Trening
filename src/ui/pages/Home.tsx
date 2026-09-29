@@ -43,7 +43,7 @@ export function Home() {
       <PageHeader title="Domov" subtitle={fmtDay(today.toISOString())} />
       <div className="px-4 pb-6">
         {needsBackup && (
-          <Link to="/nastavenia" className="press mb-4 flex items-center gap-3 rounded-2xl bg-warn/15 px-4 py-3 text-warn">
+          <Link to="/nastavenia" className="press mb-4 flex items-center gap-3 rounded-xl bg-warn px-4 py-3 text-black">
             <span className="min-w-0 flex-1">
               <span className="block font-semibold">Čas na zálohu dát</span>
               <span className="block text-[14px] opacity-90">
