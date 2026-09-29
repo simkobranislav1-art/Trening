@@ -209,6 +209,7 @@ export function SettingsPage() {
           {sampleCount > 0 && <Row title={`Odstrániť ukážkové rutiny (${sampleCount})`} onClick={() => setConfirmSamples(true)} />}
           <Row title="Vymazať všetky dáta" danger onClick={() => setConfirmClear(true)} />
         </Group>
+        <p className="mt-6 text-center text-[13px] text-muted">Zostavenie: {__APP_BUILD__}</p>
       </div>
 
       <HevyImportSheet open={hevy} onClose={() => setHevy(false)} />

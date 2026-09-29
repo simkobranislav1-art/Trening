@@ -21,6 +21,8 @@ export function About() {
           </p>
         </Card>
 
+        <p className="mt-3 px-1 text-[13px] text-muted">Zostavenie: {__APP_BUILD__}</p>
+
         <SectionTitle>Ako sa počíta</SectionTitle>
         <Card className="space-y-2 text-[15px] leading-relaxed">
           <p>
