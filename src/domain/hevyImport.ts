@@ -179,7 +179,7 @@ export interface HevyImportData {
   sessions: WorkoutSession[];
   customExercises: CustomExercise[];
   bodyEntries: BodyEntry[];
-  /** Rutiny odvodené z najnovšieho tréningu každého názvu (Chest, Legs…). */
+  /** Rutiny odvodené z najčastejších cvikov každého názvu tréningu (Chest, Legs…). */
   routines: Routine[];
   warnings: string[];
   /** Koľko rôznych cvikov z Hevy sa priradilo ku knižnici a koľko vzniklo ako vlastné. */
@@ -307,24 +307,53 @@ export function buildFromHevy(workoutCsv: string, measurementCsv?: string | null
   }
   sessions.sort((a, b) => a.startedAt.localeCompare(b.startedAt));
 
-  // Rutiny: podľa názvu tréningu; zoradené podľa prvého výskytu, aby rotácia „ďalší tréning“ sedela s tvojím cyklom.
+  // Rutiny: podľa názvu tréningu. Cvik patrí do rutiny, ak sa v takých tréningoch opakuje
+  // (aspoň v 40 % z nich, minimálne dvakrát); počet sérií je medián, poradie podľa priemernej pozície.
   const routines: Routine[] = [];
   const titles = [...new Set(sessions.map((s) => s.name))];
   for (const name of titles) {
     const same = sessions.filter((s) => s.name === name);
-    const latest = same[same.length - 1];
+    const need = Math.min(same.length, Math.max(2, Math.ceil(same.length * 0.4)));
+    const stats = new Map<string, { name: string; sets: number[]; positions: number[] }>();
+    for (const sess of same) {
+      const seen = new Set<string>();
+      sess.exercises.forEach((e, pos) => {
+        if (seen.has(e.exerciseId)) return;
+        seen.add(e.exerciseId);
+        const st = stats.get(e.exerciseId) ?? { name: e.exerciseName, sets: [], positions: [] };
+        st.sets.push(e.sets.length);
+        st.positions.push(pos);
+        stats.set(e.exerciseId, st);
+      });
+    }
+    let chosen = [...stats.entries()]
+      .filter(([, st]) => st.sets.length >= need)
+      .map(([exerciseId, st]) => {
+        const sorted = [...st.sets].sort((x, y) => x - y);
+        return {
+          exerciseId,
+          exerciseName: st.name,
+          sets: sorted[Math.ceil(sorted.length / 2) - 1],
+          pos: st.positions.reduce((x, y) => x + y, 0) / st.positions.length,
+        };
+      })
+      .sort((x, y) => x.pos - y.pos);
+    if (chosen.length === 0) {
+      // príliš rôznorodé tréningy: použi posledný
+      chosen = same[same.length - 1].exercises.map((e, i) => ({ exerciseId: e.exerciseId, exerciseName: e.exerciseName, sets: e.sets.length, pos: i }));
+    }
     const id = `hevy-routine-${slug(name) || 'trening'}`;
     routines.push({
       id,
       name,
-      note: 'Vytvorené z importu z Hevy podľa posledného tréningu.',
-      exercises: latest.exercises.map((e, i) => ({
+      note: 'Vytvorené z importu z Hevy podľa najčastejších cvikov.',
+      exercises: chosen.map((e, i) => ({
         id: `${id}-${i}`,
         exerciseId: e.exerciseId,
         exerciseName: e.exerciseName,
-        sets: e.sets.length,
+        sets: Math.max(1, e.sets),
         note: '',
-        supersetId: e.supersetId ?? null,
+        supersetId: null,
       })),
       isSample: false,
       createdAt: same[0].startedAt,

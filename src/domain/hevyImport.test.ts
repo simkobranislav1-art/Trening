@@ -74,7 +74,7 @@ describe('zostavenie z exportu Hevy', () => {
     expect(data.bodyEntries[0]).toMatchObject({ date: '2026-01-31', weight: 79, bodyFat: 15, chest: 101, waist: 85, arm: 35, thigh: 61 });
   });
 
-  it('vytvorí rutiny podľa názvov tréningov z najnovšieho tréningu', () => {
+  it('vytvorí rutiny podľa názvov tréningov', () => {
     expect(data.routines.map((r) => r.name)).toEqual(['Legs', 'Chest']);
     const chest = data.routines[1];
     expect(chest.exercises.map((e) => [e.exerciseName, e.sets])).toEqual([
