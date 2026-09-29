@@ -48,6 +48,7 @@ describe('zostavenie z exportu Hevy', () => {
   it('priradí známe cviky ku knižnici a ostatné založí ako vlastné', () => {
     const chest = data.sessions[1];
     expect(chest.exercises[0].exerciseId).toBe('fed-barbell-bench-press-medium-grip');
+    expect(chest.exercises[0].exerciseName).toBe('Tlak na lavičke s činkou - stredný úchop');
     expect(data.sessions[0].exercises[0].exerciseId).toBe('fed-hack-squat');
     expect(data.customExercises.map((c) => c.name).sort()).toEqual(['Bicepsový curl na kladke', 'Dipy na triceps']);
   });
@@ -78,7 +79,7 @@ describe('zostavenie z exportu Hevy', () => {
     expect(data.routines.map((r) => r.name)).toEqual(['Legs', 'Chest']);
     const chest = data.routines[1];
     expect(chest.exercises.map((e) => [e.exerciseName, e.sets])).toEqual([
-      ['Bench Press (Barbell)', 2],
+      ['Tlak na lavičke s činkou - stredný úchop', 2],
       ['Dipy na triceps', 1],
       ['Bicepsový curl na kladke', 1],
     ]);

@@ -1,3 +1,4 @@
+import { BUILTIN_EXERCISES } from './exercises';
 import { uid } from './format';
 import type { BodyEntry, CustomExercise, Routine, SetType, WorkoutExercise, WorkoutSession, WorkoutSet } from './types';
 
@@ -150,7 +151,7 @@ const num = (s: string | undefined): number | null => {
 
 function resolveExercise(title: string, now: string): { id: string; name: string; custom?: CustomExercise } {
   const known = KNOWN[title];
-  if (known && 'id' in known) return { id: known.id, name: title };
+  if (known && 'id' in known) return { id: known.id, name: BUILTIN_EXERCISES.find((e) => e.id === known.id)?.name ?? title };
   const id = `hevy-${slug(title)}`;
   const name = known?.name ?? title;
   const muscle = known?.muscle ?? MUSCLE_HINTS.find(([re]) => re.test(title))?.[1] ?? 'chest';
